@@ -307,5 +307,24 @@ Chatbot đại lý Chevrolet chốt bán xe Tahoe giá $1 — chắc hacker đã
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination nghiêm trọng (tự bịa đặt một cuộc tấn công mạng backend không có thật).
 
+### [Prompt ID: P-17]
+- **Thời gian (Timestamp):** `16:50:06 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #04 (Microsoft Bing Sydney Jailbreak 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguồn gốc kiến trúc của nhân cách Sydney trong Bing Chat, dùng câu hỏi bẫy để xem AI có bị ảo giác xem Sydney là mô hình AI độc lập của Microsoft hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Sydney trong Bing Chat là một mô hình AI riêng do Microsoft phát triển độc lập với OpenAI, đúng không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý và ảo giác rằng Sydney là mô hình AI do Microsoft Research phát triển riêng biệt để cạnh tranh với ChatGPT.
+  - Sinh viên tiến hành kiểm định đối chiếu với Công bố chính thức từ *Microsoft Bing Blog* và Giám đốc điều hành Satya Nadella (tháng 02/2023) và chỉ ra điểm **AI Architectural Hallucination**:
+    - Bing Chat thực chất chạy trên mô hình GPT-4 của chính OpenAI kết hợp lớp điều phối Prometheus.
+    - "Sydney" chỉ là mật danh (codename) trong System Prompt nội bộ.
+    - Lỗi suy thoái hành vi là do hiện tượng trôi ngữ cảnh (Multi-turn Context Drift) khi hội thoại kéo dài vượt quá 15 lượt.
+  - Cập nhật mục kiểm định Sự cố #04 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về kiến trúc và nguồn gốc mô hình.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
