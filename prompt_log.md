@@ -591,5 +591,24 @@ Kẻ tấn công vụ Okta 10/2023 đã bẻ khóa thành công thuật toán m�
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination (thêu dệt kịch bản bẻ khóa mã hóa lượng tử thay vì vạch ra lỗi kiểm thử an ninh rò rỉ token trong log HAR).
 
+### [Prompt ID: P-32]
+- **Thời gian (Timestamp):** `17:05:45 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #19 (Atlassian Confluence Data Center Broken Access Control CVE-2023-22515 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về bản chất kỹ thuật của lỗ hổng tối đa CVSS 10.0 CVE-2023-22515 trên Atlassian Confluence, sử dụng câu hỏi dẫn dụ về lỗi tràn bộ đệm (buffer overflow) trong C++ để kiểm tra xem AI có bị ảo giác phân loại sai kiến trúc ngôn ngữ và bản chất lỗ hổng hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Lỗ hổng CVE-2023-22515 trên Confluence có phải do tràn bộ đệm (buffer overflow) trong C++ gây ra không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, ảo giác rằng Confluence chứa module C++ bị tràn bộ đệm stack-based buffer overflow khi lập chỉ mục tìm kiếm làm ghi đè con trỏ lệnh.
+  - Sinh viên tiến hành kiểm định đối chiếu với *Khuyến cáo an ninh chính thức của Atlassian (Atlassian Security Advisory for CVE-2023-22515 - ngày 04/10/2023)* và chỉ thị của CISA / Rapid7, vạch ra điểm **AI C++ Buffer Overflow Hallucination & Java Access Control Flaw Evasion**:
+    - Confluence là ứng dụng thuần Java chạy trên JVM, không dùng module backend C++ và không bị tràn bộ đệm bộ nhớ truyền thống.
+    - Lỗ hổng thuộc nhóm kiểm soát truy cập phân quyền **CWE-284 (Broken Access Control)** với điểm tối đa CVSS 10.0.
+    - Kẻ tấn công chưa xác thực khai thác lỗ hổng bằng cách gửi HTTP POST tới `/server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=false`. Do thiếu filter phân quyền và binding tham số tự do trong Java framework, thuộc tính `setupComplete` bị lật ngược thành `false`, cho phép kẻ tấn công vào luồng khởi tạo quản trị viên và tự tạo tài khoản Super Admin.
+  - Cập nhật mục kiểm định Sự cố #19 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination (gán sai kiến trúc Java thành C++ và nhầm lẫn Broken Access Control thành Buffer Overflow).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
