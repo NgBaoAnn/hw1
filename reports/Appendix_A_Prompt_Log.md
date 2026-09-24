@@ -142,4 +142,24 @@ ghi log từ đầu cuộc trò chuyện tới giờ, bạn hãy vào thư mục
   - Bằng chứng lịch sử prompt đạt độ chính xác tuyệt đối 100% theo dữ liệu nhật ký hệ thống.
 
 ---
+
+### [Prompt ID: P-08]
+- **Thời gian (Timestamp):** `15:57:19 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 1.3 – Phân tích 10 tin tuyển dụng QA/QC trên ITviec
+- **Mục tiêu / Context:** Đọc 10 file ảnh chụp màn hình trong thư mục screenshots, trích xuất dữ liệu việc làm và viết phân tích tác động của AI.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+ở task 1.1 trong plan, tôi đã tìm đủ 10 jobs trên IT viec có liên quan và chụp hình màn hình trong @[requirements/req1_job_market/screenshots]  , trong task 1.2 đã hoàn thành chụp màn hình. giờ hãy thực hiện task 1.3, nếu cần thêm thông tin thì tự lên web search để hoàn thiện task 1.3
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Xem và phân tích trực quan toàn bộ 10 bức ảnh chụp màn hình tuyển dụng trên ITviec.
+  - Trích xuất đầy đủ thông tin: Tên công việc, Công ty, Ngày đăng (tất cả đều từ vài giờ đến tối đa 27 ngày trước, $\le 60$ ngày), Mức lương, JD, Kỹ năng yêu cầu, và Bằng chứng chống gian lận (thanh điều hướng + avatar ở góc phải).
+  - Xác nhận $\ge 3$ vị trí có yêu cầu AI/LLM (Saritasa, Golden Gate, TrustedAI).
+  - Soạn thảo 1-2 câu "Phân tích tác động của AI" (AI Impact Analysis) cho từng vị trí, làm rõ xu hướng kiểm thử 2026+.
+  - Hoàn thiện file `requirements/req1_job_market/jobs_data.md` và tạo các liên kết chuẩn hóa `job_01.png` đến `job_10.png`.
+- **Đánh giá & Ghi chú:**
+  - Đạt 100% các tiêu chí của Yêu cầu 1 theo đề bài.
+
+---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
