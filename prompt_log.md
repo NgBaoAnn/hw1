@@ -183,5 +183,42 @@ vẽ Mindmap về các vai trò QA/QC theo chuẩn ISTQB bằng Markdown Mermaid
 - **Đánh giá & Ghi chú:**
   - Hoàn thành trọn vẹn Chuẩn đầu ra CLO G9.1 theo quy định đề bài.
 
+### [Prompt ID: P-10]
+- **Thời gian (Timestamp):** `16:12:27 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2 & Định dạng tài liệu
+- **Mục tiêu / Context:** Điều chỉnh quy trình: Chỉ cần tập trung cập nhật và hoàn thiện toàn bộ nội dung trong các file Markdown (`.md`) trong workspace để sinh viên tự điền/sao chép vào các form Word `.docx` của Khoa, không cần mất thời gian tìm công cụ trích xuất PDF.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+chỉ cần cập nhật vào .md để tôi tự điền docx, ko cần tìm pdftotext
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Ghi nhận yêu cầu, tinh giản quy trình: Tập trung 100% vào việc hoàn thiện chất lượng và cấu trúc dữ liệu trên hệ thống file `.md`.
+  - Chuẩn bị chuyển trọng tâm sang Yêu cầu 2: 20 Lỗi phần mềm 2022–2026.
+- **Đánh giá & Ghi chú:**
+  - Định hướng thực thi rõ ràng, tiết kiệm token và thời gian xử lý.
+
+---
+
+### [Prompt ID: P-11]
+- **Thời gian (Timestamp):** `16:13:42 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 1 – Kiểm tra và nghiệm thu toàn diện Yêu cầu 1
+- **Mục tiêu / Context:** Rà soát và đối chiếu toàn bộ các tiêu chí chấm điểm (rubric) của Yêu cầu 1 (40 điểm) xem đã hoàn thiện 100% chưa.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+task 1 đã hoàn thiện đầy đủ chưa ?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Rà soát đối chiếu 100% các tiêu chí của Yêu cầu 1:
+    1. Đủ 10 tin tuyển dụng QA/QC trên ITviec (10/10 tin đăng trong vòng 27 ngày qua, $\le 60$ ngày).
+    2. Có 3 vị trí đòi hỏi kỹ năng AI/LLM trực tiếp (Saritasa #02, Golden Gate #04, TrustedAI #06).
+    3. Đủ 10 ảnh screenshot có tên tài khoản đăng nhập/avatar chống gian lận.
+    4. Trích xuất đầy đủ JD, kỹ năng, mức lương và 10/10 mục "Phân tích tác động của AI" (AI Impact Analysis).
+    5. Mindmap ISTQB chuẩn hoá bằng Mermaid và chỉ ra 3 lỗi sai của AI theo ISTQB CTFL v4.0 (CLO G9.1).
+    6. Cập nhật Artifact #1 vào Báo cáo kiểm định AI `[AI-02]`.
+- **Đánh giá & Ghi chú:**
+  - Task 1 đã hoàn thiện trọn vẹn 100% (40/40 điểm).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*

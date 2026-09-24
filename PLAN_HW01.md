@@ -69,31 +69,31 @@ hw1/
 ## 3. Kế hoạch Triển khai Chi tiết Từng Task
 
 ### Task 0: Thiết lập Workspace & Khởi tạo Git Repo
-- [ ] **Bước 0.1:** Khởi tạo Git repository trong workspace (`git init`).
-- [ ] **Bước 0.2:** Tạo cấu trúc thư mục như thiết kế ở trên.
-- [ ] **Bước 0.3:** Tạo file `.gitignore` phù hợp (bỏ qua file tạm OS, build caches, nhưng giữ các artifact báo cáo).
-- [ ] **Bước 0.4:** Commit khởi tạo đầu tiên (`chore: initialize project structure and workspace`).
+- [x] **Bước 0.1:** Khởi tạo Git repository trong workspace (`git init`).
+- [x] **Bước 0.2:** Tạo cấu trúc thư mục như thiết kế ở trên.
+- [x] **Bước 0.3:** Tạo file `.gitignore` phù hợp (bỏ qua file tạm OS, build caches, nhưng giữ các artifact báo cáo).
+- [x] **Bước 0.4:** Commit khởi tạo đầu tiên (`chore: initialize project structure and workspace`).
 
 ---
 
 ### Task 1: Thu thập & Phân tích 10 Tin tuyển dụng QA/QC 2026+ (Yêu cầu 1 - 40 điểm)
-- [ ] **Bước 1.1: Tìm kiếm 10 tin tuyển dụng:**
-  - Nền tảng: LinkedIn, TopCV, VietnamWorks, ITviec, Indeed.
-  - Điều kiện: Đăng trong vòng 60 ngày gần nhất.
-  - Phân loại: Ít nhất **$\ge 3$ vị trí** đòi hỏi kỹ năng AI/LLM/Automation-AI (ví dụ: AI Test Engineer, QA Automation with GenAI, LLM Evaluation Specialist, QA Engineer with Copilot/Cursor).
-- [ ] **Bước 1.2: Chụp ảnh màn hình bằng chứng (Anti-cheat):**
-  - Đảm bảo ở góc màn hình hiển thị rõ tên tài khoản đã đăng nhập của sinh viên.
+- [x] **Bước 1.1: Tìm kiếm 10 tin tuyển dụng:**
+  - Nền tảng: ITviec.
+  - Điều kiện: Đăng trong vòng 60 ngày gần nhất (thực tế toàn bộ <= 27 ngày, 100% hợp lệ).
+  - Phân loại: Có 3 vị trí đòi hỏi kỹ năng AI/LLM (Saritasa #02, Golden Gate #04, TrustedAI #06).
+- [x] **Bước 1.2: Chụp ảnh màn hình bằng chứng (Anti-cheat):**
+  - Đảm bảo góc màn hình có tài khoản đăng nhập `NgBaoAnn` / Avatar.
   - Lưu ảnh vào `requirements/req1_job_market/screenshots/job_01.png` đến `job_10.png`.
-- [ ] **Bước 1.3: Trích xuất thông tin & Soạn thảo nội dung:**
-  - Tạo file `requirements/req1_job_market/jobs_data.md`.
-  - Với mỗi tin: Link, Vị trí & Công ty, Ngày đăng, Mức lương, Tóm tắt JD, Kỹ năng yêu cầu, và **1–2 câu Phân tích tác động của AI (AI Impact Analysis)**.
-- [ ] **Bước 1.4: Tạo Mindmap quy trình/vai trò QA/QC (CLO G9.1):**
+- [x] **Bước 1.3: Trích xuất thông tin & Soạn thảo nội dung:**
+  - Đã tạo `requirements/req1_job_market/jobs_data.md`.
+  - Với mỗi tin: Link, Vị trí & Công ty, Ngày đăng, Mức lương, Tóm tắt JD, Kỹ năng yêu cầu, và **1–2 câu Phân tích tác động của AI (AI Impact Analysis)** cho đủ 10/10 tin.
+- [x] **Bước 1.4: Tạo Mindmap quy trình/vai trò QA/QC (CLO G9.1):**
   - Soạn prompt yêu cầu AI vẽ Mindmap về các vai trò QA/QC theo chuẩn ISTQB.
   - Ghi nhận lại phản hồi của AI.
-  - Phân tích và chỉ ra **3 lỗi sai / điểm thiếu sót** trong mindmap của AI.
-  - Vẽ lại mindmap chuẩn (Markdown Mermaid hoặc PNG) lưu vào `requirements/req1_job_market/mindmap/`.
-  - Cập nhật mục này vào `AI-02_AI_Audit_Report.md`.
-- [ ] **Bước 1.5: Commit kết quả Task 1** vào Git.
+  - Phân tích và chỉ ra **3 lỗi sai / điểm thiếu sót** trong mindmap của AI theo ISTQB CTFL v4.0.
+  - Vẽ lại mindmap chuẩn bằng Mermaid lưu vào `requirements/req1_job_market/mindmap/qa_qc_roles_mindmap.md`.
+  - Cập nhật mục này vào `templates/AI-02_AI_Audit_Report.md`.
+- [x] **Bước 1.5: Commit kết quả Task 1** vào Git.
 
 ---
 
