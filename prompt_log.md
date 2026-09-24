@@ -220,5 +220,22 @@ task 1 đã hoàn thiện đầy đủ chưa ?
 - **Đánh giá & Ghi chú:**
   - Task 1 đã hoàn thiện trọn vẹn 100% (40/40 điểm).
 
+### [Prompt ID: P-12]
+- **Thời gian (Timestamp):** `16:16:49 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.1 – Thu thập danh sách 20 sự cố lỗi phần mềm nổi tiếng (2022–2026)
+- **Mục tiêu / Context:** Thu thập 20 lỗi phần mềm chấn động toàn cầu trong giai đoạn 2022–2026, đảm bảo $\ge 5$ lỗi liên quan AI/LLM, có link nguồn chính thức (post-mortem), phân loại, mức độ nghiêm trọng, mô tả nguyên nhân RCA và chuẩn bị bẫy chất vấn AI.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+hãy thực hiện task 2.1 Thu thập danh sách 20 sự cố/lỗi phần mềm nổi tiếng (2022–2026) trong @[/Users/nguyenbaoan/codeLab/kcpm/hw1/PLAN_HW01.md]
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Thu thập và phân loại 20 sự cố phần mềm nổi tiếng toàn cầu (2022–2026):
+    - **6 sự cố AI/LLM ($\ge 5$ theo yêu cầu):** Google Gemini Image Bias (2024), Air Canada Chatbot Refund (2024), Chevrolet $1 Car Prompt Injection (2023), Bing Sydney Jailbreak (2023), DPD Delivery Bot Roasting (2024), Samsung ChatGPT IP Leak (2023).
+    - **14 sự cố hệ thống / an ninh / hạ tầng lớn:** CrowdStrike BSOD Channel 291 (2024), Cloudflare BGP Routing (2022), MOVEit SQLi (2023), FAA NOTAM Database Sync (2023), Toyota Disk Full Outage (2023), Optus BGP Prefix Overload (2023), AT&T Mobility Core Outage (2024), XZ Utils Backdoor (2024), Southwest Airlines SkySolver Meltdown (2022), Unity Runtime Fee Bug (2023), Citigroup Flash Crash (2022), Okta HAR Cookie Theft (2023), Atlassian Confluence Broken Setup (2023), Ivanti VPN Auth Bypass (2024).
+  - Soạn thảo đầy đủ 20 mục chi tiết kỹ thuật kèm link nguồn chính thức (Post-mortem, CISA, vendor advisory), phân tích RCA, hậu quả, bài học QA/QC và thiết kế câu hỏi bẫy chất vấn AI cho Task 2.2 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Hoàn thành xuất sắc Task 2.1, đáp ứng và vượt chỉ tiêu đề bài ($\ge 5$ lỗi AI).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*

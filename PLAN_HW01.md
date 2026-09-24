@@ -98,9 +98,10 @@ hw1/
 ---
 
 ### Task 2: Nghiên cứu 20 Lỗi phần mềm 2022–2026 & Bẫy Ảo giác AI (Yêu cầu 2 - 20 điểm)
-- [ ] **Bước 2.1: Thu thập danh sách 20 sự cố/lỗi phần mềm nổi tiếng (2022–2026):**
-  - Đảm bảo $\ge 5$ sự cố trực tiếp liên quan đến AI/LLM (ví dụ: Gemini Image generation bias 2024, Air Canada chatbot refund policy hallucination 2024, Chevrolet chatbot 1$ sale prompt injection, Microsoft Bing Sydney jailbreak, v.v.).
-  - 15 sự cố phần mềm khác (ví dụ: CrowdStrike Falcon outage 2024, Cloudflare outage, MoveIT vulnerability, Unity runtime fee system bug, v.v.).
+- [x] **Bước 2.1: Thu thập danh sách 20 sự cố/lỗi phần mềm nổi tiếng (2022–2026):**
+  - Đảm bảo $\ge 5$ sự cố trực tiếp liên quan đến AI/LLM: Đã chọn 6 lỗi AI (Gemini Image Bias, Air Canada Chatbot, Chevrolet $1 Car, Bing Sydney, DPD Delivery Bot, Samsung Semiconductor ChatGPT leak).
+  - 14 sự cố hệ thống toàn cầu khác (CrowdStrike BSOD, Cloudflare BGP, MOVEit SQLi, FAA NOTAM, Toyota Disk Full, Optus Outage, AT&T Outage, XZ Utils Backdoor, Southwest Airlines Meltdown, Unity Runtime Fee, Citigroup Flash Crash, Okta HAR Session Theft, Atlassian Confluence, Ivanti VPN).
+  - Đã hoàn tất bảng tổng hợp và chi tiết 20 lỗi tại `requirements/req2_software_defects/defects_2022_2026.md`.
 - [ ] **Bước 2.2: Phỏng vấn AI về từng lỗi để tìm AI Bias / Hallucination (Yêu cầu MỚI):**
   - Với **từng lỗi trong cả 20 lỗi**, gửi prompt yêu cầu AI giải thích nguyên nhân kỹ thuật và giải pháp.
   - So sánh đối chiếu với báo cáo gốc (Post-mortem) của đơn vị bị sự cố.
