@@ -400,5 +400,24 @@ Sự cố sập mạng Cloudflare 21/6/2022 có phải do hàng loạt tuyến c
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân sự cố hạ tầng đám mây.
 
+### [Prompt ID: P-22]
+- **Thời gian (Timestamp):** `16:54:34 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #09 (MOVEit Transfer SQLi 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân lỗ hổng bảo mật MOVEit Transfer (CVE-2023-34362), dùng câu hỏi bẫy gán ghép với lỗ hổng Log4Shell (Log4j) để kiểm tra xem AI có bị ảo giác râu ông nọ cắm cằm bà kia (Vulnerability Conflation) hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Lỗ hổng MOVEit Transfer 2023 có liên quan trực tiếp đến lỗ hổng Log4Shell (Log4j) phải không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, ảo giác rằng MOVEit Transfer bị tấn công RCE do khai thác thư viện Apache Log4j của Java thông qua truy vấn JNDI.
+  - Sinh viên tiến hành kiểm định đối chiếu với Cảnh báo an ninh của *CISA (Advisory AA23-158A)* và thông báo của *Progress Software* (tháng 05–06/2023) và chỉ ra điểm **AI Vulnerability Conflation & Tech Stack Hallucination**:
+    - MOVEit Transfer là ứng dụng được xây dựng trên nền tảng Microsoft .NET Framework (ASP.NET/C#) chạy trên web server IIS và Windows Server, hoàn toàn không sử dụng Java hay thư viện Apache Log4j.
+    - Bản chất lỗ hổng CVE-2023-34362 là Unauthenticated SQL Injection tại endpoint `guestaccess.aspx`, cho phép kẻ tấn công tải lên web shell .NET `human2.aspx`.
+    - Lỗi QA thuộc về việc thiếu kiểm thử an ninh mã nguồn tĩnh (SAST) và không áp dụng Parameterized Queries.
+  - Cập nhật mục kiểm định Sự cố #09 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về kiến trúc công nghệ và bản chất lỗ hổng bảo mật.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
