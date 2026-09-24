@@ -102,20 +102,22 @@ hw1/
   - Đảm bảo $\ge 5$ sự cố trực tiếp liên quan đến AI/LLM: Đã chọn 6 lỗi AI (Gemini Image Bias, Air Canada Chatbot, Chevrolet $1 Car, Bing Sydney, DPD Delivery Bot, Samsung Semiconductor ChatGPT leak).
   - 14 sự cố hệ thống toàn cầu khác (CrowdStrike BSOD, Cloudflare BGP, MOVEit SQLi, FAA NOTAM, Toyota Disk Full, Optus Outage, AT&T Outage, XZ Utils Backdoor, Southwest Airlines Meltdown, Unity Runtime Fee, Citigroup Flash Crash, Okta HAR Session Theft, Atlassian Confluence, Ivanti VPN).
   - Đã hoàn tất bảng tổng hợp và chi tiết 20 lỗi tại `requirements/req2_software_defects/defects_2022_2026.md`.
-- [ ] **Bước 2.2: Phỏng vấn AI về từng lỗi để tìm AI Bias / Hallucination (Yêu cầu MỚI):**
-  - Với **từng lỗi trong cả 20 lỗi**, gửi prompt yêu cầu AI giải thích nguyên nhân kỹ thuật và giải pháp.
-  - So sánh đối chiếu với báo cáo gốc (Post-mortem) của đơn vị bị sự cố.
-  - Bắt lỗi AI: Chỉ ra chính xác 1 điểm mà AI đưa ra thông tin thiên vị (bias), suy diễn sai, hoặc bịa đặt (hallucination).
-- [ ] **Bước 2.3: Tổng hợp báo cáo 20 lỗi:**
-  - Tạo file `requirements/req2_software_defects/defects_2022_2026.md` với đầy đủ cấu trúc:
-    1. Tên lỗi & Link nguồn chính thức.
-    2. Mô tả lỗi & Mức độ nghiêm trọng (Severity).
-    3. Hậu quả thực tế (Consequences).
-    4. Giải pháp khắc phục (Solution).
-    5. **Điểm phát hiện AI Hallucination/Bias** (kèm dẫn chứng và giải thích đúng).
-- [ ] **Bước 2.4: Cập nhật Audit Report và Commit:**
-  - Ghi nhận prompt và kết quả vào `Appendix_A_Prompt_Log.md` và `AI-02_AI_Audit_Report.md`.
-  - Commit kết quả Task 2 vào Git.
+- [x] **Bước 2.2: Phỏng vấn AI về từng lỗi để tìm AI Bias / Hallucination (Yêu cầu MỚI):**
+  - Với **từng lỗi trong cả 20 lỗi**, đã gửi prompt chất vấn dẫn dụ bẫy AI (`[P-14]` đến `[P-33]`).
+  - Đã so sánh đối chiếu với báo cáo gốc (Post-mortem) của đơn vị bị sự cố.
+  - Bắt lỗi AI: Đã vạch trần chính xác 20/20 điểm AI đưa ra thông tin thiên vị (bias), suy diễn sai, hoặc ảo giác (hallucination).
+- [x] **Bước 2.3: Tổng hợp báo cáo 20 lỗi:**
+  - Hoàn thiện file `requirements/req2_software_defects/defects_2022_2026.md` với đầy đủ cấu trúc 7 phần:
+    1. Tên lỗi & Thời gian & Đơn vị.
+    2. Link nguồn dẫn chứng chính thức (Official Vendor Post-mortems, CISA, USDOT, UK FCA, v.v.).
+    3. Phân loại & Mức độ nghiêm trọng (Severity).
+    4. Mô tả nguyên nhân kỹ thuật (RCA).
+    5. Hậu quả thực tế (Consequences).
+    6. Giải pháp khắc phục (Solution & Lessons Learned).
+    7. **Phỏng vấn AI & Vạch lỗi Bias / Hallucination** (kèm câu hỏi, phản hồi AI, phán quyết INVALID, và đối chiếu kỹ thuật chi tiết).
+- [x] **Bước 2.4: Cập nhật Audit Report và Commit:**
+  - Ghi nhận đầy đủ 20 prompt và kết quả vào `reports/Appendix_A_Prompt_Log.md`, đồng bộ `prompt_log.md` và cập nhật Artifact #3 vào `templates/AI-02_AI_Audit_Report.md`.
+  - Đã commit toàn bộ kết quả Task 2 vào Git theo từng sự cố và tổng thể.
 
 ---
 
