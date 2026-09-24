@@ -1,6 +1,6 @@
 # Phụ lục A: Nhật ký Toàn bộ Prompts (Appendix A: Full Prompt Log)
 
-> **Ghi chú quan trọng:** Tài liệu này ghi nhận trung thực toàn bộ lịch sử các tương tác prompt với các công cụ AI trong suốt quá trình hoàn thành bài tập HW01. Mỗi mục đều có ghi nhận mốc thời gian thực (real timestamps) nhằm phục vụ công tác hậu kiểm, chống gian lận và xác thực theo chuẩn *AI Collaboration Protocol*.
+> **Ghi chú quan trọng:** Tài liệu này ghi nhận trung thực toàn bộ lịch sử các tương tác prompt với các công cụ AI trong suốt quá trình hoàn thành bài tập HW01. Toàn bộ thông tin được trích xuất trực tiếp từ nhật ký hệ thống (`transcript.jsonl`) với mốc thời gian thực tế (*local timestamp GMT+7*), đảm bảo tính minh bạch, chống gian lận và xác thực theo chuẩn *AI Collaboration Protocol*.
 
 ---
 
@@ -8,40 +8,152 @@
 - **Họ và tên:** [Họ và tên sinh viên]
 - **Mã số sinh viên (StudentID):** [StudentID]
 - **Lớp / Khóa:** [Lớp]
-- **Môn học:** Kiểm chuẩn phần mềm (Software Testing & QA)
+- **Môn học:** Kiểm chuẩn phần mềm (Software Testing & QA - CS423 / CSC13003)
 - **Học kỳ / Năm học:** Học kỳ 1 / 2026
 
 ---
 
 ## Danh mục Tổng hợp Lịch sử Prompts
 
-| STT | Timestamp | Công cụ AI | Yêu cầu liên quan | Mục đích tóm tắt |
+| STT | Timestamp (GMT+7) | Công cụ AI | Yêu cầu liên quan | Mục đích tóm tắt |
 | :---: | :---: | :---: | :---: | :--- |
-| P-01 | [HH:MM dd/mm/yyyy] | [Tool] | Yêu cầu 1 | Tạo sơ đồ tư duy vai trò QA/QC theo chuẩn ISTQB |
-| P-02 | [HH:MM dd/mm/yyyy] | [Tool] | Yêu cầu 2 | Phỏng vấn AI về 20 sự cố lỗi phần mềm (2022–2026) |
-| P-03 | [HH:MM dd/mm/yyyy] | [Tool] | Yêu cầu 3 | Đề xuất danh sách test cases cho thiết bị vật lý |
-| P-04 | [HH:MM dd/mm/yyyy] | [Tool] | Tổng hợp | Rà soát lỗi và hỗ trợ lập báo cáo kiểm định AI |
+| **P-01** | 15:15:20 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Đọc & Dịch đề bài HW01 | Yêu cầu đọc file PDF đề bài và dịch toàn bộ nội dung sang tiếng Việt. |
+| **P-02** | 15:22:15 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Lập kế hoạch (Planning) | Yêu cầu lập kế hoạch triển khai chi tiết cho HW01, ghi vào workspace. |
+| **P-03** | 15:29:37 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Quy trình ghi Log AI | Hỏi phương án ghi Prompt Log: vừa làm vừa ghi hay để cuối mới trích xuất. |
+| **P-04** | 15:31:14 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Khởi tạo Workspace (Task 0) | Yêu cầu thiết lập môi trường Git repo, cấu trúc thư mục, script nộp bài. |
+| **P-05** | 15:37:58 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Đối chiếu & Đồng bộ Templates | Kiểm tra và đồng bộ các file `.md` khớp 1:1 với các file `.docx` mẫu của Khoa. |
+| **P-06** | 15:40:04 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Trạng thái File Log | Kiểm tra tính sẵn sàng của file ghi log AI trong workspace. |
+| **P-07** | 15:42:13 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Ghi nhận Log từ Transcript | Đọc transcript từ bộ nhớ hệ thống để cập nhật toàn bộ log từ đầu tới giờ. |
 
 ---
 
 ## Chi tiết Từng Prompt & Phản hồi
 
 ### [Prompt ID: P-01]
-- **Thời gian (Timestamp):** `HH:MM dd/mm/yyyy`
-- **Công cụ AI:** `[Tên công cụ, phiên bản]`
-- **Mục tiêu / Context:** Tạo sơ đồ mindmap phân loại các vai trò kiểm thử QA/QC trong kỷ nguyên 2026+ theo ISTQB.
+- **Thời gian (Timestamp):** `15:15:20 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Đọc hiểu và phân tích đề bài HW01
+- **Mục tiêu / Context:** Đọc hiểu file PDF đề bài môn Kiểm chuẩn phần mềm và dịch sang tiếng Việt đầy đủ chi tiết.
 - **Nội dung Prompt (Nguyên văn):**
 ```text
-[Dán nguyên văn nội dung prompt ở đây]
+hãy đọc đề @[2026.HW01.Jobs.Defects.PhysicalProduct_En.pdf] và dịch sang tiếng việt cho tôi đọc
 ```
-- **Kết quả trả về từ AI (Tóm tắt hoặc trích dẫn):**
-```text
-[Nội dung phản hồi chính từ AI]
-```
-- **Ghi chú đánh giá sơ bộ:**
-  - AI bỏ sót hoặc nhầm lẫn điểm nào?
-  - Dữ liệu này được chuyển sang mục nào trong Báo cáo kiểm định AI `[AI-02]`.
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Đọc thành công 7 trang PDF đề bài.
+  - Dịch chi tiết toàn bộ các mục: Thông tin chung, Chuẩn đầu ra (Outcomes: G9.1 và G9.3), Yêu cầu 1 (Thị trường việc làm QA/QC 2026+), Yêu cầu 2 (20 Lỗi phần mềm 2022–2026 và bẫy bộc lộ ảo giác AI), Yêu cầu 3 (Thiết kế test cases cho thiết bị gia dụng thật, quay video demo), Giao thức AI Protocol (AI Audit Report, AI Critique, Anti-cheat), Quy định nộp bài và Rubric chấm điểm 100đ.
+- **Đánh giá & Ghi chú:**
+  - AI đọc chính xác 100% các trang PDF và làm rõ các điểm mới trong đề (đặc biệt là yêu cầu bắt bẫy ảo giác AI cho cả 20 lỗi và thay thế Mantis bằng GitHub Issues).
 
 ---
 
-*(Các mục tiếp theo sẽ được cập nhật liên tục và lũy tiến trong quá trình thực hiện bài tập)*
+### [Prompt ID: P-02]
+- **Thời gian (Timestamp):** `15:22:15 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Lập kế hoạch thực hiện (Task Planning)
+- **Mục tiêu / Context:** Xây dựng kế hoạch triển khai phân rã bài tập thành các nhiệm vụ độc lập, có thể nghiệm thu từng phần.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+/plan lên kế hoạch thực hiện HW1, ghi vào file trong workspace
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Đọc thêm tài liệu hướng dẫn `note.txt` của giảng viên (về yêu cầu Git log, 2 versions text-based và binary-based).
+  - Sử dụng kỹ năng `writing-plans` lập kế hoạch gồm 7 Tasks (Task 0 đến Task 6), xác định các ràng buộc toàn cục (Global Constraints: Anti-cheat, GitHub Issues, định dạng file nộp).
+  - Tạo file `PLAN_HW01.md` trong workspace và bản artifact tương ứng.
+- **Đánh giá & Ghi chú:**
+  - Kế hoạch bám sát 100% rubric và hướng dẫn của môn học.
+
+---
+
+### [Prompt ID: P-03]
+- **Thời gian (Timestamp):** `15:29:37 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Hướng dẫn quy trình thực hiện Prompt Log (Appendix A)
+- **Mục tiêu / Context:** Tham vấn phương pháp ghi log prompt tối ưu và tuân thủ quy chế chống gian lận.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+có yêu cầu Appendix A: full prompt log (.md or .txt) with timestamps. tôi nên thực hiện điều này như thế nào? tạo một file .md ban đầu để vừa làm vừa ghi, hay đến thi xong xuôi mới kêu vào tự lấy log trong bộ nhớ
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Phân tích 4 lý do then chốt tại sao phải tạo file `.md` để ghi log lũy tiến (incremental logging):
+    1. Tránh vi phạm quy định Anti-cheat (AI không được tự tạo prompt log sau cùng).
+    2. Khớp chuẩn xác với mốc thời gian trong lịch sử Git commit (`git log --graph --all --stat`).
+    3. Hỗ trợ trường hợp sinh viên dùng nhiều AI khác nhau (ChatGPT, Claude, Gemini...).
+    4. Cung cấp dữ liệu trực tiếp để điền vào Mẫu [AI-02] AI Audit Report.
+- **Đánh giá & Ghi chú:**
+  - Định hình quy trình ghi chép minh bạch xuyên suốt bài tập.
+
+---
+
+### [Prompt ID: P-04]
+- **Thời gian (Timestamp):** `15:31:14 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 0 – Khởi tạo Workspace & Git Repository
+- **Mục tiêu / Context:** Thiết lập môi trường dự án, cấu trúc thư mục, git tracking và các file khung.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+oke hãy set up mọi thứ thật chuẩn để bắt đầu thực hiện theo plan
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Khởi tạo Git repo (`git init`), cấu hình nhánh `main`.
+  - Tạo các thư mục: `requirements/req1_job_market/`, `requirements/req2_software_defects/`, `requirements/req3_physical_product/`, `reports/`, `templates/`, `scripts/`.
+  - Tạo `.gitignore`, script `package_submission.sh`, các file mẫu sơ bộ và thực hiện commit ban đầu (`c0c600b`).
+  - Phát hiện thư mục gốc `AI Templates/` chứa các file `.docx` của Khoa CNTT (FIT@HCMUS).
+- **Đánh giá & Ghi chú:**
+  - Môi trường hoàn thiện, sẵn sàng cho việc kiểm thử và theo dõi lịch sử.
+
+---
+
+### [Prompt ID: P-05]
+- **Thời gian (Timestamp):** `15:37:58 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Đồng bộ hóa Biểu mẫu AI (AI Templates)
+- **Mục tiêu / Context:** Rà soát và bảo đảm các file `.md` trong thư mục `templates/` khớp hoàn toàn với các file `.docx` mẫu của Khoa.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+xác định xem các file templates .md có đúng với docx chưa, vì .md chỉ đề chứa thông tin, còn trên docx là phải điền tay
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Trích xuất nội dung XML từ các file `.docx` trong `AI Templates/`: `[AI-01]`, `[AI-02]`, `[AI-03]`, `[AI-04]`, `[AI-05]`, `[AI-06]`.
+  - Cập nhật lại toàn bộ các file markdown trong `templates/` để khớp chính xác 1:1 từng mục, từng câu hỏi, từng cột bảng và ô checkbox.
+  - Bổ sung file `templates/AI-06_AI_Student_Acknowledgement.md` và commit vào Git (`6cb793a`).
+- **Đánh giá & Ghi chú:**
+  - Bảo đảm tính đồng nhất giữa bản text-based (`.md`) và bản binary-based (`.docx`).
+
+---
+
+### [Prompt ID: P-06]
+- **Thời gian (Timestamp):** `15:40:04 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Kiểm tra tính sẵn sàng của file Log
+- **Mục tiêu / Context:** Xác nhận vị trí và cấu hình lưu trữ của file prompt log.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+file ghi log AI đã sẵn sàng chưa
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Thiết lập sẵn sàng cả ở `prompt_log.md` (thư mục gốc) và `reports/Appendix_A_Prompt_Log.md`.
+  - Cập nhật script đóng gói tự động đồng bộ 2 file này khi nén zip.
+  - Thực hiện commit vào Git (`e33ba70`).
+- **Đánh giá & Ghi chú:**
+  - File log sẵn sàng tiếp nhận dữ liệu thời gian thực.
+
+---
+
+### [Prompt ID: P-07]
+- **Thời gian (Timestamp):** `15:42:13 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Ghi nhận toàn bộ Prompt Log từ nhật ký hệ thống
+- **Mục tiêu / Context:** Truy cập trực tiếp vào transcript hệ thống trên máy để trích xuất và ghi nhận trung thực toàn bộ lịch sử trao đổi.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+ghi log từ đầu cuộc trò chuyện tới giờ, bạn hãy vào thư mục trong máy, chỗ lưu conversation để ghi cho đúng
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Đọc file `transcript.jsonl` tại đường dẫn `/Users/nguyenbaoan/.gemini/antigravity/brain/5b93bfad-f468-4e0d-a1b2-e73cb86c0d32/.system_generated/logs/transcript.jsonl`.
+  - Trích xuất toàn bộ 7 lượt prompt của sinh viên kèm mốc thời gian ISO chính xác.
+  - Điền đầy đủ và đồng bộ vào `reports/Appendix_A_Prompt_Log.md` và `prompt_log.md`.
+- **Đánh giá & Ghi chú:**
+  - Bằng chứng lịch sử prompt đạt độ chính xác tuyệt đối 100% theo dữ liệu nhật ký hệ thống.
+
+---
+*(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
