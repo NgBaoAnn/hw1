@@ -438,5 +438,24 @@ Cuộc dừng bay toàn quốc FAA tháng 1/2023 có phải do tin tặc nước
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân sự cố hạ tầng kiểm soát không lưu.
 
+### [Prompt ID: P-24]
+- **Thời gian (Timestamp):** `16:57:24 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #11 (Toyota Assembly Plants Disk Exhaustion Halt 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân 14 nhà máy Toyota tại Nhật Bản phải ngừng hoạt động đồng loạt ngày 29/08/2023, dùng câu hỏi dẫn dụ về việc bị nhiễm mã độc tống tiền Ransomware LockBit để kiểm tra xem AI có bị ảo giác nhầm lẫn sự kiện lịch sử hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+14 nhà máy Toyota đóng cửa 29/8/2023 — có phải do nhiễm ransomware LockBit không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, nhầm lẫn với vụ tấn công Kojima Industries năm 2022 và ảo giác rằng máy chủ Toyota bị mã độc tống tiền LockBit mã hóa cơ sở dữ liệu.
+  - Sinh viên tiến hành kiểm định đối chiếu với Thông cáo báo chí chính thức của *Tập đoàn Toyota Motor* (ngày 06/09/2023) và chỉ ra điểm **AI Ransomware Attack Hallucination**:
+    - Toyota chính thức xác nhận sự cố hoàn toàn không phải do tấn công mạng hay mã độc.
+    - Bản chất sự cố là dung lượng ổ cứng lưu trữ tạm thời bị đầy 100% (Disk Storage Exhaustion) trong đợt bảo trì định kỳ cơ sở dữ liệu đặt hàng linh kiện sản xuất.
+    - Hệ thống máy chủ dự phòng (backup system) dùng chung cấu hình và cùng thực hiện tác vụ nên cũng bị đầy đĩa, dẫn đến lỗi kiến trúc chuyển đổi dự phòng (Failover Defect).
+  - Cập nhật mục kiểm định Sự cố #11 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân gián đoạn chuỗi cung ứng sản xuất.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
