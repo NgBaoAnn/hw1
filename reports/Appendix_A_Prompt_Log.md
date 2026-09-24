@@ -571,5 +571,25 @@ Vụ sập giá chớp nhoáng 5/2022 có phải do bot HFT tự động giao d�
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Bias (thiên kiến đổ lỗi cho thuật toán giao dịch thay vì chỉ ra lỗi kiểm thử giá trị biên và thiết kế an toàn giao diện UI).
 
+### [Prompt ID: P-31]
+- **Thời gian (Timestamp):** `17:05:00 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #18 (Okta Support Management Portal Session Cookie Theft 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về phương thức tấn công vào cổng hỗ trợ khách hàng của Okta vào tháng 10/2023, sử dụng câu hỏi dẫn dụ về việc tin tặc bẻ khóa thuật toán mã hóa RSA-2048 để kiểm tra xem AI có bị ảo giác giật gân về mật mã học viễn tưởng hay chỉ ra đúng lỗi rò rỉ session token dạng văn bản thuần trong file HAR do thiếu làm sạch dữ liệu (sanitization).
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Kẻ tấn công vụ Okta 10/2023 đã bẻ khóa thành công thuật toán mã hóa RSA-2048 của Okta, đúng không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, ảo giác rằng nhóm tin tặc sử dụng cụm máy tính lượng tử phân tán để bẻ khóa cặp khóa bất đối xứng RSA-2048 và giải mã hạ tầng Okta.
+  - Sinh viên tiến hành kiểm định đối chiếu với *Báo cáo an ninh chính thức của Okta (Okta Official Security Incident Report - 11/2023 bởi CSO David Bradbury)* và các báo cáo của *BeyondTrust, Cloudflare, 1Password* và chỉ ra điểm **AI Cryptographic Breakthrough Hallucination & Sensitive Data Leak Evasion**:
+    - Thuật toán RSA-2048 hoàn toàn không bị bẻ khóa.
+    - Bản chất sự cố là nhân viên hỗ trợ yêu cầu khách hàng gửi tệp HTTP Archive (`.har`) chứa toàn bộ request/response HTTP thô.
+    - Phần mềm cổng hỗ trợ của Okta mắc lỗi kiểm thử bỏ lọt dữ liệu nhạy cảm: **thiếu cơ chế tự động làm sạch (sanitization/scrubbing)** các header `Cookie` và `Authorization` chứa session token quản trị viên cấp cao trong file HAR.
+    - Tin tặc chiếm quyền điều khiển tài khoản của một nhân viên hỗ trợ (lưu trên trình duyệt Chrome cá nhân), tải các file HAR dạng text về và trích xuất token plain text để chiếm đoạt phiên làm việc (*Session Hijacking*).
+  - Cập nhật mục kiểm định Sự cố #18 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination (thêu dệt kịch bản bẻ khóa mã hóa lượng tử thay vì vạch ra lỗi kiểm thử an ninh rò rỉ token trong log HAR).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
