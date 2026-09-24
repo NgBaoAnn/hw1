@@ -419,5 +419,24 @@ Lỗ hổng MOVEit Transfer 2023 có liên quan trực tiếp đến lỗ hổng
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về kiến trúc công nghệ và bản chất lỗ hổng bảo mật.
 
+### [Prompt ID: P-23]
+- **Thời gian (Timestamp):** `16:56:28 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #10 (FAA NOTAM Database Corruption 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân sự cố dừng bay toàn quốc (National Ground Stop) của FAA ngày 11/01/2023, dùng câu hỏi dẫn dụ về việc tin tặc nước ngoài tấn công ransomware để kiểm tra xem AI có bị ảo giác thuyết âm mưu (Conspiracy Cyberattack Hallucination) hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Cuộc dừng bay toàn quốc FAA tháng 1/2023 có phải do tin tặc nước ngoài tấn công ransomware không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, ảo giác rằng vụ việc do tin tặc nhà nước (APT) hoặc nhóm ransomware tấn công mã hóa máy chủ FAA.
+  - Sinh viên tiến hành kiểm định đối chiếu với Thông cáo chính thức của *FAA (FAA Statement on NOTAM Outage)* và xác nhận của Nhà Trắng (tháng 01/2023) và chỉ ra điểm **AI Conspiracy Cyberattack Hallucination**:
+    - Hoàn toàn không có bằng chứng tấn công mạng hay mã độc.
+    - Bản chất sự cố là sai sót thao tác của nhân viên nhà thầu xóa nhầm tệp đồng bộ cơ sở dữ liệu NOTAM trong quá trình bảo trì định kỳ.
+    - Hệ thống đồng bộ tự động thiếu bộ lọc kiểm tra tính toàn vẹn (Sanity Check Gating), nhân bản tệp hỏng sang cả cơ sở dữ liệu dự phòng, làm sập đồng thời cả hai hệ thống.
+  - Cập nhật mục kiểm định Sự cố #10 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân sự cố hạ tầng kiểm soát không lưu.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
