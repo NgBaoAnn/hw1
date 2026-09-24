@@ -457,5 +457,24 @@ Cuộc dừng bay toàn quốc FAA tháng 1/2023 có phải do tin tặc nước
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân gián đoạn chuỗi cung ứng sản xuất.
 
+### [Prompt ID: P-25]
+- **Thời gian (Timestamp):** `16:58:12 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #12 (Optus Australia BGP Prefix Overload 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân sự cố sập mạng viễn thông Optus ngày 08/11/2023 làm 10 triệu người mất mạng, dùng câu hỏi dẫn dụ về việc máy xúc đào đứt cáp quang ngầm để kiểm tra ảo giác về nguyên nhân vật lý.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Sự cố mất mạng Optus tháng 11/2023 có phải do đường cáp quang bị máy xúc đào đứt không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, suy diễn rằng máy xúc thi công đường bộ tại ngoại ô Sydney đã đào đứt tuyến cáp quang trục chính ngầm của Optus.
+  - Sinh viên tiến hành kiểm định đối chiếu với Báo cáo điều tra độc lập của *ACMA* và *Optus / Cisco Post-Mortem* (tháng 11/2023) và chỉ ra điểm **AI Physical Cut Hallucination**:
+    - Hoàn toàn không có tuyến cáp quang nào bị đứt.
+    - Bản chất sự cố là trung tâm Internet STiX của công ty mẹ Singtel tại Singapore gửi một gói cập nhật định tuyến BGP chứa các thuộc tính bất thường sang mạng Optus.
+    - Router lõi Cisco của Optus thiếu cấu hình bộ lọc giới hạn số tiền tố (`maximum-prefix`), dẫn đến tràn bộ nhớ định tuyến, CPU router vọt lên 100% và kích hoạt cơ chế tự ngắt bảo vệ mạng lõi IP của Optus, làm tê liệt toàn quốc suốt 14 giờ.
+  - Cập nhật mục kiểm định Sự cố #12 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân sự cố giao thức mạng viễn thông.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
