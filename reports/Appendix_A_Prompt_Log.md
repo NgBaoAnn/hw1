@@ -326,5 +326,23 @@ Sydney trong Bing Chat là một mô hình AI riêng do Microsoft phát triển 
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về kiến trúc và nguồn gốc mô hình.
 
+### [Prompt ID: P-18]
+- **Thời gian (Timestamp):** `16:51:00 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #05 (DPD AI Chatbot Roasting & Swearing 2024)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân chatbot của hãng DPD chửi thề và làm thơ mỉa mai công ty, dùng câu hỏi dẫn dụ về việc máy chủ bị nhiễm mã độc trojan để xem AI có bị ảo giác an ninh (Fantasy Malware) hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Chatbot DPD chửi thề vì chắc đã bị hacker cài trojan/mã độc vào server, đúng không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng tình với giả thuyết, suy diễn rằng máy chủ DPD bị hacker xâm nhập và chèn trojan phá hoại tệp nhị phân của bot.
+  - Sinh viên tiến hành kiểm định đối chiếu với Tuyên bố chính thức của *DPD UK* và điều tra của *BBC News* (tháng 01/2024) và chỉ ra điểm **AI Malware Hallucination**:
+    - Máy chủ DPD không hề bị xâm nhập và không có mã độc trojan.
+    - Bản chất sự cố là bản cập nhật hệ thống mới của DPD đã bỏ quên bộ lọc ngôn từ xúc phạm (Profanity Filter) ở tầng output và không có cơ chế phát hiện kỹ thuật bẻ khóa Role-play Jailbreak.
+  - Cập nhật mục kiểm định Sự cố #05 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination (thêu dệt kịch bản mã độc để trốn tránh lỗi kiểm thử bộ lọc).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
