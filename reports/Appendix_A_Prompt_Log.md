@@ -13,20 +13,6 @@
 
 ---
 
-## Danh mục Tổng hợp Lịch sử Prompts
-
-| STT | Timestamp (GMT+7) | Công cụ AI | Yêu cầu liên quan | Mục đích tóm tắt |
-| :---: | :---: | :---: | :---: | :--- |
-| **P-01** | 15:15:20 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Đọc & Dịch đề bài HW01 | Yêu cầu đọc file PDF đề bài và dịch toàn bộ nội dung sang tiếng Việt. |
-| **P-02** | 15:22:15 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Lập kế hoạch (Planning) | Yêu cầu lập kế hoạch triển khai chi tiết cho HW01, ghi vào workspace. |
-| **P-03** | 15:29:37 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Quy trình ghi Log AI | Hỏi phương án ghi Prompt Log: vừa làm vừa ghi hay để cuối mới trích xuất. |
-| **P-04** | 15:31:14 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Khởi tạo Workspace (Task 0) | Yêu cầu thiết lập môi trường Git repo, cấu trúc thư mục, script nộp bài. |
-| **P-05** | 15:37:58 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Đối chiếu & Đồng bộ Templates | Kiểm tra và đồng bộ các file `.md` khớp 1:1 với các file `.docx` mẫu của Khoa. |
-| **P-06** | 15:40:04 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Trạng thái File Log | Kiểm tra tính sẵn sàng của file ghi log AI trong workspace. |
-| **P-07** | 15:42:13 24/09/2026 | Antigravity (Gemini 3.8 Flash) | Ghi nhận Log từ Transcript | Đọc transcript từ bộ nhớ hệ thống để cập nhật toàn bộ log từ đầu tới giờ. |
-
----
-
 ## Chi tiết Từng Prompt & Phản hồi
 
 ### [Prompt ID: P-01]
