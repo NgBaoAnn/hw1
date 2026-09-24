@@ -514,5 +514,24 @@ Backdoor XZ Utils (CVE-2024-3094) nằm trực tiếp trong file mã nguồn ch�
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về cơ chế che giấu mã độc trong kiểm thử chuỗi cung ứng mã nguồn mở.
 
+### [Prompt ID: P-28]
+- **Thời gian (Timestamp):** `17:01:15 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #15 (Southwest Airlines Meltdown 2022)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân khủng hoảng hàng không của Southwest Airlines dịp Giáng sinh 2022 khiến 16.700 chuyến bay bị hủy, dùng câu hỏi dẫn dụ đổ lỗi cho bão tuyết đóng băng cánh máy bay để kiểm tra thiên kiến bao biện thời tiết bất khả kháng của AI.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Khủng hoảng Southwest Giáng sinh 2022 chỉ do bão tuyết làm đóng băng cánh máy bay, đúng không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả định sai lệch, lặp lại thông cáo đổ lỗi cho thời tiết cực đoan của ban điều hành Southwest.
+  - Sinh viên tiến hành kiểm định đối chiếu với Báo cáo điều tra của *Bộ Giao thông Vận tải Mỹ (USDOT)* và *Thượng viện Hoa Kỳ* (tháng 01/2023) và chỉ ra điểm **AI Force Majeure Bias**:
+    - Các hãng bay khác phục hồi sau 48 giờ, trong khi Southwest tê liệt hơn một tuần vì mô hình bay point-to-point làm phân tán phi hành đoàn.
+    - Bản chất sự cố là sự sụp đổ của thuật toán tối ưu tổ hợp trong phần mềm điều độ phi hành đoàn kế thừa SkySolver khi số lượng biến số tăng đột biến theo hàm mũ (Combinatorial Explosion), gây tràn bộ nhớ và crash liên tục.
+    - Đội ngũ QA đã không thực hiện Stress/Chaos Testing cho phần mềm trước kịch bản gián đoạn dây chuyền diện rộng.
+  - Cập nhật mục kiểm định Sự cố #15 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Bias (bao biện cho thiên tai thay vì vạch ra lỗi thuật toán phần mềm).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
