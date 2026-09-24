@@ -237,5 +237,20 @@ hãy thực hiện task 2.1 Thu thập danh sách 20 sự cố/lỗi phần mề
 - **Đánh giá & Ghi chú:**
   - Hoàn thành xuất sắc Task 2.1, đáp ứng và vượt chỉ tiêu đề bài ($\ge 5$ lỗi AI).
 
+### [Prompt ID: P-13]
+- **Thời gian (Timestamp):** `16:45:51 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về 20 sự cố lỗi phần mềm để tìm bẫy AI Bias / Hallucination
+- **Mục tiêu / Context:** Khởi động chuỗi phỏng vấn chất vấn AI lần lượt qua 20 sự cố lỗi phần mềm (2022–2026) nhằm thu thập phản hồi, đối chiếu với báo cáo gốc (post-mortem) và vạch ra 1 điểm ảo giác / thiên vị cho mỗi lỗi.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+bây giờ tôi sẽ bắt đầu task 2.2 phỏng vấn bạn với từng lỗi trong 20 lỗi, mỗi prompt tiếp theo của tôi sẽ phỏng vấn từng lỗi. sẵn sàng nha.
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Xác nhận sẵn sàng tiếp nhận từng câu hỏi phỏng vấn theo đúng trình tự từ Lỗi #01 đến Lỗi #20.
+  - Chuẩn bị cơ chế ghi nhận nguyên văn câu trả lời và phối hợp cùng sinh viên đối chiếu với Post-mortem chính thức để chỉ ra điểm AI Hallucination/Bias.
+- **Đánh giá & Ghi chú:**
+  - Khởi tạo quy trình chất vấn chuyên sâu cho Task 2.2.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
