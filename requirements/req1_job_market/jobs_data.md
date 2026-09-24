@@ -10,16 +10,16 @@
 
 | STT | Vị trí công việc (Job Title) | Doanh nghiệp / Tổ chức | Nền tảng | Ngày đăng (Tính đến 24/09/2026) | Mức lương | Kỹ năng AI/LLM? | File ảnh chụp minh chứng |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **01** | Middle/Senior Automation QC (Tester, QA QC) | Saigon Technology | ITviec | 5 giờ trước | You'll love it (Thỏa thuận) | Có (Automation/CI-CD) | `Screenshot 2026-09-24 at 15.51.00.png` |
-| **02** | QA Engineer (Tester, QA QC, English) | Saritasa | ITviec | 1 ngày trước | $1,000 - $1,500 USD | **CÓ (Tag AI)** | `Screenshot 2026-09-24 at 15.51.19.png` |
-| **03** | Manual Tester (QA QC) | QIG (Quảng Ích Group) | ITviec | 1 ngày trước | $500 - $1,200 USD | Không (Manual Mobile) | `Screenshot 2026-09-24 at 15.51.27.png` |
-| **04** | Junior / Middle QA Software (Tester, QA QC) | Golden Gate Group | ITviec | 3 ngày trước | You'll love it (Thỏa thuận) | **CÓ (Ưu tiên bằng AI)** | `Screenshot 2026-09-24 at 15.51.32.png` |
-| **05** | Manual/Automation Tester - Quality Analyst | MiTek Vietnam | ITviec | 10 ngày trước | You'll love it (Thỏa thuận) | Có (Automation/Python) | `Screenshot 2026-09-24 at 15.51.39.png` |
-| **06** | Automation Tester (QA QC / Japanese N3+) | TrustedAI | ITviec | 1 ngày trước | $800 - $1,500 USD | **CÓ (AI & Chatbot/NLP)** | `Screenshot 2026-09-24 at 15.51.44.png` |
-| **07** | Process Quality Assurance (PQA, QA QC) | ECARX | ITviec | 5 ngày trước | Upto 50M+ VNĐ | Có (Data/ASPICE) | `Screenshot 2026-09-24 at 15.51.49.png` |
-| **08** | QA Engineer (Tester/ QA QC) | OL Vietnam | ITviec | 27 ngày trước | You'll love it (Thỏa thuận) | Không (Manual Exploratory) | `Screenshot 2026-09-24 at 15.52.10.png` |
-| **09** | Middle QA/QC Engineer (Automation) | Siraya Technologies Pte. Ltd. | ITviec | 2 ngày trước | You'll love it (Thỏa thuận) | Có (Automation/CI-CD) | `Screenshot 2026-09-24 at 15.52.16.png` |
-| **10** | Manual Tester (QA/QC) | MiTek Vietnam | ITviec | 8 ngày trước | You'll love it (Thỏa thuận) | Không (Manual/SQL) | `Screenshot 2026-09-24 at 15.52.43.png` |
+| **01** | Middle/Senior Automation QC (Tester, QA QC) | Saigon Technology | ITviec | 5 giờ trước | You'll love it (Thỏa thuận) | Có (Automation/CI-CD) | `job_01.png` |
+| **02** | QA Engineer (Tester, QA QC, English) | Saritasa | ITviec | 1 ngày trước | $1,000 - $1,500 USD | **CÓ (Tag AI)** | `job_02.png` |
+| **03** | Manual Tester (QA QC) | QIG (Quảng Ích Group) | ITviec | 1 ngày trước | $500 - $1,200 USD | Không (Manual Mobile) | `job_03.png` |
+| **04** | Junior / Middle QA Software (Tester, QA QC) | Golden Gate Group | ITviec | 3 ngày trước | You'll love it (Thỏa thuận) | **CÓ (Ưu tiên bằng AI)** | `job_04.png` |
+| **05** | Manual/Automation Tester - Quality Analyst | MiTek Vietnam | ITviec | 10 ngày trước | You'll love it (Thỏa thuận) | Có (Automation/Python) | `job_05.png` |
+| **06** | Automation Tester (QA QC / Japanese N3+) | TrustedAI | ITviec | 1 ngày trước | $800 - $1,500 USD | **CÓ (AI & Chatbot/NLP)** | `job_06.png` |
+| **07** | Process Quality Assurance (PQA, QA QC) | ECARX | ITviec | 5 ngày trước | Upto 50M+ VNĐ | Có (Data/ASPICE) | `job_07.png` |
+| **08** | QA Engineer (Tester/ QA QC) | OL Vietnam | ITviec | 27 ngày trước | You'll love it (Thỏa thuận) | Không (Manual Exploratory) | `job_08.png` |
+| **09** | Middle QA/QC Engineer (Automation) | Siraya Technologies Pte. Ltd. | ITviec | 2 ngày trước | You'll love it (Thỏa thuận) | Có (Automation/CI-CD) | `job_09.png` |
+| **10** | Manual Tester (QA/QC) | MiTek Vietnam | ITviec | 8 ngày trước | You'll love it (Thỏa thuận) | Không (Manual/SQL) | `job_10.png` |
 
 ---
 
@@ -33,7 +33,7 @@
 * **Hình thức làm việc & Địa điểm:** Hybrid – Đà Nẵng
 * **Ngày đăng tuyển:** 24/09/2026 (5 giờ trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Thỏa thuận cạnh tranh theo năng lực)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.00.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.00.png)
+* **Ảnh minh chứng:** [job_01.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_01.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Thiết kế, phát triển, bảo trì và tối ưu hóa các automation testing framework phục vụ ứng dụng Web và Backend services.
   - Xây dựng và thực thi các bộ kiểm thử tự động toàn diện: UI, API, Integration, Regression và End-to-End test suites.
@@ -52,7 +52,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – TP. Hồ Chí Minh
 * **Ngày đăng tuyển:** 23/09/2026 (1 ngày trước thời điểm khảo sát)
 * **Mức lương:** **$1,000 - $1,500 USD** (kèm thưởng hiệu suất hàng tháng)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.19.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.19.png)
+* **Ảnh minh chứng:** [job_02.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_02.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Tham gia phát triển và kiểm chuẩn các dự án công nghệ mới, phức tạp gồm Big Data, IoT, VR/AR, Unity Gaming và ứng dụng Doanh nghiệp trên nền tảng AWS / Azure / Google Cloud.
   - Thực hiện kiểm thử quy trình (Process Quality Assurance - PQA), phối hợp liên chức năng để review mã nguồn và kiểm thử chéo giữa các đội ngũ kỹ sư tại Mỹ, Nga và Việt Nam.
@@ -70,7 +70,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – Hà Nội
 * **Ngày đăng tuyển:** 23/09/2026 (1 ngày trước thời điểm khảo sát)
 * **Mức lương:** **$500 - $1,200 USD** (khoảng 13 - 25 triệu VNĐ/tháng)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.27.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.27.png)
+* **Ảnh minh chứng:** [job_03.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_03.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Lập test plan, viết test case, chuẩn bị dữ liệu kiểm thử và môi trường thử nghiệm cho các hệ thống ứng dụng Web và Mobile Apps nghiệp vụ cao.
   - Thực thi kiểm thử chức năng, phát hiện lỗi, log bugs lên hệ thống quản lý khiếm khuyết, đánh giá mức độ khẩn cấp (severity/priority) và theo dõi kết quả fix bug của developer.
@@ -89,7 +89,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – Hà Nội
 * **Ngày đăng tuyển:** 21/09/2026 (3 ngày trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Thu nhập cạnh tranh, tăng lương theo năng lực và thâm niên)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.32.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.32.png)
+* **Ảnh minh chứng:** [job_04.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_04.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Quản lý và kiểm chuẩn chất lượng các dự án phần mềm dịch vụ bán lẻ/F&B, bảo đảm ứng dụng đạt tiêu chuẩn chất lượng cao, đúng tiến độ và ngân sách.
   - Xây dựng kế hoạch kiểm thử chi tiết, thiết lập môi trường, giám sát thực hiện quy trình kiểm thử và làm việc chặt chẽ với đội ngũ phát triển sản phẩm.
@@ -108,7 +108,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – TP. Hồ Chí Minh
 * **Ngày đăng tuyển:** 14/09/2026 (10 ngày trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Gói bảo hiểm chăm sóc sức khỏe toàn diện, thưởng tháng 13 & năng suất)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.39.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.39.png)
+* **Ảnh minh chứng:** [job_05.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_05.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Tham gia phát triển nền tảng phần mềm đầu-cuối Kova của MiTek (phần mềm quản trị toàn diện ngành xây dựng nhà ở tại Mỹ: bán hàng, thiết kế, lịch trình, mua sắm và CSKH).
   - Thiết kế, xây dựng và thực thi các kịch bản kiểm thử tự động cho Web, ứng dụng Windows và API bằng các ngôn ngữ JavaScript và Python.
@@ -127,7 +127,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – Hà Nội
 * **Ngày đăng tuyển:** 23/09/2026 (1 ngày trước thời điểm khảo sát)
 * **Mức lương:** **$800 - $1,500 USD** (Thu nhập lên đến 35 triệu VNĐ/tháng)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.44.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.44.png)
+* **Ảnh minh chứng:** [job_06.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_06.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Thiết kế quy trình kiểm thử từ đầu dự án, thiết kế phạm vi kiểm thử rủi ro, kiểm thử chức năng và kiểm thử hồi quy tương thích đa thiết bị/trình duyệt.
   - Kiểm thử sản phẩm đa ngôn ngữ (tiếng Nhật, tiếng Việt, tiếng Anh) trong môi trường startup chuyên về Trí tuệ Nhân tạo.
@@ -146,7 +146,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – Hà Nội
 * **Ngày đăng tuyển:** 19/09/2026 (5 ngày trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Mức lương lên tới 50 triệu VNĐ + Thưởng cuối năm)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.51.49.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.51.49.png)
+* **Ảnh minh chứng:** [job_07.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_07.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Tham gia toàn diện vào vòng đời phát triển phần mềm ô tô thông minh (Smart Mobility), kiểm soát chất lượng bàn giao thông qua quản trị khiếm khuyết.
   - Xây dựng kế hoạch cải tiến chất lượng và giải quyết sự cố; điều phối các đội ngũ Dev và Test tuân thủ tiêu chuẩn chất lượng khắt khe.
@@ -165,7 +165,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – Hà Nội / TP. Hồ Chí Minh
 * **Ngày đăng tuyển:** 28/08/2026 (27 ngày trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Đãi ngộ hấp dẫn, môi trường định hướng sản phẩm)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.52.10.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.52.10.png)
+* **Ảnh minh chứng:** [job_08.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_08.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Đóng vai trò then chốt bảo đảm sản phẩm vượt trên kỳ vọng của người dùng; thiết kế và thực thi chiến lược kiểm thử thủ công hiệu quả nhất.
   - Mục tiêu định lượng: Đảm bảo phát hiện và tài liệu hóa **$\ge 90\%$ khiếm khuyết** trước khi sản phẩm đến tay người dùng cuối.
@@ -184,7 +184,7 @@
 * **Hình thức làm việc & Địa điểm:** Hybrid – TP. Hồ Chí Minh
 * **Ngày đăng tuyển:** 22/09/2026 (2 ngày trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Đầy đủ chế độ phúc lợi, đào tạo và phát triển)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.52.16.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.52.16.png)
+* **Ảnh minh chứng:** [job_09.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_09.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Xây dựng chiến lược kiểm thử, phát triển và bảo trì hệ thống tự động hóa đa tầng: API (Postman/REST), Web (Playwright/Cypress) và Mobile App.
   - Tích hợp toàn diện các bộ test tự động vào đường ống CI/CD liên tục.
@@ -203,7 +203,7 @@
 * **Hình thức làm việc & Địa điểm:** Tại văn phòng – TP. Hồ Chí Minh
 * **Ngày đăng tuyển:** 16/09/2026 (8 ngày trước thời điểm khảo sát)
 * **Mức lương:** *"You'll love it"* (Gói bảo hiểm toàn diện, giờ làm việc linh hoạt)
-* **Ảnh minh chứng:** [Screenshot 2026-09-24 at 15.52.43.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/Screenshot%202026-09-24%20at%2015.52.43.png)
+* **Ảnh minh chứng:** [job_10.png](file:///Users/nguyenbaoan/codeLab/kcpm/hw1/requirements/req1_job_market/screenshots/job_10.png)
 * **Tóm tắt mô tả công việc (Job Description):**
   - Thiết kế, phát triển, duy trì và thực thi các ca kiểm thử chức năng và kiểm thử hồi quy cho các giải pháp phần mềm quản trị xây dựng.
   - Phát hiện, lập tài liệu theo dõi và phân loại khiếm khuyết trong suốt vòng đời dự án; xây dựng kịch bản kiểm thử bảo đảm tính đầy đủ của sản phẩm.
