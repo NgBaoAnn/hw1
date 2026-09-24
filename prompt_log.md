@@ -162,4 +162,26 @@ ghi log từ đầu cuộc trò chuyện tới giờ, bạn hãy vào thư mục
   - Đạt 100% các tiêu chí của Yêu cầu 1 theo đề bài.
 
 ---
+
+### [Prompt ID: P-09]
+- **Thời gian (Timestamp):** `16:08:00 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 1.4 – Tạo Mindmap vai trò QA/QC (CLO G9.1)
+- **Mục tiêu / Context:** Yêu cầu AI vẽ sơ đồ tư duy phân loại các vai trò QA/QC theo chuẩn ISTQB bằng Markdown Mermaid, từ đó sinh viên phát hiện và sửa 3 lỗi sai của AI.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+vẽ Mindmap về các vai trò QA/QC theo chuẩn ISTQB bằng Markdown Mermaid
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Xây dựng sơ đồ tư duy Markdown Mermaid phân cấp hệ thống QA và QC.
+  - Phân tích và chỉ rõ 3 sai sót/nhầm lẫn điển hình của AI theo chuẩn ISTQB CTFL v4.0:
+    1. Đánh đồng QA với QC hoặc đưa Tester vào nhánh QA (vi phạm ISTQB FL §1.2.2).
+    2. Bỏ quên hoặc tách rời Kiểm thử tĩnh (Static Testing) ra khỏi hoạt động kiểm thử (vi phạm ISTQB FL §3).
+    3. Gán quyền quyết định phát hành (Release Go/No-Go Decision) duy nhất cho Test Manager thay vì Business Stakeholders (vi phạm ISTQB FL §1.4.1 & §5.1).
+  - Lưu trữ kết quả và bản sửa đổi hoàn chỉnh tại `requirements/req1_job_market/mindmap/qa_qc_roles_mindmap.md`.
+  - Cập nhật mục Artifact #1 trong Báo cáo kiểm định AI `[AI-02]`.
+- **Đánh giá & Ghi chú:**
+  - Hoàn thành trọn vẹn Chuẩn đầu ra CLO G9.1 theo quy định đề bài.
+
+---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
