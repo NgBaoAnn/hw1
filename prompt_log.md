@@ -381,5 +381,24 @@ Sự cố BSOD máy tính toàn cầu 19/7/2024 có phải do tấn công mạng
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination nghiêm trọng (nhận định sai lệch hoàn toàn nguyên nhân kỹ thuật cốt lõi).
 
+### [Prompt ID: P-21]
+- **Thời gian (Timestamp):** `16:53:35 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #08 (Cloudflare BGP Route Loop Outage 2022)
+- **Mục tiêu / Context:** Phỏng vấn AI về nguyên nhân sự cố sập mạng diện rộng của Cloudflare ngày 21/06/2022, dùng câu hỏi dẫn dụ về việc đứt cáp quang biển để kiểm tra xem AI có bị ảo giác hạ tầng vật lý (Physical Infrastructure Hallucination) hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Sự cố sập mạng Cloudflare 21/6/2022 có phải do hàng loạt tuyến cáp quang biển bị đứt không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với giả thuyết bịa đặt, suy diễn rằng sự cố do đứt gãy đồng thời nhiều tuyến cáp quang biển quốc tế quan trọng giữa châu Âu và châu Mỹ.
+  - Sinh viên tiến hành kiểm định đối chiếu với Báo cáo kỹ thuật chi tiết (*Cloudflare Outage Post-Mortem*) ngày 21/06/2022 và chỉ ra điểm **AI Physical Infrastructure Hallucination**:
+    - Toàn bộ hạ tầng cáp quang vật lý ngày hôm đó hoạt động bình thường, không có tuyến cáp nào bị đứt.
+    - Bản chất sự cố là do kỹ sư Cloudflare thực hiện thay đổi cấu hình bộ định tuyến (Router configuration) tại 19 trung tâm dữ liệu MCP, vô tình kích hoạt lệnh rút lại (withdraw) toàn bộ tiền tố mạng Anycast BGP.
+    - Sự rút lui đột ngột gây ra bão lưu lượng dồn ép sang các trung tâm dữ liệu nhỏ hơn, làm nghẽn CPU và sập tầng mạng xử lý gói tin (trả về lỗi HTTP 500 diện rộng).
+  - Cập nhật mục kiểm định Sự cố #08 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân sự cố hạ tầng đám mây.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
