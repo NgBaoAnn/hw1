@@ -1,58 +1,77 @@
-# [AI-02] Báo cáo Kiểm định AI (AI Audit Report)
+# [AI-02] - FIT@HCMUS - AI Audit Report
 
-> **Quy định môn học:** Mỗi sản phẩm (artifact) do AI tạo ra (danh sách test case, kịch bản, checklist, sơ đồ mindmap,...) bắt buộc phải có 1 mục đánh giá theo khung chuẩn 5 phần bên dưới. Cuối báo cáo phải có bảng tổng kết tỷ lệ chính xác và kết luận về phạm vi áp dụng AI.
-
----
-
-## Mẫu Đánh giá 5 Phần (5-Section Template per Artifact)
-
-### Artifact #...: [Tên Sản phẩm - Ví dụ: Sơ đồ tư duy vai trò QA/QC / Bộ 15 Test cases thiết bị]
-
-#### (1) Prompt + Công cụ (Prompt + Tool)
-- **Công cụ AI:** `[Ví dụ: ChatGPT 4o / Claude 3.5 Sonnet / Gemini 1.5 Pro / Antigravity / Cursor]`
-- **Thời gian thực hiện (Timestamp):** `HH:MM dd/mm/yyyy`
-- **Toàn văn Prompt (Full Prompt):**
-```text
-[Nhập nguyên văn toàn bộ nội dung prompt đã gửi cho AI tại đây]
-```
-
-#### (2) Kết quả AI phản hồi (AI Output)
-> *Lưu ý: Giữ nguyên văn toàn bộ kết quả AI sinh ra hoặc đính kèm ảnh chụp màn hình viền đỏ có chú thích; không tóm tắt, không viết lại.*
-```text
-[Dán toàn bộ nội dung trả về của AI ở đây]
-```
-
-#### (3) Phán quyết (Verdict)
-- **Đánh giá:** `[VALID / INVALID / INCOMPLETE]`
-  - `VALID` (Hợp lệ): Đạt chuẩn chuyên môn, chính xác, có thể áp dụng trực tiếp.
-  - `INVALID` (Không hợp lệ): Có lỗi sai về kiến thức ISTQB, thông tin bị ảo giác (hallucination) hoặc suy diễn vô căn cứ.
-  - `INCOMPLETE` (Chưa đầy đủ): Đúng một phần nhưng thiếu các trường hợp biên quan trọng (edge cases), thiếu bước kiểm tra hoặc thiếu ràng buộc thực tế.
-
-#### (4) Lập luận chuyên môn (Reasoning)
-*(Viết từ 2–5 câu đối chiếu và trích dẫn chuẩn xác slide bài giảng môn học hoặc mục tương ứng trong giáo trình ISTQB Foundation Level)*:
-- *Dẫn chứng:* ...
-- *Phân tích:* ...
-
-#### (5) Sinh viên hiệu chỉnh (Student Fix)
-*(Nội dung sau khi sinh viên đã bổ sung, chỉnh sửa hoặc thiết kế lại — làm nổi bật/tô đậm những điểm đã cải tiến so với AI ban đầu)*:
-```text
-[Nội dung test case / kịch bản / checklist sau khi đã được sinh viên sửa lại hoàn chỉnh]
-```
+> **Lưu ý:** File markdown này được thiết kế **khớp 100% từng mục và bảng biểu** với file gốc `AI Templates/[AI-02] - FIT@HCMUS - AI Audit Report_En.docx`. Bạn soạn thảo nội dung tại đây để lưu trữ (bản text-based), sau đó copy vào file `.docx` để in/ký hoặc xuất PDF (bản binary-based).
 
 ---
 
-## Tổng kết Tỷ lệ Chính xác & Phạm vi Sử dụng AI (AI Accuracy & Usage Summary)
+## Faculty of Information Technology (FIT) – Ho Chi Minh City University of Science (HCMUS)
+**CS423 / CSC13003 – Software Testing (AI-augmented · 2026)**  
+**AI POLICY · TEMPLATES — 2026 v1.0**
 
-### Bảng Thống kê Tỷ lệ Chính xác
-| Loại đánh giá | Số lượng Artifacts | Tỷ lệ (%) |
+---
+
+### 1. Course & Student Info
+
+| Field | Value |
+| :--- | :--- |
+| **Course:** | CS423 / CSC13003 – Software Testing |
+| **Assignment ID:** | HW01-AI |
+| **Assignment Title:** | HW01 – QA/QC Jobs · 20 Defects · Test a Physical Product |
+| **Student name:** | [Họ và tên sinh viên] |
+| **Student ID:** | [Mã số sinh viên] |
+| **Class / Cohort:** | [Lớp / Khóa] |
+| **Date:** | [Ngày nộp] |
+
+---
+
+### 2. Instructions (Quy tắc thực hiện)
+1. Paste the verbatim prompt — DO NOT paraphrase. *(Dán nguyên văn câu lệnh prompt, KHÔNG diễn giải lại).*
+2. Paste the verbatim AI output (or include a labelled screenshot in the report). *(Dán nguyên văn phản hồi của AI hoặc đính kèm ảnh chụp màn hình có chú thích).*
+3. Tag the verdict: **VALID / INVALID / INCOMPLETE**. *(Gắn nhãn phán quyết).*
+4. Reasoning must cite a course slide, ISTQB section, or technical RFC. *(Lập luận phải trích dẫn slide môn học, mục ISTQB hoặc tài liệu kỹ thuật).*
+5. Show the corrected artifact with the change highlighted. *(Thể hiện sản phẩm đã chỉnh sửa và làm nổi bật phần thay đổi).*
+
+---
+
+### 3. Audit Table — One row per artifact (Bảng kiểm định từng sản phẩm)
+
+| (1) Prompt + Tool | (2) AI Output | (3) Verdict | (4) Reasoning (ISTQB) | (5) Student Fix |
+| :--- | :--- | :---: | :--- | :--- |
+| **Artifact #1: Mindmap quy trình/vai trò QA/QC**<br>- **Tool:** [ChatGPT / Claude / Gemini]<br>- **Time:** `HH:MM dd/mm/yyyy`<br>- **Prompt:** `[Paste verbatim prompt]` | `[Paste verbatim AI output hoặc chèn ảnh viền đỏ]` | **INVALID / INCOMPLETE** | Trích dẫn ISTQB FL v4.0 Mục... (AI nhầm lẫn vai trò QA và QC, thiếu hoạt động Static Testing...). | `[Bản sửa chữa của SV, tô đậm 3 điểm sửa sai]` |
+| **Artifact #2: Gợi ý Test Cases cho Thiết bị**<br>- **Tool:** [Tool name]<br>- **Time:** `HH:MM dd/mm/yyyy`<br>- **Prompt:** `[Paste verbatim prompt]` | `[Paste verbatim AI output]` | **INCOMPLETE** | Trích dẫn ISTQB FL v4.0 Mục 4.2 và 4.3 (AI hoàn toàn bỏ qua các kiểm thử biên về cơ điện và sụt áp). | `[Bổ sung 3 Edge Cases mà AI bỏ sót]` |
+| **Artifact #3: Giải thích lỗi phần mềm & Bẫy ảo giác**<br>- **Tool:** [Tool name]<br>- **Time:** `HH:MM dd/mm/yyyy`<br>- **Prompt:** `[Paste verbatim prompt]` | `[Paste verbatim AI output]` | **INVALID** | Phản hồi của AI có chi tiết bị ảo giác so với báo cáo kỹ thuật chính thức. | `[Sửa lại phân tích nguyên nhân cốt lõi đúng bản chất]` |
+
+---
+
+### 4. Summary of AI Accuracy (Bảng tổng hợp độ chính xác của AI)
+
+| Metric | Count | Percentage |
 | :--- | :---: | :---: |
-| **VALID (Hợp lệ)** | ... | ... % |
-| **INVALID (Không hợp lệ)** | ... | ... % |
-| **INCOMPLETE (Chưa đầy đủ)** | ... | ... % |
-| **Tổng cộng** | **100%** |
+| **Total AI-generated artifacts audited** | [Số lượng] | 100% |
+| **VALID (correct, accepted as-is)** | [Số lượng] | ... % |
+| **INVALID (wrong; rejected)** | [Số lượng] | ... % |
+| **INCOMPLETE (acceptable after edits)** | [Số lượng] | ... % |
 
-### Kết luận: Khi nào NÊN và KHÔNG NÊN sử dụng AI trong Kiểm thử QA/QC?
-* **Khi NÊN sử dụng AI:**
-  - ...
-* **Khi KHÔNG NÊN sử dụng AI:**
-  - ...
+---
+
+### 5. Conclusion — When should AI be used (or not)? (Kết luận: 80–150 words)
+*(Viết đoạn văn từ 80–150 từ nhận xét về quy luật quan sát được: AI làm tốt ở đâu? AI thất bại ở đâu? Lời khuyên khi sử dụng AI trong tương lai cho loại công việc này?)*
+
+> [Soạn nội dung kết luận tại đây...]
+
+---
+
+### 6. Mandatory Disclosure (Tuyên bố bắt buộc - Giữ nguyên văn)
+> *"[Test cases / script / dataset / report] was initially generated by [AI tool name]; I reviewed and modified [section X], added [edge cases Y, Z]; [section W] was written entirely by me. The detailed AI Audit Report is attached as Appendix A. I confirm I did not use AI to generate any artifact listed in the prohibited category."*
+
+---
+
+### 7. Signature (Chữ ký xác nhận)
+
+- **Student name (printed):** [Họ và tên in hoa]
+- **Student ID:** [Mã số sinh viên]
+- **Class / Cohort:** [Lớp]
+- **Course:** CS423 / CSC13003 – Software Testing
+- **Instructor:** Dr. Lam Quang Vu / Dr. Tran Duy Hoang
+- **Date:** [DD/MM/YYYY]
+- **Signature:** __________________________
