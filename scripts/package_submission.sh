@@ -47,6 +47,9 @@ if [ $MISSING_FILES -gt 0 ]; then
     echo "Cảnh báo: Có $MISSING_FILES file chưa hoàn thiện. Vui lòng kiểm tra lại."
 fi
 
+# Đảm bảo prompt_log.md luôn đồng bộ với reports/Appendix_A_Prompt_Log.md
+cp -f reports/Appendix_A_Prompt_Log.md prompt_log.md
+
 # 3. Tạo file nén
 echo "==> 3. Tiến hành đóng gói file zip..."
 rm -f "${ZIP_NAME}"
@@ -54,6 +57,8 @@ zip -r "${ZIP_NAME}" \
     requirements \
     reports \
     templates \
+    "AI Templates" \
+    prompt_log.md \
     PLAN_HW01.md \
     note.txt \
     -x "*.DS_Store" -x "__MACOSX*" -x "*.git*"
