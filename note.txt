@@ -1,0 +1,23 @@
+Sau đây là một số ý chung cho các bài HW.
+
+Các bạn bám theo, để khi làm bài, trình bày kết quả bài làm, ko bị thiếu sót điểm.
+
+1. HW làm theo nhóm, nhưng được chia khá rõ ràng theo cá nhân. Thành viên trong nhóm phải hỗ trợ giúp đỡ nhau, nhưng tránh làm trùng lắp.
+
+2. SV được phép sử dụng AI trong quá trình làm bài. Có thể dùng AI từ đầu, sau đó hiệu chỉnh, review. Hoặc tự bản thân làm, rồi nhờ AI hiệu chỉnh, review.
+
+3. SV phải review và chịu trách nhiệm trên chất lượng bài làm.
+
+4. Dùng Git, ghi log toàn bộ quá trình làm việc, quá trình trao đổi với AI.
+
+5. GV khi chấm bài sẽ dùng AI để scan qua các nội dung và GV kiểm tra thủ công một số nội dung. GV sẽ chịu trách nhiệm giải trình trên kết quả đưa ra cho SV. SV khi nộp cần cung cấp đầy đủ 2 versions: text based files và binary based files.
+
+6. Điểm số thường <= 9. Điểm 10 chỉ có với các bài toàn hoàn hảo về nội dung và hình thức bài làm.
+
+Please use the following command to extract your Git commit log for each homework assignment.
+
+git log --graph --all --stat
+
+
+
+Alternatively, if you know of a more detailed or comprehensive command, feel free to use that instead.
