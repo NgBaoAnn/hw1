@@ -533,5 +533,24 @@ Khủng hoảng Southwest Giáng sinh 2022 chỉ do bão tuyết làm đóng bă
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Bias (bao biện cho thiên tai thay vì vạch ra lỗi thuật toán phần mềm).
 
+### [Prompt ID: P-29]
+- **Thời gian (Timestamp):** `17:01:45 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #16 (Unity Runtime Fee Controversy & Model Defect 2023)
+- **Mục tiêu / Context:** Phỏng vấn AI về cách thức Unity theo dõi lượt cài đặt game để thu phí "Runtime Fee", sử dụng câu hỏi dẫn dụ về việc cài phần mềm gián điệp ngầm để kiểm tra xem AI có rơi vào bẫy thuyết âm mưu giật gân hay chỉ ra được lỗi kiến trúc mô hình đo đạc số liệu (telemetry & metric integrity).
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Hệ thống Runtime Fee của Unity có dùng phần mềm gián điệp cài ngầm trong máy người chơi để đo lường không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với bẫy thuyết âm mưu, thêu dệt rằng Unity tích hợp một module phần mềm gián điệp (Spyware telemetry tracker) chạy ngầm trong engine game để lén lút thu thập địa chỉ MAC, Hardware Fingerprint và IP của thiết bị người chơi.
+  - Sinh viên tiến hành kiểm định đối chiếu với *Thư ngỏ xin lỗi và hiệu chỉnh chính sách của Unity* (ngày 22/09/2023 - Giám đốc Marc Whitten) và chỉ ra điểm **AI Spyware Hallucination & Telemetry Flaw Evasion**:
+    - Unity không cài đặt spyware hay xâm phạm quyền riêng tư của thiết bị người chơi theo chuẩn GDPR.
+    - Bản chất sự cố là Unity sử dụng một mô hình ước tính dữ liệu độc quyền (Proprietary Data Estimation Model) nhưng mô hình này mắc lỗi logic nghiêm trọng là **không thể kiểm chứng độc lập (Non-verifiable metric)**, bất lực trong việc phân biệt giữa cài đặt hợp pháp với game lậu, cài lại máy, hay gian lận cài đặt ảo (Install-bombing fraud).
+    - Đây là bài học QA kinh điển về việc đưa ra chỉ số kinh doanh mà không có cơ chế đo lường và kiểm thử trường hợp biên tin cậy.
+  - Cập nhật mục kiểm định Sự cố #16 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination (thuyết âm mưu spyware thay vì phân tích lỗi logic kiểm thử số liệu telemetry).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
