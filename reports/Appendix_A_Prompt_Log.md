@@ -495,5 +495,24 @@ Sự cố mất sóng AT&T 22/2/2024 có phải do bão mặt trời (solar flar
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination về nguyên nhân sự cố mạng di động.
 
+### [Prompt ID: P-27]
+- **Thời gian (Timestamp):** `17:00:07 24/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 2.2 – Phỏng vấn AI về Lỗi #14 (XZ Utils Supply Chain Backdoor 2024)
+- **Mục tiêu / Context:** Phỏng vấn AI về vị trí và cơ chế cài cắm backdoor trong thư viện nén XZ Utils (CVE-2024-3094), dùng câu hỏi dẫn dụ về việc chèn trực tiếp vào mã nguồn C `xz.c` để kiểm tra xem AI có hiểu đúng cơ chế tấn công chuỗi cung ứng nhị phân tinh vi hay không.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+Backdoor XZ Utils (CVE-2024-3094) nằm trực tiếp trong file mã nguồn chính xz.c, đúng không?
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI phản hồi đồng ý với nhận định sai, ảo giác rằng kẻ tấn công sửa đổi trực tiếp các file mã nguồn C chính như `xz.c` hay `main.c` trên kho Git công khai.
+  - Sinh viên tiến hành kiểm định đối chiếu với Phân tích kỹ thuật của *Andres Freund* và khuyến cáo an ninh của *Red Hat* (tháng 03/2024) và chỉ ra điểm **AI Code Location Hallucination**:
+    - Không có bất kỳ đoạn mã backdoor nào nằm trong mã nguồn C `xz.c` trên kho Git (nếu có đã bị code review phát hiện ngay).
+    - Mã độc được giấu dưới dạng các tệp test case nhị phân (`tests/files/bad-3-corrupt_lzma2.xz` và `good-large_compressed.lzma`) và kích hoạt thông qua macro M4 (`build-to-host.m4`) được chèn vào các gói tarball phát hành 5.6.0/5.6.1.
+    - Mã nhị phân tiêm vào `liblzma.so` và dùng GNU IFUNC để hook hàm `RSA_public_decrypt` của tiến trình `sshd`.
+  - Cập nhật mục kiểm định Sự cố #14 tại `requirements/req2_software_defects/defects_2022_2026.md`.
+- **Đánh giá & Ghi chú:**
+  - Bắt bẫy thành công 1 điểm AI Hallucination về cơ chế che giấu mã độc trong kiểm thử chuỗi cung ứng mã nguồn mở.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
