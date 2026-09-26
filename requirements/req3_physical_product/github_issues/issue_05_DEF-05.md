@@ -4,7 +4,7 @@
 - **Mức độ nghiêm trọng (Severity):** High / Electrical Fire Safety Hazard
 - **Khả năng tái hiện (Reproducibility):** 100% khi nhấn hờ phím khoảng 50% hành trình
 - **Mã kiểm thử liên quan:** `TC-15 (Edge Case #4 - AI Missed)`
-- **Video minh chứng (YouTube Unlisted):** `[Dán link Video 5 của sinh viên tại đây]`
+- **Video minh chứng (YouTube Unlisted):** https://youtube.com/shorts/NZP3v1SyXfY?feature=share
 
 ---
 

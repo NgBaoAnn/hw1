@@ -141,11 +141,14 @@ hw1/
   - Soạn thảo bảng 15 test cases chuẩn theo ISTQB CTFL v4.0 vào `requirements/req3_physical_product/test_cases.md` gồm đầy đủ các cột: ID | Nhóm | Objective | Input | Steps | Expected | Actual | Verdict | Khiếm khuyết & Video Demo.
   - Lồng ghép 4 Edge Cases (`TC-12`, `TC-13`, `TC-14`, `TC-15`) phát hiện 5 lỗi vật lý thực tế (`DEF-01` đến `DEF-05`).
   - Xuất bảng tính `test_cases.csv` và sinh file Excel chuẩn `requirements/req3_physical_product/test_cases_and_summary.xlsx`.
-- [ ] **Bước 3.5: Thực nghiệm trên thiết bị & Quay $\ge 5$ video demo (Thời lượng $\le 60$s):**
-  - Chọn ra $\ge 5$ test case (ưu tiên các edge case hoặc các ca phát hiện lỗi/hành vi bất thường).
-  - Thực hiện trên thiết bị thật, quay video rõ nét và **nói thuyết minh trực tiếp bằng giọng của mình**.
-  - Tải video lên YouTube ở chế độ **Không công khai (Unlisted)**.
-  - Tổng hợp link video vào báo cáo.
+- [x] **Bước 3.5: Thực nghiệm trên thiết bị & Quay $\ge 5$ video demo (Thời lượng $\le 60$s):**
+  - Đã thực hiện trên thiết bị quạt Senko L1638 thật và quay 5 video demo có giọng thuyết minh của sinh viên.
+  - Tải lên YouTube (Unlisted) thành công và tích hợp vào `requirements/req3_physical_product/test_cases.md` cùng các GitHub Issues:
+    1. Video 1 (TC-12 / DEF-01): https://youtube.com/shorts/NK6kk9AF39U?feature=share
+    2. Video 2 (TC-13 / DEF-02): https://youtube.com/shorts/TQMrprni0oY?feature=share
+    3. Video 3 (TC-14 / DEF-03): https://youtube.com/shorts/edU_0xoc_JI?feature=share
+    4. Video 4 (TC-09 / DEF-04): https://youtube.com/shorts/jCHATpMITFI?feature=share
+    5. Video 5 (TC-15 / DEF-05): https://youtube.com/shorts/NZP3v1SyXfY?feature=share
 - [ ] **Bước 3.6: Ghi nhận lỗi lên GitHub Issues (Thay thế Mantis):**
   - Ghi nhận các khiếm khuyết/bất cập phát hiện được trong quá trình test thành các Issue trên GitHub repository cá nhân.
   - Chụp ảnh màn hình trang Issues có hiển thị rõ GitHub Username của sinh viên.

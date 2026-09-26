@@ -54,28 +54,28 @@ graph LR
    - **Tiêu đề:** Demo TC-12: Kẹt phím cơ liên động và xung đột dòng stator khi nhấn đồng thời 2 phím tốc độ.
    - **Kịch bản thuyết minh:** *"Xin chào thầy cô, đây là test case TC-12 trên quạt Senko L1638. Em dùng hai ngón tay ấn đồng thời phím số 1 và số 2. Kết quả là cả hai phím bị kẹt cứng ở vị trí lơ lửng, không nảy lên được. Đồng thời động cơ phát ra tiếng rên từ trường rất lớn và cánh quạt quay giật cục do hai cuộn dây bị cấp điện song song, gây quá dòng rất nguy hiểm."*
    - **Thời lượng:** ~ 35 giây.
-   - **Link YouTube (Unlisted):** `[Dán đường link YouTube Unlisted của sinh viên tại đây]`
+   - **Link YouTube (Unlisted):** [https://youtube.com/shorts/NK6kk9AF39U?feature=share](https://youtube.com/shorts/NK6kk9AF39U?feature=share)
 
 2. **Video 2 (Minh chứng Defect DEF-02 từ TC-13):**
    - **Tiêu đề:** Demo TC-13: Trượt vấu bánh răng hộp số túp-năng khi gặp vật cản cưỡng bức.
    - **Kịch bản thuyết minh:** *"Đây là test case TC-13 kiểm tra túp-năng quạt khi bị cản trở. Quạt đang xoay ở số 2, em dùng tay giữ cố định bầu quạt lại mô phỏng quạt quay chạm tường. Như thầy cô có thể nghe thấy, bên trong hộp số phát ra tiếng kêu cạch cạch liên hồi do bánh răng nhựa bị trượt cưỡng bức qua trục hãm mà không có bộ ly hợp trượt an toàn, gây mòn khuyết vấu răng."*
    - **Thời lượng:** ~ 30 giây.
-   - **Link YouTube (Unlisted):** `[Dán đường link YouTube Unlisted của sinh viên tại đây]`
+   - **Link YouTube (Unlisted):** [https://youtube.com/shorts/TQMrprni0oY?feature=share](https://youtube.com/shorts/TQMrprni0oY?feature=share)
 
 3. **Video 3 (Minh chứng Defect DEF-03 từ TC-14):**
    - **Tiêu đề:** Demo TC-14: Rung lắc cộng hưởng làm trôi ren siết ống sắt ở độ cao 95cm số 3.
    - **Kịch bản thuyết minh:** *"Tiếp theo là test case TC-14. Em kéo quạt lên độ cao tối đa 95 cm, vặn siết ren nhựa vừa tay và bật số 3 kết hợp túp-năng trên sàn gạch men. Sau một khoảng thời gian chạy rung lắc liên tục, độ rung cộng hưởng đã làm ren siết bị trôi lỏng và thân quạt tự động sụt lún xuống chỉ còn khoảng 83 cm, đồng thời chân đế bị xoay lệch vị trí."*
    - **Thời lượng:** ~ 45 giây.
-   - **Link YouTube (Unlisted):** `[Dán đường link YouTube Unlisted của sinh viên tại đây]`
+   - **Link YouTube (Unlisted):** [https://youtube.com/shorts/edU_0xoc_JI?feature=share](https://youtube.com/shorts/edU_0xoc_JI?feature=share)
 
 4. **Video 4 (Minh chứng Defect DEF-04 từ TC-09):**
    - **Tiêu đề:** Demo TC-09: Lỏng khớp gục đầu quạt khi quay đảo hướng ở góc ngửa cực đại.
    - **Kịch bản thuyết minh:** *"Đây là test case TC-09 kiểm tra góc ngửa tối đa khi quay đảo hướng. Em chỉnh quạt ngửa lên trên 15 độ và bật túp-năng. Khi quạt quay đến điểm biên cực đại bên phải, lực giật đảo chiều đã làm ốc cánh bướm bị nới nhẹ khiến đầu quạt bị sụp xuống khoảng 5 độ so với góc cài đặt ban đầu."*
    - **Thời lượng:** ~ 28 giây.
-   - **Link YouTube (Unlisted):** `[Dán đường link YouTube Unlisted của sinh viên tại đây]`
+   - **Link YouTube (Unlisted):** [https://youtube.com/shorts/jCHATpMITFI?feature=share](https://youtube.com/shorts/jCHATpMITFI?feature=share)
 
 5. **Video 5 (Minh chứng Defect DEF-05 từ TC-15):**
    - **Tiêu đề:** Demo TC-15: Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn hờ phím tốc độ.
    - **Kịch bản thuyết minh:** *"Cuối cùng là test case nguy hiểm TC-15. Em nhấn nhẹ phím số 1 chỉ khoảng một nửa hành trình mà không bấm dứt khoát. Giữa hai lá đồng tiếp điểm hở xuất hiện tia lửa điện hồ quang màu xanh nổ lép bép liên tục và bốc mùi khét nhẹ của nhựa. Đây là lỗi thiết kế thiếu cơ cấu nhảy tiếp điểm nhanh, tiềm ẩn nguy cơ chập cháy."*
    - **Thời lượng:** ~ 32 giây.
-   - **Link YouTube (Unlisted):** `[Dán đường link YouTube Unlisted của sinh viên tại đây]`
+   - **Link YouTube (Unlisted):** [https://youtube.com/shorts/NZP3v1SyXfY?feature=share](https://youtube.com/shorts/NZP3v1SyXfY?feature=share)
