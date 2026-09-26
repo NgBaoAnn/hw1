@@ -62,17 +62,29 @@ hw1/
 │       ├── test_cases_and_summary.xlsx# File Excel tiêu chuẩn
 │       ├── photo/                     # Ảnh chụp thiết bị + Thẻ sinh viên & Ảnh chat AI
 │       └── github_issues/             # Chi tiết 5 issues và bảng điều phối
-├── templates/                         # Bộ biểu mẫu AI quy định của HCMUS
+├── AI Templates/                      # Bộ 4 biểu mẫu .docx chính thức nộp bài
+│   ├── [AI-02] - FIT@HCMUS - AI Audit Report_En.docx
+│   ├── [AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx
+│   ├── [AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx
+│   ├── [AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx
+│   └── blank_templates/               # Bản sao lưu mẫu trắng gốc
+├── templates/                         # Bộ biểu mẫu AI bản Markdown đối ứng
 │   ├── AI-02_AI_Audit_Report.md
 │   ├── AI-03_AI_Disclosure_Form.md
 │   ├── AI-05_AI_Privacy_Checklist.md
 │   └── AI-06_AI_Student_Acknowledgement.md
+├── scripts/                           # Bộ công cụ tự động hóa kiểm định & đóng gói
+│   ├── populate_docx_templates.py     # Script OpenXML điền dữ liệu vào biểu mẫu .docx
+│   ├── generate_full_excel.py         # Script OpenXML xuất file Excel 3 sheets
+│   └── package_submission.sh          # Script kiểm tra hợp lệ & đóng gói nộp bài
 ├── reports/                           # Báo cáo tổng hợp và nhật ký kiểm định
 │   ├── HW01_Report.md                 # Báo cáo tổng kết toàn diện (File hiện tại)
 │   ├── AI-02_AI_Audit_Report.md       # Báo cáo kiểm định AI chính thức
 │   ├── AI_Critique.md                 # Đoạn văn phê bình chuyên môn (291 từ)
 │   ├── Self_Assessment.md             # Bảng tự chấm điểm 100/100
-│   ├── Appendix_A_Prompt_Log.md       # Nhật ký 37 Prompts đầy đủ timestamp
+│   ├── Oral_Defense_Guide.md          # Tài liệu ôn tập 3 câu hỏi vấn đáp miệng
+│   ├── test_cases_and_summary.xlsx    # Bảng tính Excel chuẩn 3 sheets
+│   ├── Appendix_A_Prompt_Log.md       # Nhật ký 40 Prompts đầy đủ timestamp
 │   └── git_log.txt                    # Lịch sử trích xuất toàn bộ commit Git
 └── prompt_log.md                      # Bản sao lưu log prompt tại thư mục gốc
 ```
@@ -221,18 +233,25 @@ Cả 5 video đều được sinh viên thực hiện trực tiếp trên thiế
 ### 4.5. Quản lý Lỗi: 5 Live GitHub Issues Được Tạo Trực tiếp bằng `gh cli`
 5 khiếm khuyết vật lý được ghi nhận chuyên nghiệp theo chuẩn quốc tế trực tiếp lên kho chứa cá nhân `https://github.com/NgBaoAnn/hw1`:
 
-- **Issue #1 (DEF-01):** [`[DEF-01][Major] Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím tốc độ (1 & 2)`](https://github.com/NgBaoAnn/hw1/issues/1) — Labels: `bug`, `safety`, `hardware`.
-- **Issue #2 (DEF-02):** [`[DEF-02][Medium] Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch khi bị cản hành trình`](https://github.com/NgBaoAnn/hw1/issues/2) — Labels: `bug`, `mechanical`, `degradation`.
-- **Issue #3 (DEF-03):** [`[DEF-03][Medium] Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm & Số 3`](https://github.com/NgBaoAnn/hw1/issues/3) — Labels: `bug`, `stability`, `vibration`.
-- **Issue #4 (DEF-04):** [`[DEF-04][Minor] Lỏng khớp bản lề làm sụp góc ngửa +15° khi quạt quay đảo chiều đến điểm biên`](https://github.com/NgBaoAnn/hw1/issues/4) — Labels: `bug`, `usability`, `mechanical`.
-- **Issue #5 (DEF-05):** [`[DEF-05][High] Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím tốc độ không hết hành trình`](https://github.com/NgBaoAnn/hw1/issues/5) — Labels: `bug`, `safety`, `electrical-hazard`.
+- **Issue #1 (DEF-01):** [`[DEF-01][Major] Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím tốc độ (1 & 2)`](https://github.com/NgBaoAnn/hw1/issues/1) — Labels: `bug`, `safety`, `hardware`.  
+  *Minh chứng ảnh chụp màn hình chính chủ:* [`issue_1.png`](../requirements/req3_physical_product/photo/issue_1.png)
+- **Issue #2 (DEF-02):** [`[DEF-02][Medium] Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch khi bị cản hành trình`](https://github.com/NgBaoAnn/hw1/issues/2) — Labels: `bug`, `mechanical`, `degradation`.  
+  *Minh chứng ảnh chụp màn hình chính chủ:* [`issue_2.png`](../requirements/req3_physical_product/photo/issue_2.png)
+- **Issue #3 (DEF-03):** [`[DEF-03][Medium] Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm & Số 3`](https://github.com/NgBaoAnn/hw1/issues/3) — Labels: `bug`, `stability`, `vibration`.  
+  *Minh chứng ảnh chụp màn hình chính chủ:* [`issue_3.png`](../requirements/req3_physical_product/photo/issue_3.png)
+- **Issue #4 (DEF-04):** [`[DEF-04][Minor] Lỏng khớp bản lề làm sụp góc ngửa +15° khi quạt quay đảo chiều đến điểm biên`](https://github.com/NgBaoAnn/hw1/issues/4) — Labels: `bug`, `usability`, `mechanical`.  
+  *Minh chứng ảnh chụp màn hình chính chủ:* [`issue_4.png`](../requirements/req3_physical_product/photo/issue_4.png)
+- **Issue #5 (DEF-05):** [`[DEF-05][High] Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím tốc độ không hết hành trình`](https://github.com/NgBaoAnn/hw1/issues/5) — Labels: `bug`, `safety`, `electrical-hazard`.  
+  *Minh chứng ảnh chụp màn hình chính chủ:* [`issue_5.png`](../requirements/req3_physical_product/photo/issue_5.png)
+
+*(Tất cả 5 ảnh chụp màn hình đều hiển thị đầy đủ URL trình duyệt, mã lỗi, nội dung phân tích lỗi chuẩn ISTQB và menu avatar tài khoản góc phải trên xác thực rõ ràng username `NgBaoAnn` và tên `Nguyễn Bảo An` làm bằng chứng chống gian lận tuyệt đối).*
 
 ---
 
 ## 5. GIAO THỨC CỘNG TÁC AI & CÁC BIỂU MẪU QUY CHUẨN (15 ĐIỂM)
 
 ### 5.1. Báo cáo Kiểm định AI [AI-02] AI Audit Report
-Báo cáo kiểm định toàn diện được thiết lập đầy đủ tại [`reports/AI-02_AI_Audit_Report.md`](AI-02_AI_Audit_Report.md) (và [`templates/AI-02_AI_Audit_Report.md`](../templates/AI-02_AI_Audit_Report.md)), đáp ứng quy chuẩn 5 phần nghiêm ngặt của FIT@HCMUS:
+Báo cáo kiểm định toàn diện được thiết lập đầy đủ tại [`reports/AI-02_AI_Audit_Report.md`](AI-02_AI_Audit_Report.md) (và bản `.docx` chính thức nộp bài tại [`AI Templates/[AI-02] - FIT@HCMUS - AI Audit Report_En.docx`](../AI%20Templates/%5BAI-02%5D%20-%20FIT@HCMUS%20-%20AI%20Audit%20Report_En.docx)), đáp ứng quy chuẩn 5 phần nghiêm ngặt của FIT@HCMUS:
 
 - **Thống kê độ chính xác của AI qua 22 sản phẩm kiểm định:**
   - **Tổng số thành phần AI tạo ra được kiểm định:** **22 sản phẩm** (1 Mindmap, 1 Đề xuất Test cases vật lý, 20 Lời giải thích sự cố phần mềm).
@@ -257,11 +276,11 @@ Trích lục nguyên văn từ file [`reports/AI_Critique.md`](AI_Critique.md):
 ### 5.3. Tuyên bố Bắt buộc (Mandatory Disclosure) & Xác nhận Biểu mẫu [AI-03], [AI-05], [AI-06]
 - **Tuyên bố bắt buộc (Mandatory Disclosure Statement):**
   > *"The QA/QC Mindmap and initial physical test cases were initially generated by Antigravity Assistant (Model: Gemini 3.8 Flash High); I reviewed and modified the entire hierarchy and static testing responsibilities in the Mindmap, added 4 physical edge cases (deadlock, gear slippage, resonance, arcing); the 10 job market analyses, 20 defect verification audits, 15 formal test executions, and 5 video demonstrations were conducted and written entirely by me. The detailed AI Audit Report is attached as Appendix A. I confirm I did not use AI to generate any artifact listed in the prohibited category."*
-- **Xác nhận trạng thái các biểu mẫu liêm chính học thuật:**
-  - [x] [`templates/AI-03_AI_Disclosure_Form.md`](../templates/AI-03_AI_Disclosure_Form.md): Đã hoàn tất kê khai đầy đủ các công cụ, giai đoạn sử dụng, trích dẫn chuẩn IEEE và ký xác nhận.
-  - [x] [`templates/AI-05_AI_Privacy_Checklist.md`](../templates/AI-05_AI_Privacy_Checklist.md): Đã tích chọn 100% các tiêu chí bảo mật, cam kết không vi phạm dữ liệu riêng tư và ký xác nhận.
-  - [x] [`templates/AI-06_AI_Student_Acknowledgement.md`](../templates/AI-06_AI_Student_Acknowledgement.md): Đã ký cam kết tuân thủ chính sách AI môn học CS423/CSC13003 từ đầu khóa.
-  - [x] [`reports/Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md): Nhật ký đầy đủ 37 prompts có dấu mốc thời gian thực chính xác từng giây.
+- **Xác nhận trạng thái các biểu mẫu liêm chính học thuật (Đã hoàn thiện cả tệp `.docx` chính thức nộp bài và `.md`):**
+  - [x] [`AI Templates/[AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx`](../AI%20Templates/%5BAI-03%5D%20-%20FIT@HCMUS%20-%20AI%20Disclosure%20Form_En.docx) (và [`templates/AI-03_AI_Disclosure_Form.md`](../templates/AI-03_AI_Disclosure_Form.md)): Đã hoàn tất kê khai đầy đủ các công cụ, giai đoạn sử dụng, 3 prompt cốt lõi, phần đóng góp chi tiết của AI và phần tự làm 100% của sinh viên, phương pháp kiểm chứng độc lập, trích dẫn chuẩn IEEE và ký xác nhận.
+  - [x] [`AI Templates/[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx`](../AI%20Templates/%5BAI-05%5D%20-%20FIT@HCMUS%20-%20AI%20Privacy%20Checklist_En.docx) (và [`templates/AI-05_AI_Privacy_Checklist.md`](../templates/AI-05_AI_Privacy_Checklist.md)): Đã tích chọn 100% các tiêu chí bảo mật, cam kết không vi phạm dữ liệu riêng tư và ký xác nhận.
+  - [x] [`AI Templates/[AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx`](../AI%20Templates/%5BAI-06%5D%20-%20FIT@HCMUS%20-%20AI%20Student%20Acknowledgement_En.docx) (và [`templates/AI-06_AI_Student_Acknowledgement.md`](../templates/AI-06_AI_Student_Acknowledgement.md)): Đã ký cam kết tuân thủ chính sách AI môn học CS423/CSC13003 từ đầu khóa và khai báo tài khoản AI.
+  - [x] [`reports/Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (và [`prompt_log.md`](../prompt_log.md)): Nhật ký đầy đủ 40 prompts có dấu mốc thời gian thực chính xác từng giây.
 
 ---
 
@@ -273,10 +292,10 @@ Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại [`reports
 | :---: | :--- | :---: | :---: | :--- |
 | **1** | **Thị trường việc làm QA/QC 2026+ (Req 1)** | **40** | **40 / 40** | Đủ 10 tin tuyển dụng ITviec $\le 27$ ngày; 3 vị trí AI; 10 ảnh screenshot có avatar; Mindmap sửa 3 lỗi ISTQB. |
 | **2** | **20 Lỗi phần mềm 2022–2026 & AI Audits (Req 2)** | **20** | **20 / 20** | 20 sự cố toàn cầu (6 AI + 14 hạ tầng); 100% nguồn Post-mortem gốc; vạch trần 20/20 bẫy ảo giác AI. |
-| **3** | **Kiểm thử thiết bị vật lý Senko L1638 (Req 3)** | **25** | **25 / 25** | Ảnh thẻ SV + quạt thật; 15 test cases ISTQB (file Excel + CSV); 4 edge cases AI bỏ sót; 5 video Shorts có thuyết minh; 5 live GitHub Issues. |
-| **AI-1** | **[AI-02] AI Audit Report** | **8** | **8 / 8** | Bảng kiểm định 5 phần đủ 22 mục; thống kê 0% Valid, 90.9% Invalid, 9.1% Incomplete; kết luận 140 từ. |
-| **AI-2** | **AI Critique + Form [AI-03]** | **4** | **4 / 4** | Bài phê bình đạt chuẩn 291 từ; form [AI-03] hoàn chỉnh có chữ ký xác nhận. |
-| **AI-3** | **[AI-05] Privacy Checklist & Anti-cheat** | **3** | **3 / 3** | Checklist bảo mật [AI-05] và [AI-06] có chữ ký; Prompt Log đủ 37 lượt prompt với timestamp chính xác. |
+| **3** | **Kiểm thử thiết bị vật lý Senko L1638 (Req 3)** | **25** | **25 / 25** | Ảnh thẻ SV + quạt thật; 15 test cases ISTQB (file Excel 3 sheets + CSV); 4 edge cases AI bỏ sót; 5 video Shorts có thuyết minh; 5 live GitHub Issues kèm 5 ảnh screenshot chính chủ. |
+| **AI-1** | **[AI-02] AI Audit Report** | **8** | **8 / 8** | Bảng kiểm định 5 phần đủ 22 mục (bản `.docx` chính thức & `.md`); thống kê 0% Valid, 90.9% Invalid, 9.1% Incomplete; kết luận 140 từ. |
+| **AI-2** | **AI Critique + Form [AI-03]** | **4** | **4 / 4** | Bài phê bình đạt chuẩn 291 từ; form [AI-03] hoàn chỉnh (bản `.docx` chính thức & `.md`) có chữ ký xác nhận. |
+| **AI-3** | **[AI-05] Privacy Checklist & Anti-cheat** | **3** | **3 / 3** | Checklist bảo mật [AI-05] và [AI-06] (bản `.docx` chính thức & `.md`) có chữ ký; Prompt Log đủ 40 lượt prompt với timestamp chính xác. |
 | **TỔNG** | **TỔNG ĐIỂM TOÀN BỘ BÀI TẬP** | **100** | **100 / 100** | **Mã điểm 3 chữ số đặt vào tên file zip khi nộp bài: `100`** |
 
 ---
@@ -288,8 +307,8 @@ Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại [`reports
 | :--- | :--- | :--- | :--- |
 | **Yêu cầu 1** | [`jobs_data.md`](../requirements/req1_job_market/jobs_data.md)<br>[`qa_qc_roles_mindmap.md`](../requirements/req1_job_market/mindmap/qa_qc_roles_mindmap.md) | Bảng dữ liệu 10 tin tuyển dụng | [`job_01.png`](../requirements/req1_job_market/screenshots/job_01.png) đến [`job_10.png`](../requirements/req1_job_market/screenshots/job_10.png) |
 | **Yêu cầu 2** | [`defects_2022_2026.md`](../requirements/req2_software_defects/defects_2022_2026.md) | 20 Báo cáo RCA chuẩn | 20 Prompt bóc trần ảo giác trong [`Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) |
-| **Yêu cầu 3** | [`device_info.md`](../requirements/req3_physical_product/device_info.md)<br>[`edge_cases_ai_missed.md`](../requirements/req3_physical_product/edge_cases_ai_missed.md)<br>[`test_cases.md`](../requirements/req3_physical_product/test_cases.md) | [`test_cases.csv`](../requirements/req3_physical_product/test_cases.csv)<br>[`test_cases_and_summary.xlsx`](../requirements/req3_physical_product/test_cases_and_summary.xlsx) | [`device_23120207.jpg`](../requirements/req3_physical_product/photo/device_23120207.jpg)<br>[`ai_edge_cases_screenshot.png`](../requirements/req3_physical_product/photo/ai_edge_cases_screenshot.png)<br>5 Video Shorts (Video 1 đến 5)<br>[GitHub Issues #1 đến #5](https://github.com/NgBaoAnn/hw1/issues) |
-| **AI Protocol** | [`AI-02_AI_Audit_Report.md`](AI-02_AI_Audit_Report.md)<br>[`AI_Critique.md`](AI_Critique.md)<br>[`Self_Assessment.md`](Self_Assessment.md) | [`templates/`](../templates/) (AI-03, AI-05, AI-06) | [`Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (Prompts P-01 đến P-37) |
+| **Yêu cầu 3** | [`device_info.md`](../requirements/req3_physical_product/device_info.md)<br>[`edge_cases_ai_missed.md`](../requirements/req3_physical_product/edge_cases_ai_missed.md)<br>[`test_cases.md`](../requirements/req3_physical_product/test_cases.md) | [`test_cases.csv`](../requirements/req3_physical_product/test_cases.csv)<br>[`test_cases_and_summary.xlsx`](../requirements/req3_physical_product/test_cases_and_summary.xlsx) (3 sheets) | [`device_23120207.jpg`](../requirements/req3_physical_product/photo/device_23120207.jpg)<br>[`ai_edge_cases_screenshot.png`](../requirements/req3_physical_product/photo/ai_edge_cases_screenshot.png)<br>5 Video Shorts (Video 1 đến 5)<br>[GitHub Issues #1 đến #5](https://github.com/NgBaoAnn/hw1/issues)<br>5 Ảnh màn hình [`issue_1.png`](../requirements/req3_physical_product/photo/issue_1.png) đến [`issue_5.png`](../requirements/req3_physical_product/photo/issue_5.png) |
+| **AI Protocol** | [`AI-02_AI_Audit_Report.md`](AI-02_AI_Audit_Report.md)<br>[`AI_Critique.md`](AI_Critique.md)<br>[`Self_Assessment.md`](Self_Assessment.md)<br>Bộ 4 file `.docx` trong [`AI Templates/`](../AI%20Templates/) | [`templates/`](../templates/) (AI-03, AI-05, AI-06)<br>[`scripts/populate_docx_templates.py`](../scripts/populate_docx_templates.py) | [`Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (Prompts P-01 đến P-40) |
 | **Quản trị Git** | [`git_log.txt`](git_log.txt) | `git log --graph --all --stat` | [https://github.com/NgBaoAnn/hw1](https://github.com/NgBaoAnn/hw1) |
 
 ---

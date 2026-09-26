@@ -180,20 +180,22 @@ hw1/
 
 ---
 
-### Task 5: Tổng hợp Báo cáo Chính (PDF + Text), File Excel & Tự chấm điểm (Chưa làm - Chờ yêu cầu)
-- [ ] **Bước 5.1: Hoàn thiện File Excel tổng thể:**
-  - Tạo `reports/test_cases_and_summary.xlsx` gồm các sheet:
-    - Sheet 1: 15 Test Cases chi tiết.
-    - Sheet 2: Danh sách khiếm khuyết (Defects Checklist / GitHub Issues mapping).
-    - Sheet 3: Báo cáo tóm tắt kiểm thử (Test Summary Report).
-- [ ] **Bước 5.2: Soạn thảo Báo cáo tổng thể `HW01_Report.md`:**
-  - Kết nối toàn bộ kết quả từ Task 1, 2, 3, 4 vào một tài liệu hoàn chỉnh, trình bày thẩm mỹ, mục lục rõ ràng.
-  - Bổ sung bảng tự chấm điểm (Self-Assessment Rubric) đủ 100 điểm.
-- [ ] **Bước 5.3: Chuẩn bị Kịch bản Vấn đáp miệng (Oral Defense Preparation):**
-  - Soạn sẵn tài liệu ôn tập 3 câu hỏi vấn đáp:
-    1. Hướng dẫn chạy nhanh kịch bản test trên máy.
-    2. Giải thích cơ sở kỹ thuật chọn Input X thay vì Input Y (Boundary Value Analysis / Equivalence Partitioning theo ISTQB).
-    3. Trình bày chi tiết 1 lỗi tiêu biểu mà AI mắc phải và cách mình đã hiệu chỉnh.
+### Task 5: Tổng hợp Báo cáo Chính (PDF + Text), File Excel & Tự chấm điểm (ĐÃ HOÀN THÀNH 100%)
+- [x] **Bước 5.1: Hoàn thiện File Excel tổng thể:**
+  - Đã xuất bản `reports/test_cases_and_summary.xlsx` và `requirements/req3_physical_product/test_cases_and_summary.xlsx` gồm đầy đủ 3 sheets chuẩn OpenXML:
+    - Sheet 1: 15 Test Cases chi tiết (ISTQB format).
+    - Sheet 2: Danh sách khiếm khuyết (Defects & Issues mapping: DEF-01 -> DEF-05).
+    - Sheet 3: Báo cáo tóm tắt kiểm thử (Test Summary Report theo ISTQB CTFL v4.0 Mục 5.1).
+  - Tích hợp script tạo tự động tại `scripts/generate_full_excel.py`.
+- [x] **Bước 5.2: Soạn thảo Báo cáo tổng thể & Xuất PDF:**
+  - Hoàn thiện tài liệu tổng hợp toàn diện `reports/HW01_Report.md` kết nối toàn bộ Task 1, 2, 3, 4, 5.
+  - Tự chấm điểm 100/100 tại `reports/Self_Assessment.md` (mã nộp bài: `100`).
+  - Biên dịch thành công ấn bản nhị phân `reports/HW01_Report.pdf` (30 trang trình bày chuyên nghiệp, font Arial & Arial Unicode MS, không lỗi font tiếng Việt).
+- [x] **Bước 5.3: Chuẩn bị Kịch bản Vấn đáp miệng (Oral Defense Preparation):**
+  - Soạn sẵn tài liệu ôn tập 3 câu hỏi vấn đáp sâu sắc tại `reports/Oral_Defense_Guide.md`:
+    1. Kịch bản thực nghiệm trực tiếp trên quạt Senko L1638 (TC-12 / DEF-01).
+    2. Cơ sở kỹ thuật BVA / Resonance chọn giá trị biên 95cm & Số 3 (TC-14 / DEF-03).
+    3. Phân tích chi tiết 1 lỗi tiêu biểu AI mắc phải (Sự cố Okta #18) và cách sinh viên đối chứng báo cáo gốc để phản biện.
 
 ---
 

@@ -753,6 +753,34 @@ hãy thực hiện task 3.6 bằng gh cli
 - **Đánh giá & Ghi chú:**
   - Hoàn thành chính xác và trọn vẹn yêu cầu thực tế của Task 4 về việc hoàn thiện sản phẩm nộp dưới định dạng `.docx` chuẩn trường.
 
+### [Prompt ID: P-40]
+- **Thời gian (Timestamp):** `15:21:00 26/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 5 – Tổng hợp Báo cáo Chính (PDF + Markdown), File Excel 3 Sheets & Tài liệu Ôn tập Vấn đáp miệng
+- **Mục tiêu / Context:** Tiến hành Task 5 theo kế hoạch: tổng hợp toàn bộ các kết quả đã làm từ Task 1, 2, 3, 4 vào bản báo cáo toàn diện `HW01_Report.md`, xuất bản PDF `HW01_Report.pdf`, hoàn thiện file Excel 3 sheets `test_cases_and_summary.xlsx`, cập nhật bảng tự đánh giá điểm số 100/100, và xây dựng tài liệu chuẩn bị vấn đáp miệng `Oral_Defense_Guide.md`.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+hãy thực hiện task số 5, tổng hợp báo cáo chính
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI triển khai hoàn tất toàn bộ các nội dung trọng tâm của Task 5:
+    1. **Hoàn thiện File Excel 3 Sheets (`reports/test_cases_and_summary.xlsx`):** Xây dựng script tự động hóa OpenXML `scripts/generate_full_excel.py` tạo workbook chuẩn gồm:
+       - *Sheet 1 (15 Test Cases):* Toàn bộ 15 test cases chuẩn ISTQB từ cơ khí tĩnh, an toàn điện, chức năng, đến 4 edge cases vật lý.
+       - *Sheet 2 (Defects & Issues):* Ma trận ánh xạ 5 khiếm khuyết vật lý (DEF-01 -> DEF-05) với mức độ nghiêm trọng, test case kích hoạt, nguyên nhân gốc rễ (RCA), liên kết trực tiếp tới GitHub Issues #1 - #5, video YouTube Shorts và ảnh chụp màn hình minh chứng.
+       - *Sheet 3 (Test Summary Report):* Báo cáo điều hành tổng kết kiểm thử theo ISTQB CTFL v4.0 Mục 5.1 và tiêu chuẩn an toàn điện IEC 60335-2-8, đo lường các chỉ số (10 Pass - 66.7%, 5 Fail - 33.3%), phân bổ mức độ khiếm khuyết, đánh giá rủi ro và khuyến nghị phát hành.
+    2. **Hoàn thiện Báo cáo tổng thể & Xuất PDF (`HW01_Report.md` & `HW01_Report.pdf`):**
+       - Cập nhật và liên kết đồng bộ toàn bộ tài sản: 10 JDs ITviec kèm ảnh anti-cheat; Mindmap ISTQB & 3 hiệu chỉnh; 20 sự cố phần mềm & 20 bẫy ảo giác AI; quạt Senko L1638 với 4 edge cases, 15 test cases, 5 video YouTube Shorts và 5 GitHub Issues kèm ảnh chụp; bộ 4 biểu mẫu `.docx` chính thức trong `AI Templates/`; đoạn AI Critique (291 từ); và ma trận truy xuất nguồn gốc tài sản (Traceability Matrix).
+       - Hoàn thiện bảng tự chấm điểm theo rubric môn học tại `reports/Self_Assessment.md` đạt **100/100 điểm** (mã điểm nộp bài: `100`).
+       - Sử dụng công cụ `pandoc` kết hợp `xelatex` biên dịch thành công tài liệu nhị phân `reports/HW01_Report.pdf` (30 trang in ấn chuẩn mực, không lỗi font tiếng Việt nhờ hỗ trợ Arial và Arial Unicode MS).
+    3. **Tài liệu Ôn tập Vấn đáp miệng (`reports/Oral_Defense_Guide.md`):**
+       - Soạn sẵn câu trả lời chuyên sâu cho 3 tình huống vấn đáp giảng viên:
+         - Câu 1: Trình diễn thực nghiệm trực tiếp kẹt cơ liên động & quá tải dòng stator (TC-12 / DEF-01).
+         - Câu 2: Giải thích cơ sở kỹ thuật BVA và rung lắc cộng hưởng khi chọn giá trị biên cực hạn 95cm & Số 3 (TC-14 / DEF-03).
+         - Câu 3: Phân tích chi tiết ảo giác mật mã học lượng tử của AI trong sự cố Okta #18 và cách sinh viên đối chứng báo cáo gốc của CSO David Bradbury để phản biện.
+- **Đánh giá & Ghi chú:**
+  - Hoàn thành trọn vẹn 100% Task 5, kết nối toàn diện tất cả các sản phẩm số và sản phẩm nhị phân sẵn sàng cho bước kiểm tra và đóng gói nộp bài cuối cùng (Task 6).
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
+
 
