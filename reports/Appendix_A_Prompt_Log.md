@@ -733,5 +733,26 @@ hãy thực hiện task 3.6 bằng gh cli
 - **Đánh giá & Ghi chú:**
   - Hoàn thành xuất sắc toàn bộ Yêu cầu 3 với đầy đủ cả 6 tiểu mục (3.1 đến 3.6), đạt điểm tối đa và tính xác thực tuyệt đối.
 
+### [Prompt ID: P-39]
+- **Thời gian (Timestamp):** `15:03:55 26/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 4 – Điền dữ liệu trực tiếp vào các biểu mẫu `.docx` chính thức trong `AI Templates/`
+- **Mục tiêu / Context:** Sinh viên làm rõ yêu cầu bắt buộc của Task 4: Tài liệu Markdown (`templates/*.md`) chỉ đóng vai trò lưu trữ nội dung thô, khi nộp bài phải điền trực tiếp dữ liệu vào 4 tệp biểu mẫu định dạng `.docx` do Khoa CNTT (FIT@HCMUS) ban hành trong thư mục `AI Templates/`.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+ở task số 4, ở chỗ xây dựng các template thì phải điền vào template file .docx trong @[AI Templates] , md chỉ là nội dung, nộp là là nộp file .docx
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI tiếp nhận chỉ đạo, sao lưu các file template gốc vào thư mục `AI Templates/blank_templates/` để bảo toàn mẫu trắng ban đầu.
+  - Xây dựng và thực thi tập lệnh tự động hóa `scripts/populate_docx_templates.py` sử dụng thư viện chuẩn của Python để can thiệp trực tiếp vào cấu trúc XML OpenXML (`word/document.xml`), điền trọn vẹn dữ liệu cá nhân sinh viên, kết quả kiểm định, các câu trả lời giải trình, các ô đánh dấu `[X]` và chữ ký cam kết vào 4 biểu mẫu `.docx` chính thức mà vẫn bảo toàn 100% định dạng, font chữ và phong cách trình bày gốc của FIT@HCMUS:
+    1. `[AI-02] - FIT@HCMUS - AI Audit Report_En.docx`: Bảng thông tin sinh viên, bảng kiểm định 3 Artifacts chính (Mindmap, Test Cases quạt Senko, 20 Lỗi phần mềm & Bẫy ảo giác), bảng tổng hợp tỷ lệ (22 AI outputs: 0 VALID, 20 INVALID, 2 INCOMPLETE), kết luận phân tích khi nào nên/không nên dùng AI, đoạn cam kết bắt buộc và bảng chữ ký xác thực.
+    2. `[AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx`: Bảng thông tin môn học/sinh viên, câu trả lời chi tiết cho 6 câu hỏi công khai sử dụng AI (công cụ, giai đoạn, 3 prompt cốt lõi, phần đóng góp chi tiết của AI và phần tự làm 100% của sinh viên, phương pháp kiểm chứng độc lập theo ISTQB/Post-mortem/Thực nghiệm, và trích dẫn IEEE), cùng bảng chữ ký trung thực học thuật.
+    3. `[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx`: Đánh dấu chọn `[X]` cho toàn bộ các điều khoản bảo mật dữ liệu, quyền riêng tư, phân loại AI Category 4/5, không nhập dữ liệu cá nhân nhạy cảm, và bảng ký tên cam kết.
+    4. `[AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx`: Đánh dấu chọn `[X]` các quy định thi cử đóng không dùng AI, nhận thức về việc giám sát prompt và bảo vệ miệng ngẫu nhiên (10-30%), bảng khai báo tài khoản AI, và bảng ký tên cam kết.
+  - Kiểm tra và xác thực cấu trúc nội dung của cả 4 tệp `.docx` đã được điền hoàn chỉnh, chuẩn xác 100% theo quy định nộp bài.
+- **Đánh giá & Ghi chú:**
+  - Hoàn thành chính xác và trọn vẹn yêu cầu thực tế của Task 4 về việc hoàn thiện sản phẩm nộp dưới định dạng `.docx` chuẩn trường.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
+

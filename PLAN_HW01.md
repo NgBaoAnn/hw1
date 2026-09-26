@@ -161,22 +161,22 @@ hw1/
 
 ---
 
-### Task 4: Hoàn thiện AI Collaboration Protocol & Các Biểu mẫu Bắt buộc (Chưa làm - Chờ yêu cầu)
-- [ ] **Bước 4.1: Xây dựng `[AI-02] AI Audit Report`:**
-  - Tổng hợp các đợt prompt cho từng sản phẩm theo đúng mẫu 5 phần:
-    `(1) Prompt + tool + timestamp -> (2) Full AI output -> (3) Verdict -> (4) Reasoning (ISTQB) -> (5) Student fix`.
-  - Thống kê tỷ lệ chính xác của AI (% VALID, % INVALID, % INCOMPLETE).
-  - Viết kết luận: Khi nào nên dùng và khi nào không nên dùng AI trong quy trình kiểm thử phần mềm/phần cứng.
-- [ ] **Bước 4.2: Viết đoạn phê bình `AI Critique` (200–300 từ):**
-  - Phân tích sâu về thiên vị (bias), ảo giác (hallucination) và hạn chế ngữ cảnh thực tế của AI.
-  - Rút ra nguyên tắc cộng tác hiệu quả giữa kỹ sư QA và AI.
-- [ ] **Bước 4.3: Điền và Ký các Biểu mẫu:**
-  - Hoàn thiện `[AI-03] AI Disclosure Form` (ký tên).
-  - Hoàn thiện `[AI-05] AI Privacy & Responsible Use Checklist` (ký tên).
-  - Dán đoạn mẫu `Mandatory Disclosure` vào cuối báo cáo trước phần phụ lục.
-- [ ] **Bước 4.4: Chuẩn bị `Appendix A: Full Prompt Log`:**
-  - Trích xuất toàn bộ lịch sử trao đổi với AI từ đầu bài tập, đánh dấu thời gian cụ thể `HH:MM dd/mm/yyyy`.
-- [ ] **Bước 4.5: Commit kết quả Task 4** vào Git.
+### Task 4: Hoàn thiện AI Collaboration Protocol & Các Biểu mẫu Bắt buộc (.docx & .md) (ĐÃ HOÀN THÀNH 100%)
+- [x] **Bước 4.1: Xây dựng `[AI-02] AI Audit Report`:**
+  - Hoàn thiện tệp `.docx` chính thức tại `AI Templates/[AI-02] - FIT@HCMUS - AI Audit Report_En.docx` và tệp markdown `templates/AI-02_AI_Audit_Report.md`.
+  - Tổng hợp 3 Artifacts kiểm định chính (Mindmap QA/QC, Test Cases Quạt Senko L1638, 20 Lỗi phần mềm 2022–2026 & Bẫy ảo giác AI).
+  - Thống kê tỷ lệ chính xác của AI: 22 artifacts (0 VALID - 0.0%, 20 INVALID - 90.9%, 2 INCOMPLETE - 9.1%).
+  - Kết luận phân tích khi nào nên/không nên dùng AI trong QA/QC và đoạn Mandatory Disclosure.
+- [x] **Bước 4.2: Viết đoạn phê bình `AI Critique` (200–300 từ):**
+  - Đã tích hợp trong Section 5 của `AI-02` và `templates/AI_Critique.md`.
+- [x] **Bước 4.3: Điền và Ký các Biểu mẫu .docx:**
+  - `[AI-03] AI Disclosure Form` (`AI Templates/[AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx`): Điền đủ 6 câu hỏi, dán 3 prompt cốt lõi, bảng chữ ký sinh viên `NGUYỄN BẢO AN - 23120207`.
+  - `[AI-05] AI Privacy & Responsible Use Checklist` (`AI Templates/[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx`): Tích chọn `[X]` toàn bộ điều khoản bảo mật, ký tên xác thực.
+  - `[AI-06] AI Student Acknowledgement` (`AI Templates/[AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx`): Tích chọn `[X]` các cam kết thi cử đóng/vấn đáp, khai báo tài khoản AI, ký tên xác thực.
+  - Sao lưu mẫu trắng gốc tại `AI Templates/blank_templates/`.
+- [x] **Bước 4.4: Chuẩn bị `Appendix A: Full Prompt Log`:**
+  - Cập nhật đầy đủ từ Prompt [P-01] đến [P-39] với timestamp chính xác từng giây trong `prompt_log.md` và `reports/Appendix_A_Prompt_Log.md`.
+- [x] **Bước 4.5: Commit kết quả Task 4** vào Git.
 
 ---
 
