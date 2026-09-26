@@ -1,3 +1,30 @@
+* commit 957159cd8b357a51184f83daedf9fba75bdc4751
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 14:45:23 2026 +0700
+| 
+|     feat: complete AI templates, AI critique, final report HW01, oral defense guide, and packaging script
+| 
+|  .gitignore                                        |   3 +-
+|  PLAN_HW01.md                                      |  74 ++-
+|  reports/AI-02_AI_Audit_Report.md                  |  82 ++++
+|  reports/AI_Critique.md                            |  22 +-
+|  reports/HW01_Report.md                            | 306 ++++++++++++
+|  reports/Oral_Defense_Guide.md                     |  56 +++
+|  reports/Self_Assessment.md                        |  27 +-
+|  reports/git_log.txt                               | 505 ++++++++++++++++++++
+|  reports/test_cases_and_summary.xlsx               | Bin 0 -> 5736 bytes
+|  .../req3_physical_product/photo/issue_1.png       | Bin 0 -> 1375133 bytes
+|  .../req3_physical_product/photo/issue_2.png       | Bin 0 -> 1363810 bytes
+|  .../req3_physical_product/photo/issue_3.png       | Bin 0 -> 1367130 bytes
+|  .../req3_physical_product/photo/issue_4.png       | Bin 0 -> 1408096 bytes
+|  .../req3_physical_product/photo/issue_5.png       | Bin 0 -> 1463259 bytes
+|  scripts/package_submission.sh                     |  47 +-
+|  templates/AI-02_AI_Audit_Report.md                |  37 +-
+|  templates/AI-03_AI_Disclosure_Form.md             |  47 +-
+|  templates/AI-05_AI_Privacy_Checklist.md           |  10 +-
+|  templates/AI-06_AI_Student_Acknowledgement.md     |  14 +-
+|  19 files changed, 1110 insertions(+), 120 deletions(-)
+| 
 * commit 991fa24832146065e2d851045408e30bb182c2a0
 | Author: NgBaoAnn <baoan1real1@gmail.com>
 | Date:   Sat Sep 26 14:38:49 2026 +0700
