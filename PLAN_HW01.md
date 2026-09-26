@@ -149,10 +149,15 @@ hw1/
     3. Video 3 (TC-14 / DEF-03): https://youtube.com/shorts/edU_0xoc_JI?feature=share
     4. Video 4 (TC-09 / DEF-04): https://youtube.com/shorts/jCHATpMITFI?feature=share
     5. Video 5 (TC-15 / DEF-05): https://youtube.com/shorts/NZP3v1SyXfY?feature=share
-- [ ] **Bước 3.6: Ghi nhận lỗi lên GitHub Issues (Thay thế Mantis):**
-  - Ghi nhận các khiếm khuyết/bất cập phát hiện được trong quá trình test thành các Issue trên GitHub repository cá nhân.
-  - Chụp ảnh màn hình trang Issues có hiển thị rõ GitHub Username của sinh viên.
-- [ ] **Bước 3.7: Commit kết quả Task 3** vào Git.
+- [x] **Bước 3.6: Ghi nhận lỗi lên GitHub Issues (Thay thế Mantis):**
+  - Đã dùng GitHub CLI (`gh`) tạo thành công 5 Issues chuyên nghiệp trực tiếp trên GitHub repository `https://github.com/NgBaoAnn/hw1`:
+    - Issue #1: `https://github.com/NgBaoAnn/hw1/issues/1` (DEF-01)
+    - Issue #2: `https://github.com/NgBaoAnn/hw1/issues/2` (DEF-02)
+    - Issue #3: `https://github.com/NgBaoAnn/hw1/issues/3` (DEF-03)
+    - Issue #4: `https://github.com/NgBaoAnn/hw1/issues/4` (DEF-04)
+    - Issue #5: `https://github.com/NgBaoAnn/hw1/issues/5` (DEF-05)
+  - Đồng bộ liên kết trực tiếp vào `requirements/req3_physical_product/device_info.md` và `requirements/req3_physical_product/github_issues/issues_list.md`.
+- [x] **Bước 3.7: Commit kết quả Task 3** vào Git và push lên GitHub.
 
 ---
 

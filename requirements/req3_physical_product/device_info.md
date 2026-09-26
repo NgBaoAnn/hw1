@@ -44,8 +44,8 @@
 
 | Defect ID | Tên lỗi phát hiện trên thiết bị | Mức độ nghiêm trọng | Issue Link trên GitHub |
 | :---: | :--- | :---: | :--- |
-| **DEF-01** | Kẹt tiếp điểm cơ học khi ấn đồng thời 2 phím tốc độ (Số 1 & Số 2) | Major (Nguy cơ đoản mạch) | `https://github.com/.../issues/1` |
-| **DEF-02** | Trượt vấu bánh răng tuốc-năng phát tiếng kêu cạch cạch khi bị cản hành trình | Medium (Hao mòn cơ khí) | `https://github.com/.../issues/2` |
-| **DEF-03** | Rung lắc mất cân bằng động làm trôi ốc siết nâng hạ khi chạy số 3 ở độ cao tối đa (95cm) | Medium (Rủi ro mất ổn định) | `https://github.com/.../issues/3` |
-| **DEF-04** | Lỏng khớp gục đầu quạt khi quay đảo hướng ở góc ngửa cực đại | Minor (Trải nghiệm người dùng) | `https://github.com/.../issues/4` |
-| **DEF-05** | Tiếp điểm hờ sinh hồ quang điện (arcing) khi bấm phím số không hết hành trình | High (Nguy cơ an toàn điện) | `https://github.com/.../issues/5` |
+| **DEF-01** | Kẹt tiếp điểm cơ học khi ấn đồng thời 2 phím tốc độ (Số 1 & Số 2) | Major (Nguy cơ đoản mạch) | [`#1`](https://github.com/NgBaoAnn/hw1/issues/1) |
+| **DEF-02** | Trượt vấu bánh răng tuốc-năng phát tiếng kêu cạch cạch khi bị cản hành trình | Medium (Hao mòn cơ khí) | [`#2`](https://github.com/NgBaoAnn/hw1/issues/2) |
+| **DEF-03** | Rung lắc mất cân bằng động làm trôi ốc siết nâng hạ khi chạy số 3 ở độ cao tối đa (95cm) | Medium (Rủi ro mất ổn định) | [`#3`](https://github.com/NgBaoAnn/hw1/issues/3) |
+| **DEF-04** | Lỏng khớp gục đầu quạt khi quay đảo hướng ở góc ngửa cực đại | Minor (Trải nghiệm người dùng) | [`#4`](https://github.com/NgBaoAnn/hw1/issues/4) |
+| **DEF-05** | Tiếp điểm hờ sinh hồ quang điện (arcing) khi bấm phím số không hết hành trình | High (Nguy cơ an toàn điện) | [`#5`](https://github.com/NgBaoAnn/hw1/issues/5) |

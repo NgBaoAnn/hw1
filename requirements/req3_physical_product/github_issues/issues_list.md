@@ -6,13 +6,13 @@
 
 ## 1. Bảng Tổng Hợp 5 Issues
 
-| Issue ID | Defect ID | Tiêu đề Issue (Title) | Mức độ (Severity) | Nhãn (Labels) | Test Case tương ứng | File nội dung chi tiết |
-| :---: | :---: | :--- | :---: | :---: | :---: | :--- |
-| **#1** | **DEF-01** | `[DEF-01][Major] Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím tốc độ (1 & 2)` | Major | `bug`, `safety`, `hardware` | `TC-12 (Edge Case #1)` | [`issue_01_DEF-01.md`](issue_01_DEF-01.md) |
-| **#2** | **DEF-02** | `[DEF-02][Medium] Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch khi bị cản hành trình` | Medium | `bug`, `mechanical`, `degradation` | `TC-13 (Edge Case #2)` | [`issue_02_DEF-02.md`](issue_02_DEF-02.md) |
-| **#3** | **DEF-03** | `[DEF-03][Medium] Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm & Số 3` | Medium | `bug`, `stability`, `vibration` | `TC-14 (Edge Case #3)` | [`issue_03_DEF-03.md`](issue_03_DEF-03.md) |
-| **#4** | **DEF-04** | `[DEF-04][Minor] Lỏng khớp bản lề làm sụp góc ngửa +15° khi quạt quay đảo chiều đến điểm biên` | Minor | `bug`, `usability`, `mechanical` | `TC-09` | [`issue_04_DEF-04.md`](issue_04_DEF-04.md) |
-| **#5** | **DEF-05** | `[DEF-05][High] Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím tốc độ không hết hành trình` | High | `bug`, `safety`, `electrical-hazard` | `TC-15 (Edge Case #4)` | [`issue_05_DEF-05.md`](issue_05_DEF-05.md) |
+| Issue ID | Defect ID | Tiêu đề Issue (Title) | Mức độ (Severity) | Nhãn (Labels) | Test Case tương ứng | File nội dung chi tiết | Link GitHub |
+| :---: | :---: | :--- | :---: | :---: | :---: | :--- | :--- |
+| **#1** | **DEF-01** | `[DEF-01][Major] Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím tốc độ (1 & 2)` | Major | `bug`, `safety`, `hardware` | `TC-12 (Edge Case #1)` | [`issue_01_DEF-01.md`](issue_01_DEF-01.md) | [Issue #1](https://github.com/NgBaoAnn/hw1/issues/1) |
+| **#2** | **DEF-02** | `[DEF-02][Medium] Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch khi bị cản hành trình` | Medium | `bug`, `mechanical`, `degradation` | `TC-13 (Edge Case #2)` | [`issue_02_DEF-02.md`](issue_02_DEF-02.md) | [Issue #2](https://github.com/NgBaoAnn/hw1/issues/2) |
+| **#3** | **DEF-03** | `[DEF-03][Medium] Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm & Số 3` | Medium | `bug`, `stability`, `vibration` | `TC-14 (Edge Case #3)` | [`issue_03_DEF-03.md`](issue_03_DEF-03.md) | [Issue #3](https://github.com/NgBaoAnn/hw1/issues/3) |
+| **#4** | **DEF-04** | `[DEF-04][Minor] Lỏng khớp bản lề làm sụp góc ngửa +15° khi quạt quay đảo chiều đến điểm biên` | Minor | `bug`, `usability`, `mechanical` | `TC-09` | [`issue_04_DEF-04.md`](issue_04_DEF-04.md) | [Issue #4](https://github.com/NgBaoAnn/hw1/issues/4) |
+| **#5** | **DEF-05** | `[DEF-05][High] Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím tốc độ không hết hành trình` | High | `bug`, `safety`, `electrical-hazard` | `TC-15 (Edge Case #4)` | [`issue_05_DEF-05.md`](issue_05_DEF-05.md) | [Issue #5](https://github.com/NgBaoAnn/hw1/issues/5) |
 
 ---
 

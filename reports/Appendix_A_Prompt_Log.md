@@ -692,5 +692,25 @@ https://youtube.com/shorts/NZP3v1SyXfY?feature=share
 - **Đánh giá & Ghi chú:**
   - Hoàn thành trọn vẹn 100% Task 3.5 thực nghiệm thiết bị vật lý với đủ $\ge 5$ video demo minh chứng có giọng thuyết minh của sinh viên.
 
+### [Prompt ID: P-37]
+- **Thời gian (Timestamp):** `14:33:34 26/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 3.6 – Khởi tạo 5 GitHub Issues trực tiếp lên repository cá nhân bằng GitHub CLI (`gh`)
+- **Mục tiêu / Context:** Tự động hóa việc tạo 5 GitHub Issues chuyên nghiệp theo chuẩn ISTQB cho 5 khiếm khuyết vật lý thực tế trên Quạt Senko L1638 lên GitHub repository `NgBaoAnn/hw1`.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+hãy thực hiện task 3.6 bằng gh cli
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI sử dụng công cụ `gh issue create` tạo thành công 5 issues trực tiếp trên repository `https://github.com/NgBaoAnn/hw1`:
+    - Issue #1: `https://github.com/NgBaoAnn/hw1/issues/1` (`[DEF-01][Major] Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím tốc độ (1 & 2)`)
+    - Issue #2: `https://github.com/NgBaoAnn/hw1/issues/2` (`[DEF-02][Medium] Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch khi bị cản hành trình`)
+    - Issue #3: `https://github.com/NgBaoAnn/hw1/issues/3` (`[DEF-03][Medium] Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm & Số 3`)
+    - Issue #4: `https://github.com/NgBaoAnn/hw1/issues/4` (`[DEF-04][Minor] Lỏng khớp bản lề làm sụp góc ngửa +15° khi quạt quay đảo chiều đến điểm biên`)
+    - Issue #5: `https://github.com/NgBaoAnn/hw1/issues/5` (`[DEF-05][High] Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím tốc độ không hết hành trình`)
+  - Cập nhật liên kết trực tiếp của 5 live GitHub Issues vào `requirements/req3_physical_product/device_info.md` và `requirements/req3_physical_product/github_issues/issues_list.md`.
+- **Đánh giá & Ghi chú:**
+  - Hoàn thành trọn vẹn 100% Task 3.6, nâng cao tính chuyên nghiệp và minh bạch của toàn bộ chu trình phát hiện lỗi vật lý và quản trị issue.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
