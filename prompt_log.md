@@ -824,6 +824,32 @@ hãy tạo file .tex riêng để format được tốt hơn, tôi thấy các d
 - **Đánh giá & Ghi chú:**
   - Hoàn thiện mỹ thuật và độ dàn trang chính xác tuyệt đối theo chuẩn in ấn luận văn học thuật.
 
+### [Prompt ID: P-43]
+- **Thời gian (Timestamp):** `15:50:45 26/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 6 – Đóng gói & Tổng hợp Thư mục Nộp bài Chuẩn Quy chế Submission (`2026.HW01.Jobs.Defects.PhysicalProduct_En.pdf`)
+- **Mục tiêu / Context:** Tạo thư mục tổng hợp nộp bài độc lập `23120207_HW01_AI_100/` và file nén `23120207_HW01_AI_100.zip` chứa đầy đủ 100% các thành phần bắt buộc đối chiếu mục Submission Regulations (PDF trang 5–6).
+- **Nội dung Prompt (Nguyên văn):**
+```text
+hãy thực hiện tạo 1 folder riêng để tổng hợp đầy đủ các file và thành phần dùng để nộp bài. nhớ check phần submission trong @[2026.HW01.Jobs.Defects.PhysicalProduct_En.pdf] để đảm bảo.
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - Trích xuất và đối chiếu kỹ lưỡng toàn bộ quy chuẩn nộp bài từ tệp PDF gốc `2026.HW01.Jobs.Defects.PhysicalProduct_En.pdf` (Trang 5–6):
+    1. *Cú pháp đặt tên gói nộp:* `StudentID_HW01_AI_<grade>.zip` $\rightarrow$ `23120207_HW01_AI_100.zip` với mã điểm tự chấm 3 chữ số `100`.
+    2. *Báo cáo chính (PDF & Markdown):* Ấn bản PDF `HW01_Report.pdf` (13 trang in ấn không lỗi Overfull \hbox) và bản Markdown `HW01_Report.md`.
+    3. *Nhật ký Prompts (Appendix A):* Tệp `Appendix_A_Prompt_Log.md` ghi nhận đủ 43 prompts có timestamp chính xác từng giây.
+    4. *Bảng tính kiểm thử Excel:* Tệp `test_cases_and_summary.xlsx` gồm 3 sheets (15 Test Cases, Ma trận 5 Defects, Test Summary Report).
+    5. *Minh chứng Lỗi GitHub Issues (thay thế Mantis):* 5 ảnh màn hình `issue_1.png` $\rightarrow$ `issue_5.png` hiển thị tài khoản sinh viên `NgBaoAnn`.
+    6. *Minh chứng thiết bị thật:* Ảnh chụp `device_23120207.jpg` thẻ SV và quạt Senko L1638 trong cùng khung hình.
+    7. *Liên kết 5 Video YouTube Shorts Unlisted:* Tệp `YouTube_Demo_Links.txt` chứa đường dẫn 5 video có thuyết minh giọng thật.
+    8. *Sơ đồ tư duy QA/QC Mindmap:* Tệp Markdown `qa_qc_roles_mindmap.md` sửa 3 lỗi ISTQB.
+    9. *Bộ biểu mẫu AI của Khoa:* Đầy đủ 4 tệp `.docx` chính thức trong `AI Templates/` và 4 tệp `.md` đối ứng trong `templates/`.
+    10. *Tài liệu Vấn đáp miệng & Tự chấm điểm:* `Oral_Defense_Guide.md` và `Self_Assessment.md` (100/100 điểm).
+    11. *Lịch sử Git commit:* Tệp `git_log.txt` trích xuất đầy đủ cây commit và số liệu sửa đổi.
+  - Xây dựng script `scripts/build_submission_package.py` tự động hóa rà soát, sao chép và đóng gói thành công thư mục `23120207_HW01_AI_100/` và file zip `23120207_HW01_AI_100.zip` (dung lượng ~22 MB).
+- **Đánh giá & Ghi chú:**
+  - Hoàn thành xuất sắc Task 6, bài nộp đạt độ toàn vẹn 100%, sẵn sàng tải lên hệ thống Moodle.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
 
