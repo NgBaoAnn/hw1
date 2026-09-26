@@ -1,3 +1,95 @@
+* commit 3b6b69b4ed3e2fca70713a6d4b828b07623ad6ac
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 15:36:30 2026 +0700
+| 
+|     feat(task-5): implement professional LaTeX template HW01_Report.tex and compile PDF
+| 
+|  .gitignore                       |   6 +
+|  prompt_log.md                    |  23 ++
+|  reports/Appendix_A_Prompt_Log.md |  23 ++
+|  reports/HW01_Report.md           |  13 +-
+|  reports/HW01_Report.pdf          | Bin 199250 -> 221868 bytes
+|  reports/HW01_Report.tex          | 497 ++++++++++++++++++++++++++++++++++
+|  reports/Self_Assessment.md       |   2 +-
+|  scripts/generate_latex_report.py | 533 +++++++++++++++++++++++++++++++++++++
+|  8 files changed, 1091 insertions(+), 6 deletions(-)
+| 
+* commit 725952c03abdbd67a5a4188c5d1366936c260e7b
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 15:26:58 2026 +0700
+| 
+|     feat(task-5): finalize consolidated report HW01, PDF, 3-sheet Excel, and oral defense guide
+|     
+|     - Update reports/HW01_Report.md connecting Tasks 1-5, linking 5 GitHub issue screenshots, 4 .docx templates, and 40 prompts
+|     - Compile reports/HW01_Report.pdf (30 pages) via pandoc and xelatex with Arial & Arial Unicode MS fonts
+|     - Generate complete 3-sheet reports/test_cases_and_summary.xlsx (15 Test Cases, Defects & Issues, Test Summary Report)
+|     - Add scripts/generate_full_excel.py OpenXML generator
+|     - Update reports/Self_Assessment.md with 100/100 self-assessment score
+|     - Confirm reports/Oral_Defense_Guide.md answers 3 oral defense questions
+|     - Log Prompt P-40 in prompt_log.md and reports/Appendix_A_Prompt_Log.md
+|     - Mark Task 5 as completed in PLAN_HW01.md
+| 
+|  PLAN_HW01.md                                      |  30 ++---
+|  prompt_log.md                                     |  28 +++++
+|  reports/Appendix_A_Prompt_Log.md                  |  28 +++++
+|  reports/HW01_Report.md                            |  57 ++++++---
+|  reports/HW01_Report.pdf                           | Bin 0 -> 199250 bytes
+|  reports/Self_Assessment.md                        |   8 +-
+|  reports/test_cases_and_summary.xlsx               | Bin 5736 -> 9110 bytes
+|  .../test_cases_and_summary.xlsx                   | Bin 5736 -> 9110 bytes
+|  scripts/generate_full_excel.py                    | 132 ++++++++++++++++++++
+|  9 files changed, 246 insertions(+), 37 deletions(-)
+| 
+* commit b40ca8864f7532fdd505634535e02af945f8e085
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 15:11:22 2026 +0700
+| 
+|     feat(task-4): populate official .docx AI templates and update prompt log P-39
+|     
+|     - Populate [AI-02] Audit Report with 3 audited artifacts, 22 metrics, conclusion and signature
+|     - Populate [AI-03] Disclosure Form with answers to Q1-Q6, verbatim prompts, and student signature
+|     - Populate [AI-05] Privacy Checklist with checked checkboxes and student signature
+|     - Populate [AI-06] Student Acknowledgement with checked acknowledgements and faculty AI account info
+|     - Backup original blank docx templates in AI Templates/blank_templates/
+|     - Add scripts/populate_docx_templates.py for OpenXML automation
+|     - Log prompt P-39 in prompt_log.md and reports/Appendix_A_Prompt_Log.md
+| 
+|  .../[AI-02] - FIT@HCMUS - AI Audit Report_En.docx | Bin 32090 -> 35469 bytes
+|  ...I-03] - FIT@HCMUS - AI Disclosure Form_En.docx | Bin 29770 -> 31581 bytes
+|  ...05] - FIT@HCMUS - AI Privacy Checklist_En.docx | Bin 28862 -> 29193 bytes
+|  ...FIT@HCMUS - AI Student Acknowledgement_En.docx | Bin 28817 -> 29210 bytes
+|  .../[AI-01] - FIT@HCMUS - AI Agreement_En.docx    | Bin 0 -> 201411 bytes
+|  .../[AI-02] - FIT@HCMUS - AI Audit Report_En.docx | Bin 0 -> 32090 bytes
+|  ...I-03] - FIT@HCMUS - AI Disclosure Form_En.docx | Bin 0 -> 29770 bytes
+|  ... - FIT@HCMUS - AI Reflective Statement_En.docx | Bin 0 -> 30003 bytes
+|  ...05] - FIT@HCMUS - AI Privacy Checklist_En.docx | Bin 0 -> 28862 bytes
+|  ...FIT@HCMUS - AI Student Acknowledgement_En.docx | Bin 0 -> 28817 bytes
+|  PLAN_HW01.md                                      |  32 +-
+|  prompt_log.md                                     |  21 ++
+|  reports/Appendix_A_Prompt_Log.md                  |  21 ++
+|  scripts/populate_docx_templates.py                | 342 ++++++++++++++++++++
+|  14 files changed, 400 insertions(+), 16 deletions(-)
+| 
+* commit 6714b7ad46da445f688cc725a7a0f4a011339484
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 14:55:12 2026 +0700
+| 
+|     feat(req3): link 5 GitHub issues screenshots (anti-cheat), log Prompt P-38, and reset Task 4-6 to pending per user request
+| 
+|  PLAN_HW01.md                                      | 67 ++++++++++++---------
+|  prompt_log.md                                     | 21 +++++++
+|  reports/Appendix_A_Prompt_Log.md                  | 21 +++++++
+|  reports/git_log.txt                               |  9 +++
+|  requirements/req3_physical_product/device_info.md | 14 ++---
+|  .../github_issues/issue_01_DEF-01.md              |  2 +
+|  .../github_issues/issue_02_DEF-02.md              |  2 +
+|  .../github_issues/issue_03_DEF-03.md              |  2 +
+|  .../github_issues/issue_04_DEF-04.md              |  2 +
+|  .../github_issues/issue_05_DEF-05.md              |  2 +
+|  .../github_issues/issues_list.md                  | 14 ++---
+|  requirements/req3_physical_product/test_cases.md  | 10 +--
+|  12 files changed, 117 insertions(+), 49 deletions(-)
+| 
 * commit b8ca90e7a130a7cb21c5231e643e5788ea4d352a
 | Author: NgBaoAnn <baoan1real1@gmail.com>
 | Date:   Sat Sep 26 14:45:32 2026 +0700
@@ -6,536 +98,3 @@
 | 
 |  reports/git_log.txt | 27 +++++++++++++++++++++++++++
 |  1 file changed, 27 insertions(+)
-| 
-* commit 957159cd8b357a51184f83daedf9fba75bdc4751
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:45:23 2026 +0700
-| 
-|     feat: complete AI templates, AI critique, final report HW01, oral defense guide, and packaging script
-| 
-|  .gitignore                                        |   3 +-
-|  PLAN_HW01.md                                      |  74 ++-
-|  reports/AI-02_AI_Audit_Report.md                  |  82 ++++
-|  reports/AI_Critique.md                            |  22 +-
-|  reports/HW01_Report.md                            | 306 ++++++++++++
-|  reports/Oral_Defense_Guide.md                     |  56 +++
-|  reports/Self_Assessment.md                        |  27 +-
-|  reports/git_log.txt                               | 505 ++++++++++++++++++++
-|  reports/test_cases_and_summary.xlsx               | Bin 0 -> 5736 bytes
-|  .../req3_physical_product/photo/issue_1.png       | Bin 0 -> 1375133 bytes
-|  .../req3_physical_product/photo/issue_2.png       | Bin 0 -> 1363810 bytes
-|  .../req3_physical_product/photo/issue_3.png       | Bin 0 -> 1367130 bytes
-|  .../req3_physical_product/photo/issue_4.png       | Bin 0 -> 1408096 bytes
-|  .../req3_physical_product/photo/issue_5.png       | Bin 0 -> 1463259 bytes
-|  scripts/package_submission.sh                     |  47 +-
-|  templates/AI-02_AI_Audit_Report.md                |  37 +-
-|  templates/AI-03_AI_Disclosure_Form.md             |  47 +-
-|  templates/AI-05_AI_Privacy_Checklist.md           |  10 +-
-|  templates/AI-06_AI_Student_Acknowledgement.md     |  14 +-
-|  19 files changed, 1110 insertions(+), 120 deletions(-)
-| 
-* commit 991fa24832146065e2d851045408e30bb182c2a0
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:38:49 2026 +0700
-| 
-|     feat(req3): link 5 live GitHub issues, update prompt log P-37, and finalize Task 3
-| 
-|  PLAN_HW01.md                                       | 13 +++++++++----
-|  prompt_log.md                                      | 20 ++++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                   | 20 ++++++++++++++++++++
-|  requirements/req3_physical_product/device_info.md  | 10 +++++-----
-|  .../github_issues/issues_list.md                   | 14 +++++++-------
-|  5 files changed, 61 insertions(+), 16 deletions(-)
-| 
-* commit 05cfb6ee3e53b7cb00fae250910587ad64ff43b9
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:30:55 2026 +0700
-| 
-|     feat(req3): integrate 5 YouTube demo video links into test_cases.md and GitHub issues
-| 
-|  PLAN_HW01.md                                      | 13 ++++++-----
-|  prompt_log.md                                     | 25 +++++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                  | 25 +++++++++++++++++++++
-|  .../github_issues/issue_01_DEF-01.md              |  2 +-
-|  .../github_issues/issue_02_DEF-02.md              |  2 +-
-|  .../github_issues/issue_03_DEF-03.md              |  2 +-
-|  .../github_issues/issue_04_DEF-04.md              |  2 +-
-|  .../github_issues/issue_05_DEF-05.md              |  2 +-
-|  requirements/req3_physical_product/test_cases.md  | 10 ++++-----
-|  9 files changed, 68 insertions(+), 15 deletions(-)
-| 
-* commit 91c18f5089a7ea5bffcf83eb708bed964cad8758
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:11:21 2026 +0700
-| 
-|     docs(req3): prepare 5 GitHub Issues for defects DEF-01 to DEF-05
-| 
-|  .../github_issues/issue_01_DEF-01.md              | 48 ++++++++++++++++++++
-|  .../github_issues/issue_02_DEF-02.md              | 47 ++++++++++++++++++++
-|  .../github_issues/issue_03_DEF-03.md              | 49 +++++++++++++++++++++
-|  .../github_issues/issue_04_DEF-04.md              | 43 ++++++++++++++++++
-|  .../github_issues/issue_05_DEF-05.md              | 49 +++++++++++++++++++++
-|  .../github_issues/issues_list.md                  | 37 ++++++++++++++++
-|  6 files changed, 273 insertions(+)
-| 
-* commit ebcd0e31f3766be0479a212a25f80196256c3499
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:09:43 2026 +0700
-| 
-|     feat(req3): complete Task 3.4 with 15 ISTQB test cases, CSV, and test_cases_and_summary.xlsx
-| 
-|  PLAN_HW01.md                                      |   8 +-
-|  requirements/req3_physical_product/test_cases.csv |  16 ++++
-|  requirements/req3_physical_product/test_cases.md  |  89 ++++++++++++++++----
-|  .../test_cases_and_summary.xlsx                   | Bin 0 -> 5736 bytes
-|  4 files changed, 91 insertions(+), 22 deletions(-)
-| 
-* commit f9f6ecdbeb0a789a0be87ce6a441899be5035cca
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:08:11 2026 +0700
-| 
-|     docs(req3): embed AI edge cases chat screenshot into edge_cases_ai_missed.md
-| 
-|  .../req3_physical_product/edge_cases_ai_missed.md    |   9 +++++++--
-|  .../photo/ai_edge_cases_screenshot.png               | Bin 0 -> 210187 bytes
-|  2 files changed, 7 insertions(+), 2 deletions(-)
-| 
-* commit 621d88183a12f380559de16e6b22fc3c005f1d7e
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 13:59:46 2026 +0700
-| 
-|     feat(req3): complete Task 3.2 anti-cheat photo and Task 3.3 AI edge cases critique (CLO G9.3)
-| 
-|  PLAN_HW01.md                                      |  20 +--
-|  prompt_log.md                                     |  22 +++
-|  reports/Appendix_A_Prompt_Log.md                  |  22 +++
-|  requirements/req3_physical_product/device_info.md |   9 +-
-|  .../req3_physical_product/edge_cases_ai_missed.md | 140 ++++++++++++++++----
-|  .../photo/device_23120207.jpg                     | Bin 0 -> 571893 bytes
-|  .../photo/device_student_id.jpg                   | Bin 0 -> 571893 bytes
-|  templates/AI-02_AI_Audit_Report.md                |   2 +-
-|  8 files changed, 179 insertions(+), 36 deletions(-)
-| 
-* commit 4821062ab4c89e1dd80d4a760cc214e41042b7f6
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 13:46:30 2026 +0700
-| 
-|     feat(req3): complete Task 3.1 device selection and specs for Senko L1638 fan
-| 
-|  PLAN_HW01.md                                      |  6 ++--
-|  prompt_log.md                                     | 15 ++++++++
-|  reports/Appendix_A_Prompt_Log.md                  | 15 ++++++++
-|  requirements/req3_physical_product/device_info.md | 40 ++++++++++++++-------
-|  4 files changed, 60 insertions(+), 16 deletions(-)
-| 
-* commit edcfd910cd1f73aced6d10c47d8d70e57b5ba3a6
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:07:38 2026 +0700
-| 
-|     docs(req2): finalize Requirement 2 in PLAN_HW01 and update Artifact #3 in AI-02 Audit Report
-| 
-|  PLAN_HW01.md                       | 30 ++++++++++++++++--------------
-|  templates/AI-02_AI_Audit_Report.md |  2 +-
-|  2 files changed, 17 insertions(+), 15 deletions(-)
-| 
-* commit 5823aac5c7932f16485834d0fe67cbdb9158f3d5
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:07:08 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #20 Ivanti VPN - finalize Requirement 2
-| 
-|  prompt_log.md                                     | 20 +++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                  | 20 +++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md    | 27 ++++++++++++++++++---
-|  3 files changed, 63 insertions(+), 4 deletions(-)
-| 
-* commit 978991ebffc0c62033dba7b824630b30bd491678
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:06:11 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #19 Atlassian Confluence
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 18 +++++++++++++++---
-|  3 files changed, 53 insertions(+), 3 deletions(-)
-| 
-* commit 8f7295f0dc1c324f6233be6aa2ff9972bc28b254
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:05:29 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #18 Okta Cookie Theft
-| 
-|  prompt_log.md                                      | 20 ++++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                   | 20 ++++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md     | 17 ++++++++++++++---
-|  3 files changed, 54 insertions(+), 3 deletions(-)
-| 
-* commit c17c64871ae5f63229cded6c9d872be5cd92a596
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:04:35 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #17 Citigroup Flash Crash
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 18 +++++++++++++++---
-|  3 files changed, 53 insertions(+), 3 deletions(-)
-| 
-* commit 978c5c9322091c7d07dba58481d7794f118b407f
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:03:46 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #16 Unity Runtime Fee
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit f6ce2f0abb2687b81055142cbdb8b53259d7d0b8
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:02:02 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #15 Southwest Airlines Meltdown
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit 3084e3b7dad4574fde1fd42ec61dc5f60bf7c257
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 17:00:37 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #14 XZ Utils Backdoor
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit 4a7365cf784f2337b4c37aca9a0c97ca908d6cbd
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:59:54 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #13 AT&T Core Network Outage
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit 0210afac986289dc0b0ad773857d2c98819e9971
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:58:37 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #12 Optus BGP Prefix Overload
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 17 ++++++++++++++---
-|  3 files changed, 52 insertions(+), 3 deletions(-)
-| 
-* commit 31ed8225701a626f86b75c8af33ea7c5783cd752
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:58:00 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #11 Toyota Disk Full Outage
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 17 ++++++++++++++---
-|  3 files changed, 52 insertions(+), 3 deletions(-)
-| 
-* commit 2370654e94a48f297b3bedbc2ac11930e0dd953b
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:57:00 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #10 FAA NOTAM Database Sync
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit f65fe3b0673ab8f9cdfac95cfaaf086a2b7ff463
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:55:14 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #09 MOVEit Transfer SQLi
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit 54a2ea646b2c6ffde5a2749876e610cfc3ed68e1
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:54:14 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #08 Cloudflare BGP Outage
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit cf386dce53929fc27d80ae09c9539ea1b37fedfc
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:53:18 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #07 CrowdStrike BSOD
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit 84aaf1addcf53c197085c0daeed6e2a89c70db9b
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:52:11 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #06 Samsung ChatGPT Data Leak
-| 
-|  prompt_log.md                                        | 18 ++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                     | 18 ++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md       | 16 +++++++++++++---
-|  3 files changed, 49 insertions(+), 3 deletions(-)
-| 
-* commit 5ece9a66d290786e9cbb9aca0277dbbd9f55b982
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:51:23 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #05 DPD Delivery Bot
-| 
-|  prompt_log.md                                        | 18 ++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                     | 18 ++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md       | 17 ++++++++++++++---
-|  3 files changed, 50 insertions(+), 3 deletions(-)
-| 
-* commit b1688ef5bc1eb0c775842bc6d8de33951b949d34
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:50:42 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #04 Microsoft Bing Sydney
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 17 ++++++++++++++---
-|  3 files changed, 52 insertions(+), 3 deletions(-)
-| 
-* commit fd0559504f2c85a5b1f15ed78a03e7b36674592d
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:49:42 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #03 Chevrolet  Car Prompt Injection
-| 
-|  prompt_log.md                                        | 18 ++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                     | 18 ++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md       | 16 +++++++++++++---
-|  3 files changed, 49 insertions(+), 3 deletions(-)
-| 
-* commit 6372711f41c5852cbea3e7aedeb57aab7104a8bb
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:48:22 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #02 Air Canada Chatbot
-| 
-|  prompt_log.md                                       | 19 +++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                    | 19 +++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md      | 16 +++++++++++++---
-|  3 files changed, 51 insertions(+), 3 deletions(-)
-| 
-* commit 00b7838cf3d0a6bfe460b9472a331593e6b44a95
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:47:16 2026 +0700
-| 
-|     feat(req2): complete interview and audit for Defect #01 Google Gemini Image Bias
-| 
-|  prompt_log.md                                        | 18 ++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md                     | 18 ++++++++++++++++++
-|  .../req2_software_defects/defects_2022_2026.md       | 15 ++++++++++++---
-|  3 files changed, 48 insertions(+), 3 deletions(-)
-| 
-* commit e6ff135abfc8ac154c0bb54fa7b4f576e0a5c225
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:46:09 2026 +0700
-| 
-|     docs: record P-13 ready for Task 2.2 defect interviews
-| 
-|  prompt_log.md                    | 15 +++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md | 15 +++++++++++++++
-|  2 files changed, 30 insertions(+)
-| 
-* commit 6b3a2170eb733a15c5eccdbbeff6412bab524898
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:44:01 2026 +0700
-| 
-|     fix(req1): update screenshots with logged-in account and standardize filenames to job_01-10
-| 
-|  requirements/req1_job_market/jobs_data.md         |  40 ++++++++++----------
-|  .../Screenshot 2026-09-24 at 15.51.00.png         | Bin 1308670 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.51.19.png         | Bin 1401534 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.51.27.png         | Bin 1345729 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.51.32.png         | Bin 1410794 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.51.39.png         | Bin 1284918 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.51.44.png         | Bin 1357845 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.51.49.png         | Bin 1358559 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.52.10.png         | Bin 1233793 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.52.16.png         | Bin 1353844 -> 0 bytes
-|  .../Screenshot 2026-09-24 at 15.52.43.png         | Bin 1239881 -> 0 bytes
-|  .../req1_job_market/screenshots/job_01.png        | Bin 37 -> 1548425 bytes
-|  .../req1_job_market/screenshots/job_02.png        | Bin 37 -> 1637526 bytes
-|  .../req1_job_market/screenshots/job_03.png        | Bin 37 -> 1450722 bytes
-|  .../req1_job_market/screenshots/job_04.png        | Bin 37 -> 1446520 bytes
-|  .../req1_job_market/screenshots/job_05.png        | Bin 37 -> 1443890 bytes
-|  .../req1_job_market/screenshots/job_06.png        | Bin 37 -> 1419775 bytes
-|  .../req1_job_market/screenshots/job_07.png        | Bin 37 -> 1408636 bytes
-|  .../req1_job_market/screenshots/job_08.png        | Bin 37 -> 1357895 bytes
-|  .../req1_job_market/screenshots/job_09.png        | Bin 37 -> 1395133 bytes
-|  .../req1_job_market/screenshots/job_10.png        | Bin 37 -> 1343891 bytes
-|  21 files changed, 20 insertions(+), 20 deletions(-)
-| 
-* commit 61c60ba9af4481271fb8b6d562fb366b36371418
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:18:31 2026 +0700
-| 
-|     feat(req2): complete Task 2.1 collection of 20 software defects (2022-2026) with 6 AI incidents
-| 
-|  PLAN_HW01.md                                      |   7 +-
-|  prompt_log.md                                     |  17 +
-|  reports/Appendix_A_Prompt_Log.md                  |  17 +
-|  .../req2_software_defects/defects_2022_2026.md    | 409 ++++++++++++++++++--
-|  4 files changed, 417 insertions(+), 33 deletions(-)
-| 
-* commit 5c9293353bc6bd3a5fe8cc08d63b1ab693288eec
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:14:43 2026 +0700
-| 
-|     docs: sync prompt log up to P-11 and update Task 1 completion status in plan
-| 
-|  PLAN_HW01.md                     | 36 ++++++++++++++++++------------------
-|  prompt_log.md                    | 37 +++++++++++++++++++++++++++++++++++++
-|  reports/Appendix_A_Prompt_Log.md | 37 +++++++++++++++++++++++++++++++++++++
-|  3 files changed, 92 insertions(+), 18 deletions(-)
-| 
-* commit 02f81b9c9e5f22191ba9850f3291665454f7e778
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 16:08:50 2026 +0700
-| 
-|     feat(req1): complete Task 1.4 QA/QC role mindmap and CLO G9.1 3-mistake analysis
-| 
-|  prompt_log.md                                     | 22 ++++++
-|  reports/Appendix_A_Prompt_Log.md                  | 22 ++++++
-|  .../mindmap/qa_qc_roles_mindmap.md                | 83 +++++++++++++++++++++
-|  templates/AI-02_AI_Audit_Report.md                |  2 +-
-|  4 files changed, 128 insertions(+), 1 deletion(-)
-| 
-* commit 8b0f893009e6af080b59fabc45055964ded92679
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 15:59:50 2026 +0700
-| 
-|     feat(req1): complete Task 1.3 job data extraction and analysis for 10 QA/QC jobs
-| 
-|  prompt_log.md                                     |  20 ++
-|  reports/Appendix_A_Prompt_Log.md                  |  20 ++
-|  requirements/req1_job_market/jobs_data.md         | 226 ++++++++++++++++++--
-|  .../Screenshot 2026-09-24 at 15.51.00.png         | Bin 0 -> 1308670 bytes
-|  .../Screenshot 2026-09-24 at 15.51.19.png         | Bin 0 -> 1401534 bytes
-|  .../Screenshot 2026-09-24 at 15.51.27.png         | Bin 0 -> 1345729 bytes
-|  .../Screenshot 2026-09-24 at 15.51.32.png         | Bin 0 -> 1410794 bytes
-|  .../Screenshot 2026-09-24 at 15.51.39.png         | Bin 0 -> 1284918 bytes
-|  .../Screenshot 2026-09-24 at 15.51.44.png         | Bin 0 -> 1357845 bytes
-|  .../Screenshot 2026-09-24 at 15.51.49.png         | Bin 0 -> 1358559 bytes
-|  .../Screenshot 2026-09-24 at 15.52.10.png         | Bin 0 -> 1233793 bytes
-|  .../Screenshot 2026-09-24 at 15.52.16.png         | Bin 0 -> 1353844 bytes
-|  .../Screenshot 2026-09-24 at 15.52.43.png         | Bin 0 -> 1239881 bytes
-|  .../req1_job_market/screenshots/job_01.png        |   1 +
-|  .../req1_job_market/screenshots/job_02.png        |   1 +
-|  .../req1_job_market/screenshots/job_03.png        |   1 +
-|  .../req1_job_market/screenshots/job_04.png        |   1 +
-|  .../req1_job_market/screenshots/job_05.png        |   1 +
-|  .../req1_job_market/screenshots/job_06.png        |   1 +
-|  .../req1_job_market/screenshots/job_07.png        |   1 +
-|  .../req1_job_market/screenshots/job_08.png        |   1 +
-|  .../req1_job_market/screenshots/job_09.png        |   1 +
-|  .../req1_job_market/screenshots/job_10.png        |   1 +
-|  23 files changed, 253 insertions(+), 23 deletions(-)
-| 
-* commit a70961a71f40d0fefaec0910e1960e564c60a4d5
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 15:44:59 2026 +0700
-| 
-|     docs: remove prompt summary table from prompt log files
-| 
-|  prompt_log.md                    | 14 --------------
-|  reports/Appendix_A_Prompt_Log.md | 14 --------------
-|  2 files changed, 28 deletions(-)
-| 
-* commit 000345ecc6a327adf206ebcabf037241bdee3683
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 15:42:45 2026 +0700
-| 
-|     docs: record full prompt log from transcript with exact timestamps (P-01 to P-07)
-| 
-|  prompt_log.md                    | 146 ++++++++++++++++++++++++++++++++-----
-|  reports/Appendix_A_Prompt_Log.md | 146 ++++++++++++++++++++++++++++++++-----
-|  2 files changed, 258 insertions(+), 34 deletions(-)
-| 
-* commit e33ba70e55506a8d2fe81710d6a7de7f2e60ce12
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 15:40:39 2026 +0700
-| 
-|     chore: setup prompt_log.md in root and update package script
-| 
-|  prompt_log.md                 | 47 +++++++++++++++++++++++++++++++++++++++++
-|  scripts/package_submission.sh |  5 +++++
-|  2 files changed, 52 insertions(+)
-| 
-* commit 6cb793a874675729c9229ffff6099c73d8394a75
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Thu Sep 24 15:39:10 2026 +0700
-| 
-|     feat: align markdown templates exactly with official FIT@HCMUS docx forms
-| 
-|  templates/AI-02_AI_Audit_Report.md            | 105 ++++++++++++++----------
-|  templates/AI-03_AI_Disclosure_Form.md         | 102 +++++++++++++++++------
-|  templates/AI-05_AI_Privacy_Checklist.md       |  58 ++++++++-----
-|  templates/AI-06_AI_Student_Acknowledgement.md |  50 +++++++++++
-|  4 files changed, 228 insertions(+), 87 deletions(-)
-| 
-* commit c0c600b78f0937194479f969148fc6bfd52e688c
-  Author: NgBaoAnn <baoan1real1@gmail.com>
-  Date:   Thu Sep 24 15:34:11 2026 +0700
-  
-      chore: initialize repository structure, templates and tracking for HW01
-  
-   .gitignore                                        |  13 ++
-   2026.HW01.Jobs.Defects.PhysicalProduct_En.pdf     | Bin 0 -> 471275 bytes
-   .../[AI-01] - FIT@HCMUS - AI Agreement_En.docx    | Bin 0 -> 201411 bytes
-   .../[AI-02] - FIT@HCMUS - AI Audit Report_En.docx | Bin 0 -> 32090 bytes
-   ...I-03] - FIT@HCMUS - AI Disclosure Form_En.docx | Bin 0 -> 29770 bytes
-   ... - FIT@HCMUS - AI Reflective Statement_En.docx | Bin 0 -> 30003 bytes
-   ...05] - FIT@HCMUS - AI Privacy Checklist_En.docx | Bin 0 -> 28862 bytes
-   ...FIT@HCMUS - AI Student Acknowledgement_En.docx | Bin 0 -> 28817 bytes
-   PLAN_HW01.md                                      | 214 ++++++++++++++++++++
-   note.txt                                          |  23 +++
-   reports/AI_Critique.md                            |  12 ++
-   reports/Appendix_A_Prompt_Log.md                  |  47 +++++
-   reports/Self_Assessment.md                        |  16 ++
-   requirements/req1_job_market/jobs_data.md         |  35 ++++
-   requirements/req1_job_market/mindmap/.gitkeep     |   0
-   requirements/req1_job_market/screenshots/.gitkeep |   0
-   .../req2_software_defects/defects_2022_2026.md    |  41 ++++
-   requirements/req3_physical_product/device_info.md |  36 ++++
-   .../req3_physical_product/edge_cases_ai_missed.md |  34 ++++
-   .../req3_physical_product/github_issues/.gitkeep  |   0
-   requirements/req3_physical_product/photo/.gitkeep |   0
-   requirements/req3_physical_product/test_cases.md  |  28 +++
-   .../req3_physical_product/videos/.gitkeep         |   0
-   scripts/package_submission.sh                     |  64 ++++++
-   templates/AI-02_AI_Audit_Report.md                |  58 ++++++
-   templates/AI-03_AI_Disclosure_Form.md             |  42 ++++
-   templates/AI-05_AI_Privacy_Checklist.md           |  30 +++
-   27 files changed, 693 insertions(+)
