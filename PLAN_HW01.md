@@ -125,14 +125,18 @@ hw1/
 - [x] **Bước 3.1: Lựa chọn thiết bị gia dụng:**
   - Đã chọn: Quạt điện lửng dân dụng SENKO, Model L1638, sản xuất tháng 09/2023.
   - Thu thập đầy đủ thông số kỹ thuật (47W, 220V/50Hz, sải cánh 39cm, 4 phím cơ liên động 0-1-2-3, túp-năng 180°, ống rút 77cm-95cm, cầu chì nhiệt stator) và lưu tại `requirements/req3_physical_product/device_info.md`.
-- [ ] **Bước 3.2: Chụp ảnh bằng chứng chống gian lận (Anti-cheat photo):**
-  - Chụp ảnh thiết bị cùng Thẻ sinh viên trong cùng 1 khung hình rõ nét, thấy rõ model/nhãn mác.
-  - Lưu vào `requirements/req3_physical_product/photo/device_student_id.jpg`.
-- [ ] **Bước 3.3: Dùng AI gợi ý ban đầu & Bắt lỗi Edge Cases (CLO G9.3):**
-  - Gửi prompt yêu cầu AI đề xuất các test case cho thiết bị này.
-  - Đánh giá output của AI: Xác định **ít nhất $\ge 3$ trường hợp biên/ngoại lệ (edge cases) cực kỳ quan trọng mà AI KHÔNG nghĩ tới** (ví dụ: mất điện đột ngột khi đang trong chu trình nhiệt, nhấn giữ đồng thời 2 nút chức năng xung đột, cắm điện khi lòng nồi chưa khô hoặc có dị vật, điện áp sụt giảm...).
-  - Lưu ảnh chụp màn hình chứng minh AI không đề xuất các ca này vào `requirements/req3_physical_product/edge_cases_ai_missed.md`.
-  - Viết phần giải thích kỹ thuật tại sao AI lại bỏ sót các edge case này (do thiếu cảm giác vật lý, dữ liệu đào tạo chỉ tập trung vào happy path, không nắm rõ cơ chế cơ điện...).
+- [x] **Bước 3.2: Chụp ảnh bằng chứng chống gian lận (Anti-cheat photo):**
+  - Đã chụp ảnh Quạt Senko L1638 cùng Thẻ sinh viên (NGUYỄN BẢO AN - MSSV 23120207) trong cùng 1 khung hình rõ nét, hợp lệ 100%.
+  - Lưu vào `requirements/req3_physical_product/photo/device_23120207.jpg` và `photo/device_student_id.jpg`.
+- [x] **Bước 3.3: Dùng AI gợi ý ban đầu & Bắt lỗi Edge Cases (CLO G9.3):**
+  - Đã gửi prompt yêu cầu AI đề xuất test cases cho quạt Senko L1638.
+  - Phê bình phản hồi hời hợt của AI (chỉ sinh 10 test case Happy Path bề mặt).
+  - Vạch trần **4 Edge Cases vật lý / cơ điện trọng yếu mà AI bỏ sót**:
+    1. Nhấn đồng thời 2 phím tốc độ (kẹt lẫy cơ & đoản mạch chéo cuộn dây).
+    2. Cản cưỡng bức hành trình túp-năng (trượt mòn vấu bánh răng hộp số).
+    3. Rung lắc cộng hưởng khi chạy Số 3 ở độ cao 95cm (trôi ren siết ống sắt làm quạt tự sụt chiều cao).
+    4. Nhấn hờ phím tốc độ (phóng hồ quang điện arcing nguy cơ chập cháy).
+  - Hoàn thiện tài liệu `requirements/req3_physical_product/edge_cases_ai_missed.md` và cập nhật Artifact #2 trong `templates/AI-02_AI_Audit_Report.md`.
 - [ ] **Bước 3.4: Xây dựng bộ 15 Test Cases hoàn chỉnh:**
   - Soạn thảo bảng 15 test cases chuẩn vào `requirements/req3_physical_product/test_cases.md` và file Excel `test_cases_and_summary.xlsx` gồm đầy đủ các cột:
     - ID | Objective | Input | Steps | Expected Result | Actual Result | Verdict (Pass/Fail)

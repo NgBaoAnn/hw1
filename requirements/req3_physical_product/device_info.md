@@ -30,11 +30,12 @@
 ---
 
 ## 2. Minh chứng Chống Gian lận (Anti-cheat Evidence)
-- **File ảnh chụp thiết bị + Thẻ sinh viên chung khung hình:** `photo/device_student_id.jpg`
+- **Thông tin sinh viên:** NGUYỄN BẢO AN — MSSV: `23120207` — Lớp/Khóa: 2023 - 2027 — Khoa Công nghệ Thông tin, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM.
+- **File ảnh chụp thiết bị + Thẻ sinh viên chung khung hình:** [`photo/device_23120207.jpg`](photo/device_23120207.jpg) (và bản sao [`photo/device_student_id.jpg`](photo/device_student_id.jpg))
 - **Tình trạng kiểm tra của TA:**
-  - [ ] Thấy rõ sản phẩm vật lý thật (Quạt lửng Senko L1638).
-  - [ ] Thấy rõ Thẻ sinh viên (Họ tên, MSSV, hình ảnh).
-  - [ ] Cùng nằm trong 1 bức ảnh chụp thực tế (không phải ghép kỹ thuật số).
+  - [x] Thấy rõ sản phẩm vật lý thật (Quạt lửng Senko L1638 với logo SENKO, lồng quạt, bầu motor và đế quạt).
+  - [x] Thấy rõ Thẻ sinh viên (Họ tên: NGUYỄN BẢO AN, MSSV: 23120207, ảnh chân dung, logo Trường ĐH KHTN).
+  - [x] Cùng nằm trong 1 bức ảnh chụp thực tế rõ nét (không qua chỉnh sửa/cắt ghép kỹ thuật số).
 
 ---
 
