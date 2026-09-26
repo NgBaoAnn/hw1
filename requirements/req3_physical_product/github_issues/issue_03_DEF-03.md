@@ -4,6 +4,8 @@
 - **Mức độ nghiêm trọng (Severity):** Medium / Mechanical Instability
 - **Khả năng tái hiện (Reproducibility):** Thường xuyên (~80% khi chạy quá 20 phút ở 95cm & Số 3)
 - **Mã kiểm thử liên quan:** `TC-14 (Edge Case #3 - AI Missed)`
+- **GitHub Issue Link:** [https://github.com/NgBaoAnn/hw1/issues/3](https://github.com/NgBaoAnn/hw1/issues/3)
+- **Minh chứng ảnh chụp màn hình (Anti-cheat):** [`../photo/issue_3.png`](../photo/issue_3.png)
 - **Video minh chứng (YouTube Unlisted):** https://youtube.com/shorts/edU_0xoc_JI?feature=share
 
 ---

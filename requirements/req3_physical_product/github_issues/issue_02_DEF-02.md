@@ -4,6 +4,8 @@
 - **Mức độ nghiêm trọng (Severity):** Medium / Hardware Degradation
 - **Khả năng tái hiện (Reproducibility):** 100% khi gặp vật cản trong hành trình quay
 - **Mã kiểm thử liên quan:** `TC-13 (Edge Case #2 - AI Missed)`
+- **GitHub Issue Link:** [https://github.com/NgBaoAnn/hw1/issues/2](https://github.com/NgBaoAnn/hw1/issues/2)
+- **Minh chứng ảnh chụp màn hình (Anti-cheat):** [`../photo/issue_2.png`](../photo/issue_2.png)
 - **Video minh chứng (YouTube Unlisted):** https://youtube.com/shorts/TQMrprni0oY?feature=share
 
 ---

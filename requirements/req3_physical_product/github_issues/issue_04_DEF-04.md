@@ -4,6 +4,8 @@
 - **Mức độ nghiêm trọng (Severity):** Minor / Usability & Ergonomics Defect
 - **Khả năng tái hiện (Reproducibility):** ~60% khi đầu quạt ngửa góc cực đại +15° kết hợp túp-năng
 - **Mã kiểm thử liên quan:** `TC-09`
+- **GitHub Issue Link:** [https://github.com/NgBaoAnn/hw1/issues/4](https://github.com/NgBaoAnn/hw1/issues/4)
+- **Minh chứng ảnh chụp màn hình (Anti-cheat):** [`../photo/issue_4.png`](../photo/issue_4.png)
 - **Video minh chứng (YouTube Unlisted):** https://youtube.com/shorts/jCHATpMITFI?feature=share
 
 ---

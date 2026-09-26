@@ -4,6 +4,8 @@
 - **Mức độ nghiêm trọng (Severity):** Major / High Safety Risk
 - **Khả năng tái hiện (Reproducibility):** 100% (luôn xảy ra khi ấn lực cân bằng)
 - **Mã kiểm thử liên quan:** `TC-12 (Edge Case #1 - AI Missed)`
+- **GitHub Issue Link:** [https://github.com/NgBaoAnn/hw1/issues/1](https://github.com/NgBaoAnn/hw1/issues/1)
+- **Minh chứng ảnh chụp màn hình (Anti-cheat):** [`../photo/issue_1.png`](../photo/issue_1.png)
 - **Video minh chứng (YouTube Unlisted):** https://youtube.com/shorts/NK6kk9AF39U?feature=share
 
 ---

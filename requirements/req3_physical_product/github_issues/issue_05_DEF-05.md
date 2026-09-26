@@ -4,6 +4,8 @@
 - **Mức độ nghiêm trọng (Severity):** High / Electrical Fire Safety Hazard
 - **Khả năng tái hiện (Reproducibility):** 100% khi nhấn hờ phím khoảng 50% hành trình
 - **Mã kiểm thử liên quan:** `TC-15 (Edge Case #4 - AI Missed)`
+- **GitHub Issue Link:** [https://github.com/NgBaoAnn/hw1/issues/5](https://github.com/NgBaoAnn/hw1/issues/5)
+- **Minh chứng ảnh chụp màn hình (Anti-cheat):** [`../photo/issue_5.png`](../photo/issue_5.png)
 - **Video minh chứng (YouTube Unlisted):** https://youtube.com/shorts/NZP3v1SyXfY?feature=share
 
 ---

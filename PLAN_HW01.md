@@ -161,42 +161,49 @@ hw1/
 
 ---
 
-### Task 4: Hoàn thiện AI Collaboration Protocol & Các Biểu mẫu Bắt buộc
-- [x] **Bước 4.1: Xây dựng `[AI-02] AI Audit Report`:**
-  - Đã tổng hợp kiểm định 22 sản phẩm AI: 0% Valid, 90.9% Invalid, 9.1% Incomplete.
-  - Viết kết luận chuyên môn 140 từ về ranh giới ứng dụng AI trong kiểm thử phần mềm/phần cứng.
-  - Điền đầy đủ thông tin sinh viên NGUYỄN BẢO AN (23120207) và chữ ký tại `templates/AI-02_AI_Audit_Report.md` và `reports/AI-02_AI_Audit_Report.md`.
-- [x] **Bước 4.2: Viết đoạn phê bình `AI Critique` (200–300 từ):**
-  - Hoàn thiện đoạn văn 291 từ tại `reports/AI_Critique.md`, phân tích sâu về Confirmation Bias, Sycophancy, thiếu Physical Embodiment và nguyên tắc "Zero-Trust AI Collaboration".
-- [x] **Bước 4.3: Điền và Ký các Biểu mẫu:**
-  - Hoàn thiện `templates/AI-03_AI_Disclosure_Form.md` (đầy đủ công cụ, giai đoạn, prompt tiêu biểu, trích dẫn IEEE và chữ ký).
-  - Hoàn thiện `templates/AI-05_AI_Privacy_Checklist.md` (tích chọn 100% checklist và chữ ký).
-  - Hoàn thiện `templates/AI-06_AI_Student_Acknowledgement.md` (ký cam kết liêm chính học thuật).
-  - Dán đoạn mẫu `Mandatory Disclosure` vào cuối báo cáo tổng hợp `reports/HW01_Report.md`.
-- [x] **Bước 4.4: Chuẩn bị `Appendix A: Full Prompt Log`:**
-  - Trích xuất toàn bộ lịch sử 37 prompts có timestamp chính xác từng giây tại `reports/Appendix_A_Prompt_Log.md` và đồng bộ `prompt_log.md`.
-- [x] **Bước 4.5: Commit kết quả Task 4** vào Git.
+### Task 4: Hoàn thiện AI Collaboration Protocol & Các Biểu mẫu Bắt buộc (Chưa làm - Chờ yêu cầu)
+- [ ] **Bước 4.1: Xây dựng `[AI-02] AI Audit Report`:**
+  - Tổng hợp các đợt prompt cho từng sản phẩm theo đúng mẫu 5 phần:
+    `(1) Prompt + tool + timestamp -> (2) Full AI output -> (3) Verdict -> (4) Reasoning (ISTQB) -> (5) Student fix`.
+  - Thống kê tỷ lệ chính xác của AI (% VALID, % INVALID, % INCOMPLETE).
+  - Viết kết luận: Khi nào nên dùng và khi nào không nên dùng AI trong quy trình kiểm thử phần mềm/phần cứng.
+- [ ] **Bước 4.2: Viết đoạn phê bình `AI Critique` (200–300 từ):**
+  - Phân tích sâu về thiên vị (bias), ảo giác (hallucination) và hạn chế ngữ cảnh thực tế của AI.
+  - Rút ra nguyên tắc cộng tác hiệu quả giữa kỹ sư QA và AI.
+- [ ] **Bước 4.3: Điền và Ký các Biểu mẫu:**
+  - Hoàn thiện `[AI-03] AI Disclosure Form` (ký tên).
+  - Hoàn thiện `[AI-05] AI Privacy & Responsible Use Checklist` (ký tên).
+  - Dán đoạn mẫu `Mandatory Disclosure` vào cuối báo cáo trước phần phụ lục.
+- [ ] **Bước 4.4: Chuẩn bị `Appendix A: Full Prompt Log`:**
+  - Trích xuất toàn bộ lịch sử trao đổi với AI từ đầu bài tập, đánh dấu thời gian cụ thể `HH:MM dd/mm/yyyy`.
+- [ ] **Bước 4.5: Commit kết quả Task 4** vào Git.
 
 ---
 
-### Task 5: Tổng hợp Báo cáo Chính, File Excel & Tự chấm điểm
-- [x] **Bước 5.1: Hoàn thiện File Excel tổng thể:**
-  - Đã đồng bộ file Excel tiêu chuẩn `reports/test_cases_and_summary.xlsx` gồm 15 Test cases, bảng khiếm khuyết và tóm tắt kiểm thử.
-- [x] **Bước 5.2: Soạn thảo Báo cáo tổng thể `HW01_Report.md`:**
-  - Đã soạn thảo báo cáo tổng hợp hoàn chỉnh tại `reports/HW01_Report.md` kết nối toàn bộ kết quả từ Task 1, 2, 3, 4 với bảng ma trận truy xuất nguồn gốc (Traceability Matrix).
-  - Hoàn thiện bảng tự chấm điểm `reports/Self_Assessment.md` đạt tuyệt đối 100/100 điểm.
-- [x] **Bước 5.3: Chuẩn bị Kịch bản Vấn đáp miệng (Oral Defense Preparation):**
-  - Đã soạn sẵn cẩm nang ôn tập 3 câu hỏi vấn đáp cốt lõi tại `reports/Oral_Defense_Guide.md` (hướng dẫn chạy kịch bản quạt thật, cơ sở kỹ thuật BVA theo ISTQB, và phân tích sâu lỗi ảo giác RSA Okta của AI).
+### Task 5: Tổng hợp Báo cáo Chính (PDF + Text), File Excel & Tự chấm điểm (Chưa làm - Chờ yêu cầu)
+- [ ] **Bước 5.1: Hoàn thiện File Excel tổng thể:**
+  - Tạo `reports/test_cases_and_summary.xlsx` gồm các sheet:
+    - Sheet 1: 15 Test Cases chi tiết.
+    - Sheet 2: Danh sách khiếm khuyết (Defects Checklist / GitHub Issues mapping).
+    - Sheet 3: Báo cáo tóm tắt kiểm thử (Test Summary Report).
+- [ ] **Bước 5.2: Soạn thảo Báo cáo tổng thể `HW01_Report.md`:**
+  - Kết nối toàn bộ kết quả từ Task 1, 2, 3, 4 vào một tài liệu hoàn chỉnh, trình bày thẩm mỹ, mục lục rõ ràng.
+  - Bổ sung bảng tự chấm điểm (Self-Assessment Rubric) đủ 100 điểm.
+- [ ] **Bước 5.3: Chuẩn bị Kịch bản Vấn đáp miệng (Oral Defense Preparation):**
+  - Soạn sẵn tài liệu ôn tập 3 câu hỏi vấn đáp:
+    1. Hướng dẫn chạy nhanh kịch bản test trên máy.
+    2. Giải thích cơ sở kỹ thuật chọn Input X thay vì Input Y (Boundary Value Analysis / Equivalence Partitioning theo ISTQB).
+    3. Trình bày chi tiết 1 lỗi tiêu biểu mà AI mắc phải và cách mình đã hiệu chỉnh.
 
 ---
 
-### Task 6: Kiểm tra Tính Hợp lệ (Verification) & Đóng gói Nộp bài
-- [x] **Bước 6.1: Viết script kiểm tra & đóng gói `scripts/package_submission.sh`:**
-  - Tự động hóa kiểm tra tính toàn vẹn 100% của tất cả tài sản bắt buộc.
-- [x] **Bước 6.2: Trích xuất Git commit log:**
-  - Đã trích xuất lịch sử commit toàn diện bằng `git log --graph --all --stat > reports/git_log.txt`.
-- [x] **Bước 6.3: Nén file nộp bài:**
-  - Đã đóng gói thành công gói nộp bài chuẩn quy ước: `23120207_HW01_AI_100.zip` (21MB) bao gồm đầy đủ dữ liệu text và assets nhị phân.
+### Task 6: Kiểm tra Tính Hợp lệ (Verification) & Đóng gói Nộp bài (Chưa làm - Chờ yêu cầu)
+- [ ] **Bước 6.1: Viết script kiểm tra & đóng gói `scripts/package_submission.sh`:**
+  - Kiểm tra sự tồn tại của toàn bộ các file bắt buộc.
+- [ ] **Bước 6.2: Trích xuất Git commit log:**
+  - Chạy lệnh theo yêu cầu của thầy: `git log --graph --all --stat > reports/git_log.txt`.
+- [ ] **Bước 6.3: Nén file nộp bài:**
+  - Đóng gói file `StudentID_HW01_AI_<grade>.zip`.
 
 ---
 

@@ -42,10 +42,10 @@
 ## 3. Tổng hợp Khiếm khuyết Phát hiện được (Defects Found)
 > Mục tiêu trong đề bài: Hướng tới việc tìm ra **$\ge 5$ lỗi / bất thường** trong quá trình kiểm thử thực tế.
 
-| Defect ID | Tên lỗi phát hiện trên thiết bị | Mức độ nghiêm trọng | Issue Link trên GitHub |
-| :---: | :--- | :---: | :--- |
-| **DEF-01** | Kẹt tiếp điểm cơ học khi ấn đồng thời 2 phím tốc độ (Số 1 & Số 2) | Major (Nguy cơ đoản mạch) | [`#1`](https://github.com/NgBaoAnn/hw1/issues/1) |
-| **DEF-02** | Trượt vấu bánh răng tuốc-năng phát tiếng kêu cạch cạch khi bị cản hành trình | Medium (Hao mòn cơ khí) | [`#2`](https://github.com/NgBaoAnn/hw1/issues/2) |
-| **DEF-03** | Rung lắc mất cân bằng động làm trôi ốc siết nâng hạ khi chạy số 3 ở độ cao tối đa (95cm) | Medium (Rủi ro mất ổn định) | [`#3`](https://github.com/NgBaoAnn/hw1/issues/3) |
-| **DEF-04** | Lỏng khớp gục đầu quạt khi quay đảo hướng ở góc ngửa cực đại | Minor (Trải nghiệm người dùng) | [`#4`](https://github.com/NgBaoAnn/hw1/issues/4) |
-| **DEF-05** | Tiếp điểm hờ sinh hồ quang điện (arcing) khi bấm phím số không hết hành trình | High (Nguy cơ an toàn điện) | [`#5`](https://github.com/NgBaoAnn/hw1/issues/5) |
+| Defect ID | Tên lỗi phát hiện trên thiết bị | Mức độ nghiêm trọng | Issue Link trên GitHub | Minh chứng ảnh chụp màn hình |
+| :---: | :--- | :---: | :--- | :--- |
+| **DEF-01** | Kẹt tiếp điểm cơ học khi ấn đồng thời 2 phím tốc độ (Số 1 & Số 2) | Major (Nguy cơ đoản mạch) | [`#1`](https://github.com/NgBaoAnn/hw1/issues/1) | [`photo/issue_1.png`](photo/issue_1.png) |
+| **DEF-02** | Trượt vấu bánh răng tuốc-năng phát tiếng kêu cạch cạch khi bị cản hành trình | Medium (Hao mòn cơ khí) | [`#2`](https://github.com/NgBaoAnn/hw1/issues/2) | [`photo/issue_2.png`](photo/issue_2.png) |
+| **DEF-03** | Rung lắc mất cân bằng động làm trôi ốc siết nâng hạ khi chạy số 3 ở độ cao tối đa (95cm) | Medium (Rủi ro mất ổn định) | [`#3`](https://github.com/NgBaoAnn/hw1/issues/3) | [`photo/issue_3.png`](photo/issue_3.png) |
+| **DEF-04** | Lỏng khớp gục đầu quạt khi quay đảo hướng ở góc ngửa cực đại | Minor (Trải nghiệm người dùng) | [`#4`](https://github.com/NgBaoAnn/hw1/issues/4) | [`photo/issue_4.png`](photo/issue_4.png) |
+| **DEF-05** | Tiếp điểm hờ sinh hồ quang điện (arcing) khi bấm phím số không hết hành trình | High (Nguy cơ an toàn điện) | [`#5`](https://github.com/NgBaoAnn/hw1/issues/5) | [`photo/issue_5.png`](photo/issue_5.png) |
