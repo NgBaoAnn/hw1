@@ -122,9 +122,9 @@ hw1/
 ---
 
 ### Task 3: Thiết kế Kiểm thử & Quay video Thực nghiệm Thiết bị Vật lý (Yêu cầu 3 - 40 điểm)
-- [ ] **Bước 3.1: Lựa chọn thiết bị gia dụng:**
-  - Chọn 1 thiết bị thực tế đang có sẵn tại nhà (ví dụ: Nồi cơm điện tử đa năng, Quạt điều khiển từ xa, Máy lọc không khí, Nồi chiên không dầu, hoặc Ấm đun siêu tốc có màn hình/cảm ứng).
-  - Thu thập thông số: Hãng (Brand), Dòng máy (Model), Năm sản xuất (Year), Số serial (che 4 ký tự giữa).
+- [x] **Bước 3.1: Lựa chọn thiết bị gia dụng:**
+  - Đã chọn: Quạt điện lửng dân dụng SENKO, Model L1638, sản xuất tháng 09/2023.
+  - Thu thập đầy đủ thông số kỹ thuật (47W, 220V/50Hz, sải cánh 39cm, 4 phím cơ liên động 0-1-2-3, túp-năng 180°, ống rút 77cm-95cm, cầu chì nhiệt stator) và lưu tại `requirements/req3_physical_product/device_info.md`.
 - [ ] **Bước 3.2: Chụp ảnh bằng chứng chống gian lận (Anti-cheat photo):**
   - Chụp ảnh thiết bị cùng Thẻ sinh viên trong cùng 1 khung hình rõ nét, thấy rõ model/nhãn mác.
   - Lưu vào `requirements/req3_physical_product/photo/device_student_id.jpg`.

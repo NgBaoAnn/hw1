@@ -630,5 +630,20 @@ Lỗ hổng Ivanti VPN đầu 2024 nằm ở thuật toán mã hóa SSL/TLS quá
 - **Đánh giá & Ghi chú:**
   - Bắt bẫy thành công 1 điểm AI Hallucination (quy kết sai lệch điểm yếu SSL/TLS thay vì vạch ra chuỗi lỗi Path Traversal & Command Injection). Hoàn tất toàn bộ chuỗi 20/20 câu hỏi phỏng vấn và kiểm định AI của Yêu cầu 2.
 
+### [Prompt ID: P-34]
+- **Thời gian (Timestamp):** `13:45:06 26/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 3.1 – Lựa chọn và khai báo thông số kỹ thuật thiết bị gia dụng thực tế
+- **Mục tiêu / Context:** Khởi động Yêu cầu 3 (Kiểm thử thiết bị vật lý). Sinh viên lựa chọn thiết bị thực tế là Quạt lửng ống sắt Senko L1638, sản xuất tháng 9/2023, đồng thời chỉ định lược bỏ số sê-ri do thiết bị cơ gia dụng dân dụng quản lý theo lô sản xuất.
+- **Nội dung Prompt (Nguyên văn):**
+```text
+bắt đầu làm task 3.1, thiết bị tôi chọn là quạt điện đứng. hãng senko, model: L1638, sản xuất tháng 9/2023, bỏ Số serial, không cần thiết trong task này
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI tiếp nhận lựa chọn thiết bị, cập nhật toàn bộ thông số kỹ thuật (công suất 47W, điện áp 220V/50Hz, sải cánh 39cm, lưu lượng gió 64.4 m³/phút), đặc tính cơ điện (cụm 4 phím cơ liên động 0-1-2-3, túp-năng ly hợp cơ học, ống rút điều chỉnh độ cao 77cm-95cm, cầu chì nhiệt bảo vệ quá dòng stator) vào `requirements/req3_physical_product/device_info.md`.
+  - Phác thảo 5 khiếm khuyết vật lý tiềm năng trên quạt phục vụ cho việc thực nghiệm và ghi nhận issue.
+- **Đánh giá & Ghi chú:**
+  - Lựa chọn thiết bị thực tế, bám sát đời sống và rất trực quan để tiến hành các ca kiểm thử biên cơ điện và quay video thực nghiệm.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
