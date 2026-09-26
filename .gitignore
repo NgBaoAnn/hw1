@@ -12,3 +12,9 @@ __pycache__/
 *.tmp
 *.temp
 *.zip
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc

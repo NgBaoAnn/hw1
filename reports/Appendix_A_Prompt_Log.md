@@ -780,7 +780,30 @@ hãy thực hiện task số 5, tổng hợp báo cáo chính
 - **Đánh giá & Ghi chú:**
   - Hoàn thành trọn vẹn 100% Task 5, kết nối toàn diện tất cả các sản phẩm số và sản phẩm nhị phân sẵn sàng cho bước kiểm tra và đóng gói nộp bài cuối cùng (Task 6).
 
+### [Prompt ID: P-41]
+- **Thời gian (Timestamp):** `15:29:14 26/09/2026`
+- **Công cụ AI:** `Antigravity Assistant (Model: Gemini 3.8 Flash High)`
+- **Yêu cầu liên quan:** Task 5 – Soạn thảo mã nguồn LaTeX chuyên nghiệp cho Báo cáo Tổng kết & Biên dịch PDF chuẩn học thuật
+- **Mục tiêu / Context:** Sinh viên yêu cầu soạn thảo một file mã nguồn LaTeX (`.tex`) chuẩn mực học thuật FIT@HCMUS để biên dịch ra ấn bản PDF (`reports/HW01_Report.pdf`) với chất lượng dàn trang đỉnh cao, đồng thời bảo toàn nguyên vẹn nội dung của file Markdown (`reports/HW01_Report.md`) phục vụ cho việc nộp bài đồng thời cả 2 định dạng (Text & Binary).
+- **Nội dung Prompt (Nguyên văn):**
+```text
+đối với full report hãy soạn thảo 1 file latex chuyên nghiệp để có file .pdf, file .md giữ nguyên nội dung để nộp
+```
+- **Kết quả trả về từ AI (Tóm tắt nội dung chính):**
+  - AI tiếp nhận yêu cầu, bảo lưu nguyên vẹn 100% nội dung tệp `reports/HW01_Report.md`.
+  - Soạn thảo tệp mã nguồn LaTeX toàn diện `reports/HW01_Report.tex` và script tự động biên dịch `scripts/generate_latex_report.py`:
+    1. Trang bìa chuyên nghiệp chuẩn Khoa CNTT -- Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM: Viền khung trang trọng, đầy đủ tên trường, khoa, bộ môn, tên đề tài, thông tin sinh viên (`NGUYỄN BẢO AN - 23120207 - 23CLC01`), giảng viên phụ trách, mã tự đánh giá (`100`) và link repository.
+    2. Cấu hình kiểu chữ Times New Roman và Courier New sắc nét hỗ trợ Unicode tiếng Việt đầy đủ với engine `XeLaTeX`.
+    3. Thiết lập tiêu đề trang và chân trang tự động bằng `fancyhdr` (`FIT@HCMUS · CS423 / CSC13003 – Kiểm thử phần mềm`, `Báo cáo HW01 – Nguyễn Bảo An (23120207)`, `Trang X / Y` qua `lastpage`).
+    4. Trình bày các bảng biểu phức tạp (10 tin ITviec, 20 sự cố phần mềm đối chiếu post-mortem và bẫy ảo giác AI, 15 test cases quạt Senko L1638, rubric tự chấm 100/100, ma trận truy xuất nguồn gốc tài sản) bằng các gói `longtable`, `tabularx`, `booktabs`.
+    5. Thiết kế hộp nổi bật `tcolorbox` cho đoạn phê bình chuyên môn AI Critique (291 từ), các khối mã nguồn thư mục cây dự án, và cam kết liêm chính học thuật.
+    6. Tinh chỉnh loại trừ các ký tự đặc biệt LaTeX, cấu hình `headheight=14pt`, và biên dịch 2 lượt (`pass 1` và `pass 2`) thành công 100% với exit code 0, tạo ra tệp PDF `reports/HW01_Report.pdf` (13 trang) chuẩn mực học thuật.
+  - Cập nhật `.gitignore` loại trừ các tệp phụ trợ của LaTeX (`*.aux`, `*.log`, `*.out`, `*.toc`).
+- **Đánh giá & Ghi chú:**
+  - Nâng tầm chuyên nghiệp của sản phẩm nộp bài, đáp ứng xuất sắc yêu cầu nộp đầy đủ cả bản Text Markdown và bản Binary PDF chất lượng cao.
+
 ---
 *(Nhật ký sẽ tiếp tục được cập nhật lũy tiến sau mỗi lượt prompt tiếp theo)*
+
 
 

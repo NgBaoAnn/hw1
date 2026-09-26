@@ -76,15 +76,18 @@ hw1/
 ├── scripts/                           # Bộ công cụ tự động hóa kiểm định & đóng gói
 │   ├── populate_docx_templates.py     # Script OpenXML điền dữ liệu vào biểu mẫu .docx
 │   ├── generate_full_excel.py         # Script OpenXML xuất file Excel 3 sheets
+│   ├── generate_latex_report.py       # Script biên dịch mã nguồn LaTeX ra PDF
 │   └── package_submission.sh          # Script kiểm tra hợp lệ & đóng gói nộp bài
 ├── reports/                           # Báo cáo tổng hợp và nhật ký kiểm định
-│   ├── HW01_Report.md                 # Báo cáo tổng kết toàn diện (File hiện tại)
+│   ├── HW01_Report.md                 # Báo cáo tổng kết toàn diện (Markdown)
+│   ├── HW01_Report.tex                # Mã nguồn LaTeX báo cáo chuyên nghiệp
+│   ├── HW01_Report.pdf                # Ấn bản PDF biên dịch chính thức
 │   ├── AI-02_AI_Audit_Report.md       # Báo cáo kiểm định AI chính thức
 │   ├── AI_Critique.md                 # Đoạn văn phê bình chuyên môn (291 từ)
 │   ├── Self_Assessment.md             # Bảng tự chấm điểm 100/100
 │   ├── Oral_Defense_Guide.md          # Tài liệu ôn tập 3 câu hỏi vấn đáp miệng
 │   ├── test_cases_and_summary.xlsx    # Bảng tính Excel chuẩn 3 sheets
-│   ├── Appendix_A_Prompt_Log.md       # Nhật ký 40 Prompts đầy đủ timestamp
+│   ├── Appendix_A_Prompt_Log.md       # Nhật ký 41 Prompts đầy đủ timestamp
 │   └── git_log.txt                    # Lịch sử trích xuất toàn bộ commit Git
 └── prompt_log.md                      # Bản sao lưu log prompt tại thư mục gốc
 ```
@@ -280,7 +283,7 @@ Trích lục nguyên văn từ file [`reports/AI_Critique.md`](AI_Critique.md):
   - [x] [`AI Templates/[AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx`](../AI%20Templates/%5BAI-03%5D%20-%20FIT@HCMUS%20-%20AI%20Disclosure%20Form_En.docx) (và [`templates/AI-03_AI_Disclosure_Form.md`](../templates/AI-03_AI_Disclosure_Form.md)): Đã hoàn tất kê khai đầy đủ các công cụ, giai đoạn sử dụng, 3 prompt cốt lõi, phần đóng góp chi tiết của AI và phần tự làm 100% của sinh viên, phương pháp kiểm chứng độc lập, trích dẫn chuẩn IEEE và ký xác nhận.
   - [x] [`AI Templates/[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx`](../AI%20Templates/%5BAI-05%5D%20-%20FIT@HCMUS%20-%20AI%20Privacy%20Checklist_En.docx) (và [`templates/AI-05_AI_Privacy_Checklist.md`](../templates/AI-05_AI_Privacy_Checklist.md)): Đã tích chọn 100% các tiêu chí bảo mật, cam kết không vi phạm dữ liệu riêng tư và ký xác nhận.
   - [x] [`AI Templates/[AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx`](../AI%20Templates/%5BAI-06%5D%20-%20FIT@HCMUS%20-%20AI%20Student%20Acknowledgement_En.docx) (và [`templates/AI-06_AI_Student_Acknowledgement.md`](../templates/AI-06_AI_Student_Acknowledgement.md)): Đã ký cam kết tuân thủ chính sách AI môn học CS423/CSC13003 từ đầu khóa và khai báo tài khoản AI.
-  - [x] [`reports/Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (và [`prompt_log.md`](../prompt_log.md)): Nhật ký đầy đủ 40 prompts có dấu mốc thời gian thực chính xác từng giây.
+  - [x] [`reports/Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (và [`prompt_log.md`](../prompt_log.md)): Nhật ký đầy đủ 41 prompts có dấu mốc thời gian thực chính xác từng giây.
 
 ---
 
@@ -295,7 +298,7 @@ Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại [`reports
 | **3** | **Kiểm thử thiết bị vật lý Senko L1638 (Req 3)** | **25** | **25 / 25** | Ảnh thẻ SV + quạt thật; 15 test cases ISTQB (file Excel 3 sheets + CSV); 4 edge cases AI bỏ sót; 5 video Shorts có thuyết minh; 5 live GitHub Issues kèm 5 ảnh screenshot chính chủ. |
 | **AI-1** | **[AI-02] AI Audit Report** | **8** | **8 / 8** | Bảng kiểm định 5 phần đủ 22 mục (bản `.docx` chính thức & `.md`); thống kê 0% Valid, 90.9% Invalid, 9.1% Incomplete; kết luận 140 từ. |
 | **AI-2** | **AI Critique + Form [AI-03]** | **4** | **4 / 4** | Bài phê bình đạt chuẩn 291 từ; form [AI-03] hoàn chỉnh (bản `.docx` chính thức & `.md`) có chữ ký xác nhận. |
-| **AI-3** | **[AI-05] Privacy Checklist & Anti-cheat** | **3** | **3 / 3** | Checklist bảo mật [AI-05] và [AI-06] (bản `.docx` chính thức & `.md`) có chữ ký; Prompt Log đủ 40 lượt prompt với timestamp chính xác. |
+| **AI-3** | **[AI-05] Privacy Checklist & Anti-cheat** | **3** | **3 / 3** | Checklist bảo mật [AI-05] và [AI-06] (bản `.docx` chính thức & `.md`) có chữ ký; Prompt Log đủ 41 lượt prompt với timestamp chính xác. |
 | **TỔNG** | **TỔNG ĐIỂM TOÀN BỘ BÀI TẬP** | **100** | **100 / 100** | **Mã điểm 3 chữ số đặt vào tên file zip khi nộp bài: `100`** |
 
 ---
@@ -308,7 +311,7 @@ Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại [`reports
 | **Yêu cầu 1** | [`jobs_data.md`](../requirements/req1_job_market/jobs_data.md)<br>[`qa_qc_roles_mindmap.md`](../requirements/req1_job_market/mindmap/qa_qc_roles_mindmap.md) | Bảng dữ liệu 10 tin tuyển dụng | [`job_01.png`](../requirements/req1_job_market/screenshots/job_01.png) đến [`job_10.png`](../requirements/req1_job_market/screenshots/job_10.png) |
 | **Yêu cầu 2** | [`defects_2022_2026.md`](../requirements/req2_software_defects/defects_2022_2026.md) | 20 Báo cáo RCA chuẩn | 20 Prompt bóc trần ảo giác trong [`Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) |
 | **Yêu cầu 3** | [`device_info.md`](../requirements/req3_physical_product/device_info.md)<br>[`edge_cases_ai_missed.md`](../requirements/req3_physical_product/edge_cases_ai_missed.md)<br>[`test_cases.md`](../requirements/req3_physical_product/test_cases.md) | [`test_cases.csv`](../requirements/req3_physical_product/test_cases.csv)<br>[`test_cases_and_summary.xlsx`](../requirements/req3_physical_product/test_cases_and_summary.xlsx) (3 sheets) | [`device_23120207.jpg`](../requirements/req3_physical_product/photo/device_23120207.jpg)<br>[`ai_edge_cases_screenshot.png`](../requirements/req3_physical_product/photo/ai_edge_cases_screenshot.png)<br>5 Video Shorts (Video 1 đến 5)<br>[GitHub Issues #1 đến #5](https://github.com/NgBaoAnn/hw1/issues)<br>5 Ảnh màn hình [`issue_1.png`](../requirements/req3_physical_product/photo/issue_1.png) đến [`issue_5.png`](../requirements/req3_physical_product/photo/issue_5.png) |
-| **AI Protocol** | [`AI-02_AI_Audit_Report.md`](AI-02_AI_Audit_Report.md)<br>[`AI_Critique.md`](AI_Critique.md)<br>[`Self_Assessment.md`](Self_Assessment.md)<br>Bộ 4 file `.docx` trong [`AI Templates/`](../AI%20Templates/) | [`templates/`](../templates/) (AI-03, AI-05, AI-06)<br>[`scripts/populate_docx_templates.py`](../scripts/populate_docx_templates.py) | [`Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (Prompts P-01 đến P-40) |
+| **AI Protocol** | [`AI-02_AI_Audit_Report.md`](AI-02_AI_Audit_Report.md)<br>[`AI_Critique.md`](AI_Critique.md)<br>[`Self_Assessment.md`](Self_Assessment.md)<br>Bộ 4 file `.docx` trong [`AI Templates/`](../AI%20Templates/) | [`templates/`](../templates/) (AI-03, AI-05, AI-06)<br>[`scripts/populate_docx_templates.py`](../scripts/populate_docx_templates.py) | [`Appendix_A_Prompt_Log.md`](Appendix_A_Prompt_Log.md) (Prompts P-01 đến P-41) |
 | **Quản trị Git** | [`git_log.txt`](git_log.txt) | `git log --graph --all --stat` | [https://github.com/NgBaoAnn/hw1](https://github.com/NgBaoAnn/hw1) |
 
 ---
