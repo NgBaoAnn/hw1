@@ -1,3 +1,27 @@
+* commit 9390c6347054b2941386835f231fde0bbc580395
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 15:43:12 2026 +0700
+| 
+|     feat(task-5): standardize standalone HW01_Report.tex layout and eliminate all overfull lines
+| 
+|  prompt_log.md                    |  22 ++
+|  reports/Appendix_A_Prompt_Log.md |  22 ++
+|  reports/HW01_Report.md           |   6 +-
+|  reports/HW01_Report.pdf          | Bin 221868 -> 219647 bytes
+|  reports/HW01_Report.tex          | 242 ++++++++--------
+|  reports/Self_Assessment.md       |   2 +-
+|  scripts/generate_latex_report.py | 546 ++-----------------------------------
+|  7 files changed, 198 insertions(+), 642 deletions(-)
+| 
+* commit 26b9fc395c53462589379aff105669684b2a4af7
+| Author: NgBaoAnn <baoan1real1@gmail.com>
+| Date:   Sat Sep 26 15:36:39 2026 +0700
+| 
+|     chore(reports): update git_log.txt with task 5 commits
+| 
+|  reports/git_log.txt | 625 ++++++++------------------------------------------
+|  1 file changed, 92 insertions(+), 533 deletions(-)
+| 
 * commit 3b6b69b4ed3e2fca70713a6d4b828b07623ad6ac
 | Author: NgBaoAnn <baoan1real1@gmail.com>
 | Date:   Sat Sep 26 15:36:30 2026 +0700
@@ -69,32 +93,3 @@
 |  reports/Appendix_A_Prompt_Log.md                  |  21 ++
 |  scripts/populate_docx_templates.py                | 342 ++++++++++++++++++++
 |  14 files changed, 400 insertions(+), 16 deletions(-)
-| 
-* commit 6714b7ad46da445f688cc725a7a0f4a011339484
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:55:12 2026 +0700
-| 
-|     feat(req3): link 5 GitHub issues screenshots (anti-cheat), log Prompt P-38, and reset Task 4-6 to pending per user request
-| 
-|  PLAN_HW01.md                                      | 67 ++++++++++++---------
-|  prompt_log.md                                     | 21 +++++++
-|  reports/Appendix_A_Prompt_Log.md                  | 21 +++++++
-|  reports/git_log.txt                               |  9 +++
-|  requirements/req3_physical_product/device_info.md | 14 ++---
-|  .../github_issues/issue_01_DEF-01.md              |  2 +
-|  .../github_issues/issue_02_DEF-02.md              |  2 +
-|  .../github_issues/issue_03_DEF-03.md              |  2 +
-|  .../github_issues/issue_04_DEF-04.md              |  2 +
-|  .../github_issues/issue_05_DEF-05.md              |  2 +
-|  .../github_issues/issues_list.md                  | 14 ++---
-|  requirements/req3_physical_product/test_cases.md  | 10 +--
-|  12 files changed, 117 insertions(+), 49 deletions(-)
-| 
-* commit b8ca90e7a130a7cb21c5231e643e5788ea4d352a
-| Author: NgBaoAnn <baoan1real1@gmail.com>
-| Date:   Sat Sep 26 14:45:32 2026 +0700
-| 
-|     chore: refresh git_log.txt with complete commit graph
-| 
-|  reports/git_log.txt | 27 +++++++++++++++++++++++++++
-|  1 file changed, 27 insertions(+)
