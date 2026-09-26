@@ -32,8 +32,8 @@ I commit to following this agreement throughout the term.
 
 | Field | Value |
 | :--- | :--- |
-| **AI Tool(s) you plan to use:** | ChatGPT, Claude, Gemini, Antigravity |
-| **Activation date:** | [Ngày kích hoạt tài khoản] |
+| **AI Tool(s) you plan to use:** | Antigravity, Gemini, ChatGPT, Claude |
+| **Activation date:** | 20/09/2026 |
 | **First-time login confirmed:** | `[X] Yes    [ ] No` |
 | **GitHub Copilot Education activated:** | `[X] Yes    [ ] No` |
 
@@ -41,10 +41,10 @@ I commit to following this agreement throughout the term.
 
 ### 4. Signature (Chữ ký cam kết)
 
-- **Student name (printed):** [Họ và tên in hoa]
-- **Student ID:** [Mã số sinh viên]
-- **Class / Cohort:** [Lớp]
+- **Student name (printed):** NGUYỄN BẢO AN
+- **Student ID:** 23120207
+- **Class / Cohort:** 23CLC01 (K2023)
 - **Course:** CS423 / CSC13003 – Software Testing
 - **Instructor:** Dr. Lam Quang Vu / Dr. Tran Duy Hoang
-- **Date:** [DD/MM/YYYY]
-- **Signature:** __________________________
+- **Date:** 26/09/2026
+- **Signature:** *Nguyễn Bảo An*

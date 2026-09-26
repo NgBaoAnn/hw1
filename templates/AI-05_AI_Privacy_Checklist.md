@@ -41,10 +41,10 @@
 ### 4. Final Statement (Tuyên bố cuối cùng)
 *Final responsibility for the accuracy, originality, and integrity of this submission rests with me. Any undisclosed AI use is treated as academic misconduct.*
 
-- **Student name (printed):** [Họ và tên in hoa]
-- **Student ID:** [Mã số sinh viên]
-- **Class / Cohort:** [Lớp]
+- **Student name (printed):** NGUYỄN BẢO AN
+- **Student ID:** 23120207
+- **Class / Cohort:** 23CLC01 (K2023)
 - **Course:** CS423 / CSC13003 – Software Testing
 - **Instructor:** Dr. Lam Quang Vu / Dr. Tran Duy Hoang
-- **Date:** [DD/MM/YYYY]
-- **Signature:** __________________________
+- **Date:** 26/09/2026
+- **Signature:** *Nguyễn Bảo An*
