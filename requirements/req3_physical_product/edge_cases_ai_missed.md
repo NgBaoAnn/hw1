@@ -28,8 +28,13 @@ Hãy đóng vai một chuyên viên kiểm thử QA/QC chuyên nghiệp theo chu
 > 9. **TC-09 (Điều chỉnh độ cao):** Vặn van ren siết ngược chiều kim đồng hồ, kéo quạt lên cao nhất (95cm) và hạ thấp nhất (77cm), sau đó siết chặt lại.
 > 10. **TC-10 (Chỉnh góc gục/ngửa):** Dùng tay đẩy bầu quạt gục xuống hoặc ngửa lên, kiểm tra góc nghiêng giữ cố định."*
 
-### 1.3. Nhận xét Phê bình Kiểm thử (QA Critique on AI Output)
-- Toàn bộ 10 test case do AI sinh ra chỉ bao gồm **Happy Path (luồng lý tưởng)** và kiểm thử chức năng bề mặt (Functional Testing).
+### 1.3. Hình ảnh Minh chứng Đoạn Chat Bắt bẫy AI (Chat Screenshot Evidence)
+![Minh chứng đoạn chat yêu cầu AI sinh test cases và phân tích thiếu sót edge cases](photo/ai_edge_cases_screenshot.png)
+
+> **Ghi chú minh chứng:** Ảnh chụp màn hình giao diện IDE Antigravity làm việc với mô hình Gemini 3.8 Flash High (thời điểm `14:06 Thứ Bảy 26/09/2026`), ghi nhận rõ prompt chất vấn về việc thiết kế bộ test cases cho thiết bị vật lý và phần phản hồi chỉ ra 5 khiếm khuyết cơ điện thực tế cùng sự vượt trội của QA con người so với AI (vốn chỉ biết test Happy Path theo lý thuyết).
+
+### 1.4. Nhận xét Phê bình Kiểm thử (QA Critique on AI Output)
+- Toàn bộ các test case do AI sinh ra ban đầu chỉ bao gồm **Happy Path (luồng lý tưởng)** và kiểm thử chức năng bề mặt (Functional Testing).
 - AI **hoàn toàn bỏ qua kiểm thử giá trị biên (Boundary Value Testing), kiểm thử tải cơ học (Mechanical Stress Testing), kiểm thử tương tác xung đột vật lý (Physical Concurrency Testing) và an toàn điện theo tiêu chuẩn IEC 60335-2-8**.
 - Cụ thể, sinh viên đã bắt bẫy và chỉ ra **4 Edge Cases cốt lõi** mà AI hoàn toàn bất lực trong việc suy luận.
 
