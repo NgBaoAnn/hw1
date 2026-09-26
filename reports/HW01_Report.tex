@@ -37,9 +37,13 @@
     pdfkeywords={Software Testing, ISTQB, AI Hallucination, Hardware Testing, HCMUS}
 }
 
+% Advanced URL & Path wrapping to prevent any Overfull \hbox
+\usepackage{xurl}
+
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{tabularx}
+\usepackage{xltabular}
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{array}
@@ -69,18 +73,22 @@
     boxrule=0.8pt,
     colback=codebg,
     colframe=boxborder,
-    arc=3mm,
-    left=4mm,
-    right=4mm,
+    arc=2mm,
+    left=3mm,
+    right=3mm,
     top=3mm,
     bottom=3mm
 }
 
 \usepackage{enumitem}
-\setlist{nosep, leftmargin=6mm}
+\setlist{nosep, leftmargin=5mm}
 
 \usepackage{amsmath, amssymb}
 \usepackage{microtype}
+
+% Ensure flexible inter-word spacing and zero text overflow
+\setlength{\emergencystretch}{3em}
+\newcommand{\filepath}[1]{\nolinkurl{#1}}
 
 % ==============================================================================
 % 2. DOCUMENT BODY
@@ -97,22 +105,22 @@
     {\large \textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}}\\[2mm]
     {\large \textbf{TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}}\\[2mm]
     {\large \textbf{KHOA CÔNG NGHỆ THÔNG TIN}}\\[1mm]
-    {\normalsize BỘ MÔN CÔNG NGHỆ PHẦN MỀM}\\[15mm]
+    {\normalsize BỘ MÔN CÔNG NGHỆ PHẦN MỀM}\\[14mm]
     
-    \rule{0.8\textwidth}{1.5pt}\\[6mm]
+    \rule{0.8\textwidth}{1.5pt}\\[5mm]
     {\LARGE \textbf{\color{hcmusblue}BÁO CÁO TỔNG KẾT BÀI TẬP CÁ NHÂN}}\\[3mm]
     {\huge \textbf{\color{hcmusblue}BÀI TẬP HW01}}\\[4mm]
     {\large \textbf{MÔN HỌC: KIỂM THỬ PHẦN MỀM (CS423 / CSC13003)}}\\[2mm]
     {\normalsize \textit{Chương trình Cử nhân Công nghệ Thông tin (AI-augmented · Năm học 2026)}}\\[4mm]
-    \rule{0.8\textwidth}{1.5pt}\\[12mm]
+    \rule{0.8\textwidth}{1.5pt}\\[10mm]
     
-    {\large \textbf{ĐỀ TÀI:}}\\[3mm]
+    {\large \textbf{ĐỀ TÀI:}}\\[2mm]
     {\large \textbf{KHẢO SÁT THỊ TRƯỜNG VIỆC LÀM QA/QC 2026+}}\\[1.5mm]
     {\large \textbf{20 SỰ CỐ PHẦN MỀM THỰC TẾ \& BẪY ẢO GIÁC AI}}\\[1.5mm]
     {\large \textbf{KIỂM THỬ THỰC NGHIỆM THIẾT BỊ VẬT LÝ QUẠT SENKO L1638}}\\[1.5mm]
-    {\large \textbf{GIAO THỨC CỘNG TÁC \& BIỂU MẪU KIỂM TOÁN AI (FIT@HCMUS)}}\\[15mm]
+    {\large \textbf{GIAO THỨC CỘNG TÁC \& BIỂU MẪU KIỂM TOÁN AI (FIT@HCMUS)}}\\[12mm]
     
-    \begin{minipage}{0.85\textwidth}
+    \begin{minipage}{0.88\textwidth}
     \begin{tabular}{ll}
         \textbf{Sinh viên thực hiện:} & \textbf{NGUYỄN BẢO AN} \\
         \textbf{Mã số sinh viên (MSSV):} & \textbf{23120207} \\
@@ -149,49 +157,60 @@
 
 Bài tập cá nhân \textbf{HW01 (CS423 / CSC13003 -- Software Testing)} được thực hiện với định hướng tiên phong tích hợp trí tuệ nhân tạo (\textit{AI-augmented testing}), đồng thời tuân thủ nghiêm ngặt chuẩn mực công nghiệp \textbf{ISTQB CTFL v4.0} và chính sách liêm chính học thuật của Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM.
 
-Dự án được tổ chức chặt chẽ theo cấu trúc thư mục tiêu chuẩn, hỗ trợ cả 2 định dạng: bản số hóa văn bản (\textit{Text-based markdown files}) và bản nhị phân chứng thực (\textit{Binary-based assets: .docx, .xlsx, .pdf, .png, .jpg}):
+\subsection{Thông tin Nhận diện \& Cam kết Liêm chính Học thuật}
+\begin{itemize}
+    \item \textbf{Sinh viên:} NGUYỄN BẢO AN \quad|\quad \textbf{MSSV:} 23120207 \quad|\quad \textbf{Lớp:} 23CLC01
+    \item \textbf{Kho mã nguồn công khai (Public GitHub Repository):} \href{https://github.com/NgBaoAnn/hw1}{\texttt{https://github.com/NgBaoAnn/hw1}}
+    \item \textbf{Cam kết chống gian lận (Anti-cheat Policy):}
+    \begin{enumerate}
+        \item Toàn bộ 10 ảnh tin tuyển dụng ITviec đều hiển thị rõ ràng header tài khoản sinh viên có avatar nhận diện.
+        \item Toàn bộ 20 sự cố phần mềm được truy xuất độc lập từ Vendor Post-mortems gốc; vạch trần 20 bẫy ảo giác AI (Hallucination \& Sycophancy).
+        \item Ảnh chụp thiết bị vật lý thật (quạt SENKO L1638) đặt cạnh Thẻ sinh viên NGUYỄN BẢO AN (23120207) trong cùng một khung hình gốc.
+        \item 5 video thực nghiệm trên YouTube Shorts có giọng đọc thuyết minh chính chủ phân tích nguyên nhân lỗi kỹ thuật.
+        \item 5 lỗi cơ điện thực tế được log trực tiếp lên GitHub Issues thông qua \texttt{gh cli}, đính kèm ảnh chụp màn hình tài khoản chính chủ.
+        \item Hoàn thiện đầy đủ bộ 4 biểu mẫu Word quy chuẩn của trường (\texttt{[AI-02]}, \texttt{[AI-03]}, \texttt{[AI-05]}, \texttt{[AI-06]}) kèm nhật ký 41 Prompts chi tiết từng giây.
+    \end{enumerate}
+\end{itemize}
 
-\begin{tcolorbox}
+\subsection{Cấu trúc Kho lưu trữ Bài nộp}
+\begin{tcolorbox}[title=\textbf{Cây thư mục tổ chức dự án HW01}]
+\fontsize{7.8pt}{9.5pt}\selectfont
 \begin{verbatim}
-hw1/
+.
 ├── requirements/
-│   ├── req1_job_market/               # Yêu cầu 1: Thị trường việc làm QA/QC 2026+
-│   │   ├── jobs_data.md               # Chi tiết 10 JDs, kỹ năng, lương, AI Impact
-│   │   ├── screenshots/               # 10 ảnh chụp màn hình có header avatar anti-cheat
-│   │   └── mindmap/                   # Sơ đồ Mermaid và phân tích 3 lỗi sai ISTQB
-│   ├── req2_software_defects/         # Yêu cầu 2: 20 Lỗi phần mềm 2022-2026
-│   │   └── defects_2022_2026.md       # Báo cáo 20 lỗi & 20 bẫy phỏng vấn bóc trần AI
-│   └── req3_physical_product/         # Yêu cầu 3: Kiểm thử quạt Senko L1638
-│       ├── device_info.md             # Thông số quạt, 5 lỗi phát hiện, link issues
-│       ├── edge_cases_ai_missed.md    # Phân tích 4 ca biên cơ điện AI bỏ sót
-│       ├── test_cases.md              # 15 Test cases ISTQB (10 Pass, 5 Fail)
-│       ├── test_cases.csv             # Bản xuất dữ liệu bảng tính phẳng
-│       ├── test_cases_and_summary.xlsx# File Excel tiêu chuẩn 3 sheets
-│       ├── photo/                     # Ảnh thẻ SV + Thiết bị, ảnh chat AI & 5 ảnh issues
-│       └── github_issues/             # Chi tiết 5 issues và bảng điều phối
-├── AI Templates/                      # Bộ 4 biểu mẫu .docx chính thức nộp bài
+│   ├── req1_job_market/
+│   │   ├── jobs_data.md           # Dữ liệu 10 tin tuyển dụng ITviec
+│   │   ├── screenshots/           # 10 ảnh screenshot có avatar
+│   │   └── mindmap/               # Sơ đồ tư duy & 3 lỗi ISTQB
+│   ├── req2_software_defects/
+│   │   └── defects_2022_2026.md   # 20 sự cố & 20 bẫy AI
+│   └── req3_physical_product/
+│       ├── device_info.md         # Khai báo quạt Senko L1638
+│       ├── edge_cases_ai_missed.md# 4 ca biên cơ điện AI bỏ sót
+│       ├── test_cases.md / .csv   # 15 Test cases ISTQB v4.0
+│       ├── test_cases_and_summary.xlsx # Bảng tính Excel 3 sheets
+│       ├── photo/                 # Ảnh thẻ SV & 5 ảnh issues
+│       └── github_issues/         # 5 live issues trên GitHub
+├── AI Templates/                  # 4 Biểu mẫu .docx nộp bài
 │   ├── [AI-02] - FIT@HCMUS - AI Audit Report_En.docx
 │   ├── [AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx
 │   ├── [AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx
-│   ├── [AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx
-│   └── blank_templates/               # Bản sao lưu mẫu trắng gốc
-├── templates/                         # Bộ biểu mẫu AI bản Markdown đối ứng
-├── scripts/                           # Bộ công cụ tự động hóa kiểm định & đóng gói
-│   ├── populate_docx_templates.py     # Script OpenXML điền dữ liệu vào biểu mẫu .docx
-│   ├── generate_full_excel.py         # Script OpenXML xuất file Excel 3 sheets
-│   └── package_submission.sh          # Script kiểm tra hợp lệ & đóng gói nộp bài
-├── reports/                           # Báo cáo tổng hợp và nhật ký kiểm định
-│   ├── HW01_Report.md                 # Báo cáo tổng kết toàn diện (Markdown)
-│   ├── HW01_Report.tex                # Mã nguồn LaTeX báo cáo chuyên nghiệp
-│   ├── HW01_Report.pdf                # Ấn bản PDF biên dịch chính thức
-│   ├── AI-02_AI_Audit_Report.md       # Báo cáo kiểm định AI chính thức
-│   ├── AI_Critique.md                 # Đoạn văn phê bình chuyên môn (291 từ)
-│   ├── Self_Assessment.md             # Bảng tự chấm điểm 100/100
-│   ├── Oral_Defense_Guide.md          # Tài liệu ôn tập 3 câu hỏi vấn đáp miệng
-│   ├── test_cases_and_summary.xlsx    # Bảng tính Excel chuẩn 3 sheets
-│   ├── Appendix_A_Prompt_Log.md       # Nhật ký 41 Prompts đầy đủ timestamp
-│   └── git_log.txt                    # Lịch sử trích xuất toàn bộ commit Git
-└── prompt_log.md                      # Bản sao lưu log prompt tại thư mục gốc
+│   └── [AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx
+├── templates/                     # Bộ biểu mẫu AI bản Markdown
+├── scripts/                       # Scripts tự động hóa & đóng gói
+│   ├── populate_docx_templates.py # Điền dữ liệu vào file .docx
+│   ├── generate_full_excel.py     # Xuất Excel 3 sheets
+│   └── package_submission.sh      # Đóng gói nộp bài chuẩn
+├── reports/                       # Báo cáo tổng hợp, LaTeX & PDF
+│   ├── HW01_Report.md             # Báo cáo Markdown
+│   ├── HW01_Report.tex / .pdf     # Báo cáo LaTeX & PDF
+│   ├── AI-02_AI_Audit_Report.md   # Báo cáo kiểm định AI
+│   ├── AI_Critique.md             # Phê bình chuyên môn (291 từ)
+│   ├── Self_Assessment.md         # Bảng tự chấm điểm 100/100
+│   ├── Oral_Defense_Guide.md      # Ôn tập 3 câu hỏi vấn đáp
+│   ├── test_cases_and_summary.xlsx# Bảng tính Excel chuẩn 3 sheets
+│   └── Appendix_A_Prompt_Log.md   # Nhật ký 42 Prompts timestamp
+└── prompt_log.md                  # Bản sao lưu log prompt tại gốc
 \end{verbatim}
 \end{tcolorbox}
 
@@ -206,7 +225,7 @@ Tất cả 10 tin tuyển dụng đều được thu thập thực tế từ n�
 \begin{table}[htbp]
 \centering
 \small
-\begin{tabularx}{\textwidth}{l p{3.2cm} p{2.2cm} c c p{4.2cm}}
+\begin{tabularx}{\textwidth}{@{} l p{3.2cm} p{2.2cm} c c X @{}}
 \toprule
 \textbf{Mã Job} & \textbf{Vị trí (Job Title)} & \textbf{Công ty} & \textbf{Mức lương} & \textbf{Ngày đăng} & \textbf{Kỹ năng trọng tâm / AI Factor} \\
 \midrule
@@ -237,7 +256,7 @@ Tất cả 10 tin tuyển dụng đều được thu thập thực tế từ n�
 \end{itemize}
 
 \subsection{Sơ đồ Tư duy (Mindmap) Vai trò QA/QC \& 3 Hiệu chỉnh ISTQB CTFL v4.0}
-Sơ đồ tư duy được thiết lập hoàn chỉnh trong tài liệu \texttt{requirements/req1\_job\_market/mindmap/qa\_qc\_roles\_mindmap.md}. Sinh viên đã chủ động phản biện và sửa đổi \textbf{3 lỗi sai kiến thức căn bản mà AI mắc phải}:
+Sơ đồ tư duy được thiết lập hoàn chỉnh trong tài liệu \filepath{requirements/req1_job_market/mindmap/qa_qc_roles_mindmap.md}. Sinh viên đã chủ động phản biện và sửa đổi \textbf{3 lỗi sai kiến thức căn bản mà AI mắc phải}:
 \begin{enumerate}
     \item \textbf{Lỗi 1 (Đánh đồng QA và QC -- Vi phạm ISTQB v4.0 Mục 1.2.2):} AI ban đầu gộp chung QA và QC thành một nhóm thực thi. Sinh viên đã tách thành 2 nhánh triết lý riêng biệt: \textbf{QA (Quality Assurance)} tập trung vào quy trình phòng ngừa khuyết tật (\textit{Process-oriented / Defect Prevention}); còn \textbf{QC (Quality Control)} tập trung vào kiểm tra sản phẩm nhằm phát hiện khuyết tật (\textit{Product-oriented / Defect Detection}).
     \item \textbf{Lỗi 2 (Bỏ quên Kiểm thử Tĩnh -- Vi phạm ISTQB v4.0 Chương 3):} AI chỉ liệt kê các hoạt động Dynamic Testing (chạy code). Sinh viên bổ sung toàn bộ nhánh \textbf{Static Testing} (Reviews, Walkthroughs, Inspections, Static Analysis) -- phương pháp giúp phát hiện lỗi sớm với chi phí thấp nhất.
@@ -254,9 +273,9 @@ Sơ đồ tư duy được thiết lập hoàn chỉnh trong tài liệu \texttt
 Báo cáo nghiên cứu sâu 20 thảm họa phần mềm chấn động toàn cầu giai đoạn 2022--2026, bao gồm \textbf{6 sự cố trực tiếp liên quan đến AI/LLM} và \textbf{14 sự cố sụp đổ hạ tầng công nghệ lõi}. 100\% sự cố được thu thập từ nguồn tài liệu gốc: Báo cáo hậu kiểm kỹ thuật chính thức (\textit{Vendor Official Post-mortems}), Chỉ thị khẩn cấp CISA, Thông cáo xử phạt UK FCA, và Báo cáo điều tra USDOT.
 
 \subsection{Bảng Đối chiếu Nguyên nhân Gốc rễ vs 20 Ảo giác / Thiên kiến của AI}
-Sinh viên đã thiết lập chuỗi 20 câu hỏi phỏng vấn đối kháng dẫn dụ bẫy (Prompts \texttt{[P-14]} đến \texttt{[P-33]} trong \texttt{Appendix\_A\_Prompt\_Log.md}), khiến AI liên tục bộc lộ các hình thái ảo giác kỹ thuật đặc trưng:
+Sinh viên đã thiết lập chuỗi 20 câu hỏi phỏng vấn đối kháng dẫn dụ bẫy (Prompts \texttt{[P-14]} đến \texttt{[P-33]} trong \filepath{reports/Appendix_A_Prompt_Log.md}), khiến AI liên tục bộc lộ các hình thái ảo giác kỹ thuật đặc trưng:
 
-\begin{longtable}{p{0.8cm} p{3.2cm} p{2.2cm} p{4.6cm} p{4.2cm}}
+\begin{xltabular}{\textwidth}{@{} c p{3.0cm} p{2.0cm} X X @{}}
 \toprule
 \textbf{Mã} & \textbf{Sự cố \& Thời gian} & \textbf{Mức độ} & \textbf{Nguyên nhân thực tế (Post-Mortem)} & \textbf{Ảo giác / Thiên kiến AI bị bóc trần} \\
 \midrule
@@ -271,7 +290,7 @@ Sinh viên đã thiết lập chuỗi 20 câu hỏi phỏng vấn đối kháng 
 \textbf{\#02} & Google Gemini Bias (02/2024) & High (Đạo đức AI) & Can thiệp system prompt cưỡng bức đa dạng quá mức (Systemic Over-steering) & \textbf{AI Training Data Evasion:} Đổ lỗi tập dữ liệu huấn luyện cổ xưa thiên lệch \\
 \textbf{\#03} & Air Canada Bot (02/2024) & High (Pháp lý) & RAG bot ảo giác chính sách tang chế giả mạo; Tòa xử hãng phải đền tiền & \textbf{AI Rogue Entity Bias:} Bao biện bot tự hoạt động như một pháp nhân riêng \\
 \textbf{\#04} & Cloudflare Outage (11/2023) & Critical (Cloud) & Lỗi phụ thuộc vòng tròn (Circular Dependency) trong cấu hình phân tán & \textbf{AI Infrastructure Bias:} Đổ lỗi đứt cáp quang biển và thiên tai \\
-\textbf{\#05} & MOVEit 0-day (05/2023) & Critical (CVSS 9.8) & SQLi không làm sạch dữ liệu trong web API endpoint guestaccess.aspx & \textbf{AI Zero-Day Evasion:} Cho rằng do admin không đặt mật khẩu \\
+\textbf{\#05} & MOVEit 0-day (05/2023) & Critical (CVSS 9.8) & SQLi không làm sạch dữ liệu trong web API endpoint \filepath{guestaccess.aspx} & \textbf{AI Zero-Day Evasion:} Cho rằng do admin không đặt mật khẩu \\
 \textbf{\#06} & FAA NOTAM Crash (01/2023) & Critical (Cấm bay Mỹ) & Nhà thầu xóa nhầm file đồng bộ cơ sở dữ liệu làm hỏng toàn vẹn DB & \textbf{AI Cyber Warfare Hallucination:} Thêu dệt chiến tranh mạng phi đối xứng \\
 \textbf{\#07} & Toyota Factory Halt (08/2023) & Major (14 nhà máy) & Tràn ổ cứng máy chủ (Disk Space Full) khi bảo trì cơ sở dữ liệu phụ tùng & \textbf{AI Malware Hallucination:} Ảo giác mã độc công nghiệp Stuxnet tấn công \\
 \textbf{\#08} & Optus Outage (11/2023) & Critical (10.2M dân) & Thiết bị định tuyến Cisco sập bộ nhớ BGP sau cập nhật từ Singtel & \textbf{AI Solar Flare Hallucination:} Ảo giác bão mặt trời cực mạnh làm đảo bit \\
@@ -280,35 +299,35 @@ Sinh viên đã thiết lập chuỗi 20 câu hỏi phỏng vấn đối kháng 
 \textbf{\#11} & DPD Chatbot Revolt (01/2024) & Medium (Khủng hoảng) & Thiếu bộ lọc an toàn đầu ra, bị ép làm thơ tự châm biếm công ty & \textbf{AI Red Teaming Evasion:} Cho rằng do nhân viên bất mãn chèn mã độc \\
 \textbf{\#12} & Samsung Data Leak (04/2023) & High (Lộ bí mật) & Kỹ sư dán mã nguồn bán dẫn và biên bản họp vào ChatGPT công khai & \textbf{AI Interception Hallucination:} Ảo giác tin tặc nghe lén bắt gói tin TLS \\
 \textbf{\#13} & AT\&T Outage (02/2024) & Critical (70k trạm) & Sai sót quy trình mở rộng mạng khi áp dụng mã cấu hình tự động & \textbf{AI State Cyberattack Bias:} Đổ lỗi tin tặc chính phủ nước ngoài tấn công \\
-\textbf{\#14} & XZ Utils Backdoor (03/2024) & Critical (CVSS 10.0) & Mã độc giấu trong file test case nhị phân nén tarball, tiêm vào sshd & \textbf{AI Code Location Hallucination:} Ảo giác mã độc nằm lộ liễu trong xz.c \\
-\textbf{\#15} & Southwest Meltdown (12/2022) & Critical (16.7k chuyến) & Thuật toán SkySolver sụp đổ vì bùng nổ tổ hợp biến số (Combinatorial Exp.) & \textbf{AI Force Majeure Bias:} Bao biện bão tuyết đóng băng cánh máy bay \\
+\textbf{\#14} & XZ Utils Backdoor (03/2024) & Critical (CVSS 10.0) & Mã độc giấu trong file test case nhị phân nén tarball, tiêm vào sshd & \textbf{AI Code Location Hallucination:} Ảo giác mã độc nằm lộ liễu trong \filepath{xz.c} \\
+\textbf{\#15} & Southwest Meltdown (12/2022) & Critical (16.7k chuyến) & Thuật toán SkySolver sụp đổ vì bùng nổ tổ hợp biến số & \textbf{AI Force Majeure Bias:} Bao biện bão tuyết đóng băng cánh máy bay \\
 \textbf{\#16} & Unity Runtime Fee (09/2023) & High (Khủng hoảng) & Mô hình ước tính độc quyền không thể kiểm chứng (Non-verifiable metric) & \textbf{AI Spyware Hallucination:} Thêu dệt Unity cài spyware quét phần cứng \\
 \textbf{\#17} & Citigroup \$180M Crash (05/2022) & Major (Sụt 8\% sàn) & Trader nhập sai; thiếu Hard Limit Boundary và cho phép bỏ qua cảnh báo & \textbf{AI Scapegoat Bias:} Đổ lỗi cho bot HFT giao dịch thuật toán tự động \\
-\textbf{\#18} & Okta Session Theft (10/2023) & High (Cướp token) & Cổng hỗ trợ không làm sạch (Sanitize) file HAR, để lộ session token admin & \textbf{AI Quantum Hallucination:} Ảo giác tin tặc bẻ khóa mật mã RSA-2048 \\
-\textbf{\#19} & Confluence BAC (10/2023) & Critical (CVSS 10.0) & Lỗi phân quyền Java endpoint /server-info.action tạo Super Admin & \textbf{AI Architecture Hallucination:} Gán sai thành tràn bộ đệm C++ \\
+\textbf{\#18} & Okta Session Theft (10/2023) & High (Cướp token) & Cổng hỗ trợ không làm sạch file HAR, để lộ session token admin & \textbf{AI Quantum Hallucination:} Ảo giác tin tặc bẻ khóa mật mã RSA-2048 \\
+\textbf{\#19} & Confluence BAC (10/2023) & Critical (CVSS 10.0) & Lỗi phân quyền Java endpoint \filepath{/server-info.action} tạo Super Admin & \textbf{AI Architecture Hallucination:} Gán sai thành tràn bộ đệm C++ \\
 \textbf{\#20} & Ivanti VPN Chain (01/2024) & Critical (CISA rút điện) & Chuỗi lỗ hổng Path Traversal (CVE-2023-46805) và Command Injection & \textbf{AI Cipher Hallucination:} Ảo giác giao thức SSL/TLS quá yếu bị giải mã \\
-\end{longtable}
+\end{xltabular}
 
 \subsection{Bài học Cốt lõi cho Kỹ sư QA/QC Hiện đại}
 \begin{enumerate}
     \item \textbf{Kiểm thử Giá trị Biên tuyệt đối (Hard-limit Boundary Testing):} Điển hình vụ Citigroup (lệnh trôi 1.4 tỷ USD) nhấn mạnh: mọi giới hạn nghiệp vụ phải được chặn cứng ở cả hai đầu client/server và bắt buộc kiểm soát phê duyệt hai người (\textit{Two-man Rule}).
     \item \textbf{Kiểm thử Kiểm soát Phụ thuộc và Suy thoái êm dịu (Graceful Degradation \& Chaos Testing):} Thảm họa CrowdStrike và Cloudflare chứng minh sự cần thiết của việc kiểm thử phụ thuộc vòng tròn và kiểm định cú pháp tập tin cấu hình ngoài nhân hệ điều hành.
-    \item \textbf{Bảo vệ Dữ liệu Nhạy cảm và Làm sạch Dữ liệu Tự động (Sanitization Testing):} Vụ đánh cắp token Okta qua file HAR chỉ ra bài học: mọi luồng xuất/nhập nhật ký chẩn đoán phải được kiểm thử tự động loại bỏ thông tin định danh và phiên làm việc mật.
-    \item \textbf{Kiểm thử Rào chắn An toàn Mô hình AI (AI Guardrails \& Red Teaming):} Các sự cố Air Canada, Chevrolet và DPD cho thấy các mô hình GenAI bắt buộc phải được bọc trong các lớp bảo vệ kiểm soát ngữ cảnh, lọc đầu ra an toàn, và kiểm thử tấn công giả lập Prompt Injection.
+    \item \textbf{Kiểm thử Phòng thủ Chiều sâu (Defense-in-Depth):} Vụ XZ Utils khẳng định các ca kiểm thử nhị phân phức tạp và chuỗi cung ứng mở bắt buộc phải được quét bằng các công cụ phân tích động độc lập.
+    \item \textbf{Nguyên tắc Vàng: Zero-Trust AI:} Mô hình AI hoàn toàn không có khả năng phân biệt sự thật khách quan với tiền đề dẫn dụ sai. Mọi câu trả lời của AI phải được đối chiếu với Post-mortem gốc và tài liệu kỹ thuật chuẩn mực.
 \end{enumerate}
 
 % ==============================================================================
-% SECTION 4: YÊU CẦU 3: KIỂM THỬ THỰC NGHIỆM THIẾT BỊ VẬT LÝ
+% SECTION 4: YÊU CẦU 3: KIỂM THỬ THIẾT BỊ VẬT LÝ QUẠT SENKO L1638
 % ==============================================================================
 \newpage
-\section{Yêu cầu 3: Kiểm thử Thực nghiệm Thiết bị Vật lý — Quạt SENKO L1638 (25 Điểm)}
+\section{Yêu cầu 3: Kiểm thử Thực nghiệm Thiết bị Vật lý Quạt Senko L1638 (25 Điểm)}
 
 \subsection{Thông số Kỹ thuật Thiết bị \& Bằng chứng Chống gian lận (Anti-cheat)}
 \begin{itemize}
     \item \textbf{Thiết bị thực nghiệm:} Quạt điện lửng ống sắt dân dụng \textbf{SENKO}, Model: \texttt{L1638}.
     \item \textbf{Thông số nhà sản xuất:} Công suất 47W, Điện áp định mức 220V $\sim$ 50Hz, sải cánh 39cm (3 cánh bản rộng), lưu lượng gió 64.4 m$^3$/phút, tốc độ gió 3 cấp độ, sản xuất tháng 09/2023.
     \item \textbf{Cơ cấu cơ điện:} Cụm 4 phím cơ liên động (0 nhả, 1-2-3 tốc độ); Túp-năng đảo hướng 180$^\circ$ ly hợp cơ học; Khớp cổ quạt ngửa/gục 4 nấc có ốc cánh bướm; Thân ống sắt nâng hạ 77cm -- 95cm van siết ren nhựa; Motor xoay chiều 1 pha có tụ khởi động và cầu chì nhiệt bảo vệ stator.
-    \item \textbf{Minh chứng chống gian lận (Anti-cheat Evidence):} Ảnh chụp thiết bị quạt thật kèm Thẻ sinh viên \textbf{NGUYỄN BẢO AN -- MSSV 23120207} trong cùng một khung hình rõ nét lưu tại \texttt{requirements/req3\_physical\_product/photo/device\_23120207.jpg}.
+    \item \textbf{Minh chứng chống gian lận (Anti-cheat Evidence):} Ảnh chụp thiết bị quạt thật kèm Thẻ sinh viên \textbf{NGUYỄN BẢO AN -- MSSV 23120207} trong cùng một khung hình rõ nét lưu tại \filepath{requirements/req3_physical_product/photo/device_23120207.jpg}.
 \end{itemize}
 
 \subsection{Phê bình Gợi ý của AI \& 4 Ca Kiểm thử Biên (Edge Cases) Vật lý Bị bỏ sót}
@@ -324,7 +343,7 @@ Khi được yêu cầu đề xuất bộ kiểm thử, AI chỉ sinh ra 10 test
 \begin{table}[htbp]
 \centering
 \scriptsize
-\begin{tabularx}{\textwidth}{l p{2.2cm} p{4.2cm} c c p{3.2cm}}
+\begin{tabularx}{\textwidth}{@{} l p{1.8cm} X c c p{3.2cm} @{}}
 \toprule
 \textbf{Mã TC} & \textbf{Nhóm kiểm thử} & \textbf{Mục tiêu kiểm thử (Objective)} & \textbf{Kỳ vọng} & \textbf{Thực tế} & \textbf{Đánh giá \& Minh chứng} \\
 \midrule
@@ -350,21 +369,21 @@ Khi được yêu cầu đề xuất bộ kiểm thử, AI chỉ sinh ra 10 test
 
 \subsection{Danh mục 5 Video Demo Thực nghiệm YouTube Shorts (Có giọng thuyết minh)}
 \begin{enumerate}
-    \item \textbf{Video 1 (TC-12 / DEF-01):} \href{https://youtube.com/shorts/NK6kk9AF39U?feature=share}{\texttt{https://youtube.com/shorts/NK6kk9AF39U}} -- Thao tác nhấn đồng thời 2 phím 1 và 2 gây kẹt lẫy cơ khí và tiếng motor gầm ù quá tải.
-    \item \textbf{Video 2 (TC-13 / DEF-02):} \href{https://youtube.com/shorts/TQMrprni0oY?feature=share}{\texttt{https://youtube.com/shorts/TQMrprni0oY}} -- Cản hướng đảo gió cổ quạt, ghi âm thanh bánh răng hộp số trượt vấu cạch cạch.
-    \item \textbf{Video 3 (TC-14 / DEF-03):} \href{https://youtube.com/shorts/edU_0xoc_JI?feature=share}{\texttt{https://youtube.com/shorts/edU\_0xoc\_JI}} -- Chạy Số 3 ở 95cm; rung lắc cộng hưởng làm van siết ren bị trôi lỏng và quạt tự sụt chiều cao.
-    \item \textbf{Video 4 (TC-09 / DEF-04):} \href{https://youtube.com/shorts/jCHATpMITFI?feature=share}{\texttt{https://youtube.com/shorts/jCHATpMITFI}} -- Ngửa cổ quạt +15$^\circ$ và đảo hướng; mô-men quán tính làm sụp khớp bản lề ở điểm đảo chiều biên.
-    \item \textbf{Video 5 (TC-15 / DEF-05):} \href{https://youtube.com/shorts/NZP3v1SyXfY?feature=share}{\texttt{https://youtube.com/shorts/NZP3v1SyXfY}} -- Nhấn hờ phím tốc độ 50\% hành trình; ghi nhận phóng hồ quang điện arcing xèo xèo và mùi khét tiếp điểm.
+    \item \textbf{Video 1 (TC-12 / DEF-01):} \href{https://youtube.com/shorts/NK6kk9AF39U?feature=share}{\nolinkurl{youtube.com/shorts/NK6kk9AF39U}} -- Thao tác nhấn đồng thời 2 phím 1 và 2 gây kẹt lẫy cơ khí và tiếng motor gầm ù quá tải.
+    \item \textbf{Video 2 (TC-13 / DEF-02):} \href{https://youtube.com/shorts/TQMrprni0oY?feature=share}{\nolinkurl{youtube.com/shorts/TQMrprni0oY}} -- Cản hướng đảo gió cổ quạt, ghi âm thanh bánh răng hộp số trượt vấu cạch cạch.
+    \item \textbf{Video 3 (TC-14 / DEF-03):} \href{https://youtube.com/shorts/edU_0xoc_JI?feature=share}{\nolinkurl{youtube.com/shorts/edU_0xoc_JI}} -- Chạy Số 3 ở 95cm; rung lắc cộng hưởng làm van siết ren bị trôi lỏng và quạt tự sụt chiều cao.
+    \item \textbf{Video 4 (TC-09 / DEF-04):} \href{https://youtube.com/shorts/jCHATpMITFI?feature=share}{\nolinkurl{youtube.com/shorts/jCHATpMITFI}} -- Ngửa cổ quạt +15$^\circ$ và đảo hướng; mô-men quán tính làm sụp khớp bản lề ở điểm đảo chiều biên.
+    \item \textbf{Video 5 (TC-15 / DEF-05):} \href{https://youtube.com/shorts/NZP3v1SyXfY?feature=share}{\nolinkurl{youtube.com/shorts/NZP3v1SyXfY}} -- Nhấn hờ phím tốc độ 50\% hành trình; ghi nhận phóng hồ quang điện arcing xèo xèo và mùi khét tiếp điểm.
 \end{enumerate}
 
 \subsection{Quản lý Lỗi: 5 Live GitHub Issues Được Tạo Trực tiếp bằng \texttt{gh cli}}
 5 khiếm khuyết được quản lý trực tiếp trên GitHub repository \href{https://github.com/NgBaoAnn/hw1/issues}{\texttt{NgBaoAnn/hw1/issues}}:
 \begin{itemize}
-    \item \textbf{Issue \#1 (DEF-01):} \href{https://github.com/NgBaoAnn/hw1/issues/1}{\texttt{[DEF-01][Major] Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím}} (Minh chứng: \texttt{issue\_1.png}).
-    \item \textbf{Issue \#2 (DEF-02):} \href{https://github.com/NgBaoAnn/hw1/issues/2}{\texttt{[DEF-02][Medium] Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch}} (Minh chứng: \texttt{issue\_2.png}).
-    \item \textbf{Issue \#3 (DEF-03):} \href{https://github.com/NgBaoAnn/hw1/issues/3}{\texttt{[DEF-03][Medium] Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm}} (Minh chứng: \texttt{issue\_3.png}).
-    \item \textbf{Issue \#4 (DEF-04):} \href{https://github.com/NgBaoAnn/hw1/issues/4}{\texttt{[DEF-04][Minor] Lỏng khớp bản lề làm sụp góc ngửa +15$^\circ$ khi quạt quay đảo chiều}} (Minh chứng: \texttt{issue\_4.png}).
-    \item \textbf{Issue \#5 (DEF-05):} \href{https://github.com/NgBaoAnn/hw1/issues/5}{\texttt{[DEF-05][High] Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím hờ}} (Minh chứng: \texttt{issue\_5.png}).
+    \item \textbf{Issue \#1 (DEF-01):} \href{https://github.com/NgBaoAnn/hw1/issues/1}{\textbf{[Major]}} Kẹt cơ cấu liên động và dẫn chéo dòng stator khi nhấn đồng thời 2 phím (Minh chứng: \filepath{issue_1.png}).
+    \item \textbf{Issue \#2 (DEF-02):} \href{https://github.com/NgBaoAnn/hw1/issues/2}{\textbf{[Medium]}} Trượt vấu bánh răng hộp số túp-năng phát tiếng kêu cạch cạch (Minh chứng: \filepath{issue_2.png}).
+    \item \textbf{Issue \#3 (DEF-03):} \href{https://github.com/NgBaoAnn/hw1/issues/3}{\textbf{[Medium]}} Rung lắc cộng hưởng làm trôi van siết ren ống sắt ở độ cao 95cm (Minh chứng: \filepath{issue_3.png}).
+    \item \textbf{Issue \#4 (DEF-04):} \href{https://github.com/NgBaoAnn/hw1/issues/4}{\textbf{[Minor]}} Lỏng khớp bản lề làm sụp góc ngửa $+15^\circ$ khi quạt quay đảo chiều (Minh chứng: \filepath{issue_4.png}).
+    \item \textbf{Issue \#5 (DEF-05):} \href{https://github.com/NgBaoAnn/hw1/issues/5}{\textbf{[High]}} Phóng hồ quang điện (Arcing) và khét tiếp điểm khi nhấn phím hờ (Minh chứng: \filepath{issue_5.png}).
 \end{itemize}
 
 % ==============================================================================
@@ -373,17 +392,15 @@ Khi được yêu cầu đề xuất bộ kiểm thử, AI chỉ sinh ra 10 test
 \newpage
 \section{Giao thức Cộng tác AI \& Các Biểu mẫu Quy chuẩn (15 Điểm)}
 
-\subsection{Báo cáo Kiểm định AI [AI-02] AI Audit Report}
-\begin{itemize}
-    \item \textbf{Thống kê độ chính xác của AI qua 22 sản phẩm kiểm định:}
-    \begin{itemize}
-        \item Tổng số sản phẩm AI tạo ra được kiểm định: \textbf{22 sản phẩm} (1 Mindmap, 1 Đề xuất Test cases, 20 Lời giải thích sự cố phần mềm).
-        \item \textbf{VALID (Đúng, chấp nhận nguyên trạng):} \textbf{0 sản phẩm (0.0\%)}.
-        \item \textbf{INVALID (Sai lệch / Ảo giác; Bác bỏ):} \textbf{20 sản phẩm (90.9\%)}.
-        \item \textbf{INCOMPLETE (Thiếu sót; Cần sinh viên hiệu chỉnh/bổ sung):} \textbf{2 sản phẩm (9.1\%)}.
-    \end{itemize}
-    \item \textbf{Kết luận ranh giới ứng dụng AI trong QA/QC:} AI chỉ đóng vai trò trợ lý tăng tốc tạo khung sơ bộ (scaffolding) và cú pháp hiển thị. Tuyệt đối không dùng AI để phân tích nguyên nhân gốc rễ (RCA) các sự cố nghiêm trọng khi chưa có tài liệu gốc, và không tin cậy AI trong kiểm thử cơ điện vật lý vì AI hoàn toàn thiếu tri giác vật lý (\textit{embodiment}). Luôn áp dụng chính sách \textbf{"Zero-Trust AI"}.
-\end{itemize}
+\subsection{Tổng quan Quy trình Kiểm định Sản phẩm AI ([AI-02] AI Audit Report)}
+Sinh viên áp dụng quy trình kiểm định 5 phần nghiêm ngặt theo mẫu chuẩn FIT@HCMUS cho toàn bộ 22 sản phẩm thành phần do AI gợi ý:
+\begin{enumerate}
+    \item \textbf{Mục tiêu thực tế (Ground Truth Target):} Đối chiếu yêu cầu kỹ thuật thực nghiệm.
+    \item \textbf{Phản hồi nguyên văn từ AI (Raw Output):} Ghi nhận chính xác phản hồi ban đầu.
+    \item \textbf{Kiểm định thực tế độc lập (Verification Method):} Kiểm tra thực nghiệm, đối chiếu RFC/ISTQB.
+    \item \textbf{Đánh giá phân loại (Classification):} \textbf{0\% VALID}, \textbf{90.9\% INVALID}, \textbf{9.1\% INCOMPLETE}.
+    \item \textbf{Hành động khắc phục (Action Taken):} 100\% nội dung lỗi được sinh viên sửa đổi hoàn toàn.
+\end{enumerate}
 
 \subsection{Đoạn văn Phê bình Chuyên môn AI Critique (291 từ)}
 \begin{tcolorbox}[colback=white, colframe=hcmusblue, title=\textbf{AI Critique -- Nguyễn Bảo An (Trích lục nguyên văn từ reports/AI\_Critique.md)}]
@@ -404,11 +421,11 @@ Khi được yêu cầu đề xuất bộ kiểm thử, AI chỉ sinh ra 10 test
     \end{quote}
     \item \textbf{Xác nhận trạng thái hoàn thành bộ biểu mẫu quy chuẩn (Đã điền hoàn chỉnh cả file \texttt{.docx} chính thức và file \texttt{.md}):}
     \begin{itemize}
-        \item[\checkmark] \textbf{[AI-02] AI Audit Report:} \texttt{AI Templates/[AI-02] - FIT@HCMUS - AI Audit Report\_En.docx}
-        \item[\checkmark] \textbf{[AI-03] AI Disclosure Form:} \texttt{AI Templates/[AI-03] - FIT@HCMUS - AI Disclosure Form\_En.docx}
-        \item[\checkmark] \textbf{[AI-05] AI Privacy Checklist:} \texttt{AI Templates/[AI-05] - FIT@HCMUS - AI Privacy Checklist\_En.docx}
-        \item[\checkmark] \textbf{[AI-06] AI Student Acknowledgement:} \texttt{AI Templates/[AI-06] - FIT@HCMUS - AI Student Acknowledgement\_En.docx}
-        \item[\checkmark] \textbf{Appendix A Prompt Log:} Ghi nhận đầy đủ 41 lượt prompt từ \texttt{[P-01]} đến \texttt{[P-41]} với timestamp chính xác.
+        \item[\checkmark] \textbf{[AI-02] AI Audit Report:} \filepath{AI Templates/[AI-02] - FIT@HCMUS - AI Audit Report_En.docx}
+        \item[\checkmark] \textbf{[AI-03] AI Disclosure Form:} \filepath{AI Templates/[AI-03] - FIT@HCMUS - AI Disclosure Form_En.docx}
+        \item[\checkmark] \textbf{[AI-05] AI Privacy Checklist:} \filepath{AI Templates/[AI-05] - FIT@HCMUS - AI Privacy Checklist_En.docx}
+        \item[\checkmark] \textbf{[AI-06] AI Student Acknowledgement:} \filepath{AI Templates/[AI-06] - FIT@HCMUS - AI Student Acknowledgement_En.docx}
+        \item[\checkmark] \textbf{Appendix A Prompt Log:} Ghi nhận đầy đủ 42 lượt prompt từ \texttt{[P-01]} đến \texttt{[P-42]} với timestamp chính xác.
     \end{itemize}
 \end{itemize}
 
@@ -418,12 +435,12 @@ Khi được yêu cầu đề xuất bộ kiểm thử, AI chỉ sinh ra 10 test
 \newpage
 \section{Tự Đánh giá Điểm số theo Rubric (100/100 Điểm)}
 
-Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại \texttt{reports/Self\_Assessment.md}:
+Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại \filepath{reports/Self_Assessment.md}:
 
 \begin{table}[htbp]
 \centering
 \small
-\begin{tabularx}{\textwidth}{c p{5cm} c c p{6cm}}
+\begin{tabularx}{\textwidth}{@{} c p{4.2cm} c c X @{}}
 \toprule
 \textbf{STT} & \textbf{Tiêu chí đánh giá (Criteria)} & \textbf{Thang điểm} & \textbf{Tự đánh giá} & \textbf{Minh chứng thực hiện cốt lõi} \\
 \midrule
@@ -432,7 +449,7 @@ Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại \texttt{r
 \textbf{3} & \textbf{Kiểm thử thiết bị vật lý Senko L1638 (Req 3)} & 25 & \textbf{25 / 25} & Ảnh thẻ SV + quạt thật; 15 test cases (Excel 3 sheets); 4 edge cases AI bỏ sót; 5 video Shorts có voice; 5 live GitHub Issues kèm 5 ảnh screenshot chính chủ. \\
 \textbf{AI-1} & \textbf{[AI-02] AI Audit Report} & 8 & \textbf{8 / 8} & Bảng kiểm định 22 sản phẩm (0\% Valid, 90.9\% Invalid, 9.1\% Incomplete); điền cả file \texttt{.docx} chính thức \& \texttt{.md}. \\
 \textbf{AI-2} & \textbf{AI Critique + Form [AI-03]} & 4 & \textbf{4 / 4} & Bài phê bình 291 từ chuẩn mực; Form [AI-03] điền đủ 6 câu hỏi, dán prompt và ký tên xác thực (cả \texttt{.docx} \& \texttt{.md}). \\
-\textbf{AI-3} & \textbf{[AI-05] Privacy Checklist \& Anti-cheat} & 3 & \textbf{3 / 3} & Form [AI-05] và [AI-06] ký tên; Prompt Log đủ 41 lượt prompt với timestamp chính xác từng giây. \\
+\textbf{AI-3} & \textbf{[AI-05] Privacy Checklist \& Anti-cheat} & 3 & \textbf{3 / 3} & Form [AI-05] và [AI-06] ký tên; Prompt Log đủ 42 lượt prompt với timestamp chính xác từng giây. \\
 \midrule
 \textbf{TỔNG} & \textbf{TỔNG ĐIỂM TOÀN BỘ BÀI TẬP} & \textbf{100} & \textbf{100 / 100} & \textbf{Mã điểm 3 chữ số quy ước nộp bài: \texttt{100}} \\
 \bottomrule
@@ -449,49 +466,36 @@ Căn cứ theo bảng tiêu chuẩn đánh giá của môn học tại \texttt{r
 \begin{table}[htbp]
 \centering
 \small
-\begin{tabularx}{\textwidth}{p{2.5cm} p{4.2cm} p{4cm} p{4.5cm}}
+\begin{tabularx}{\textwidth}{@{} p{2.2cm} p{3.8cm} p{3.8cm} X @{}}
 \toprule
 \textbf{Nhóm yêu cầu} & \textbf{Tài sản tài liệu (Document)} & \textbf{Dữ liệu bảng tính / Cấu hình} & \textbf{Minh chứng Hình ảnh / Video / Issue} \\
 \midrule
-\textbf{Yêu cầu 1} & \texttt{jobs\_data.md}\newline \texttt{qa\_qc\_roles\_mindmap.md} & Bảng 10 tin tuyển dụng ITviec & \texttt{job\_01.png} đến \texttt{job\_10.png} \\
+\textbf{Yêu cầu 1} & \filepath{jobs_data.md}\newline \filepath{qa_qc_roles_mindmap.md} & Bảng 10 tin tuyển dụng ITviec & \filepath{job_01.png} đến \filepath{job_10.png} \\
 \midrule
-\textbf{Yêu cầu 2} & \texttt{defects\_2022\_2026.md} & 20 Báo cáo RCA chuẩn gốc & 20 Prompt bóc trần ảo giác trong \texttt{Appendix\_A\_Prompt\_Log.md} \\
+\textbf{Yêu cầu 2} & \filepath{defects_2022_2026.md} & 20 Báo cáo RCA chuẩn gốc & 20 Prompt bóc trần ảo giác trong \filepath{Appendix_A_Prompt_Log.md} \\
 \midrule
-\textbf{Yêu cầu 3} & \texttt{device\_info.md}\newline \texttt{edge\_cases\_ai\_missed.md}\newline \texttt{test\_cases.md} & \texttt{test\_cases.csv}\newline \texttt{test\_cases\_and\_summary.xlsx} (3 sheets) & \texttt{device\_23120207.jpg}\newline 5 Video Shorts (Video 1 đến 5)\newline GitHub Issues \#1 đến \#5\newline 5 Ảnh \texttt{issue\_1.png} -- \texttt{issue\_5.png} \\
+\textbf{Yêu cầu 3} & \filepath{device_info.md}\newline \filepath{edge_cases_ai_missed.md}\newline \filepath{test_cases.md} & \filepath{test_cases.csv}\newline \filepath{test_cases_and_summary.xlsx} & \filepath{device_23120207.jpg}\newline 5 Video Shorts (1 đến 5)\newline GitHub Issues \#1 đến \#5\newline 5 Ảnh \filepath{issue_1.png} -- \filepath{issue_5.png} \\
 \midrule
-\textbf{AI Protocol} & \texttt{AI-02\_AI\_Audit\_Report.md}\newline \texttt{AI\_Critique.md}\newline \texttt{Self\_Assessment.md}\newline 4 file \texttt{.docx} trong \texttt{AI Templates/} & \texttt{templates/} (AI-03, 05, 06)\newline \texttt{scripts/populate\_docx\_templates.py} & \texttt{Appendix\_A\_Prompt\_Log.md} (Prompts P-01 đến P-41) \\
+\textbf{AI Protocol} & \filepath{AI-02_AI_Audit_Report.md}\newline \filepath{AI_Critique.md}\newline \filepath{Self_Assessment.md}\newline 4 file \texttt{.docx} trong \filepath{AI Templates/} & \filepath{templates/} (AI-03, 05, 06)\newline \filepath{populate_docx_templates.py} & \filepath{Appendix_A_Prompt_Log.md} (Prompts P-01 đến P-42) \\
 \midrule
-\textbf{Quản trị Git} & \texttt{git\_log.txt} & \texttt{git log --graph --all --stat} & \href{https://github.com/NgBaoAnn/hw1}{\texttt{https://github.com/NgBaoAnn/hw1}} \\
+\textbf{Quản trị Git} & \filepath{git_log.txt} & \texttt{git log --graph --all --stat} & \href{https://github.com/NgBaoAnn/hw1}{\nolinkurl{github.com/NgBaoAnn/hw1}} \\
 \bottomrule
 \end{tabularx}
 \caption{Ma trận truy xuất nguồn gốc tài sản (Traceability Matrix)}
 \end{table}
 
-\subsection{Danh mục Tài liệu Tham khảo (References)}
-\begin{enumerate}[label={[\arabic*]}]
-    \item International Software Testing Qualifications Board (ISTQB). (2023). \textit{Certified Tester Foundation Level (CTFL) Syllabus v4.0}. International Software Testing Qualifications Board.
-    \item International Electrotechnical Commission. (2020). \textit{IEC 60335-2-8: Household and similar electrical appliances -- Safety -- Part 2-8: Particular requirements for fans}. IEC.
-    \item CrowdStrike Holdings, Inc. (2024). \textit{Falcon Content Update Remediation and Guidance Hub -- Channel File 291 Technical Root Cause Analysis}.
-    \item Cloudflare, Inc. (2023). \textit{Post-mortem on Cloudflare control plane and analytics outage (November 2, 2023)}.
-    \item Okta, Inc. (2023). \textit{Official Security Incident Report: Unauthorized Access to Okta Customer Support System via HAR file (CSO David Bradbury)}.
-    \item United Kingdom Financial Conduct Authority (UK FCA). (2024). \textit{Final Notice: Citigroup Global Markets Limited fined \pounds 61.6m for trading control failings}.
-    \item United States Cybersecurity and Infrastructure Security Agency (CISA). (2024). \textit{Emergency Directive 24-01: Mitigate Ivanti Connect Secure and Policy Secure Vulnerabilities}.
-    \item Atlassian Corporation. (2023). \textit{Security Advisory: CVE-2023-22515 Broken Access Control Vulnerability in Confluence Data Center and Server}.
-    \item Google DeepMind. (2026). \textit{Gemini 3.8 Flash High / Antigravity Assistant [Large Language Model]}.
-    \item Kharbach, M. (2026). \textit{AI Use Policy Templates for Higher Education}. CC BY-NC-SA 4.0.
-\end{enumerate}
+\subsection{Cam đoan \& Xác nhận Chữ ký Sinh viên}
+Tôi xin cam đoan toàn bộ nội dung trong bản báo cáo tổng hợp này là sản phẩm học tập và nghiên cứu thực tế của chính tôi. Mọi thông tin tham khảo và sự hỗ trợ của công cụ AI đều đã được công bố minh bạch và kiểm định chặt chẽ theo đúng Quy định Liêm chính Học thuật của Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM.
 
 \vspace{10mm}
-\subsection*{Cam kết của Sinh viên}
-Tôi xin cam đoan toàn bộ nội dung trong bản báo cáo tổng hợp này là sản phẩm học tập và nghiên cứu thực tế của chính tôi. Mọi thông tin tham khảo và sự hỗ trợ của công cụ AI đều đã được công bố minh bạch và kiểm định chặt chẽ theo đúng Quy định Liêm chính Học thuật của Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM.\\[6mm]
-
-\noindent
-\begin{minipage}{\textwidth}
-\raggedleft
-\textit{Thành phố Hồ Chí Minh, ngày 26 tháng 09 năm 2026}\\[2mm]
+\begin{flushright}
+\begin{minipage}{0.45\textwidth}
+\centering
+\textit{Thành phố Hồ Chí Minh, ngày 26 tháng 09 năm 2026}\\
 \textbf{Sinh viên thực hiện}\\[15mm]
 \textbf{NGUYỄN BẢO AN}\\
-MSSV: \texttt{23120207}
+\textit{(Đã ký và xác nhận)}
 \end{minipage}
+\end{flushright}
 
 \end{document}
