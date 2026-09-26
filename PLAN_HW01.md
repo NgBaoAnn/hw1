@@ -137,10 +137,10 @@ hw1/
     3. Rung lắc cộng hưởng khi chạy Số 3 ở độ cao 95cm (trôi ren siết ống sắt làm quạt tự sụt chiều cao).
     4. Nhấn hờ phím tốc độ (phóng hồ quang điện arcing nguy cơ chập cháy).
   - Hoàn thiện tài liệu `requirements/req3_physical_product/edge_cases_ai_missed.md` và cập nhật Artifact #2 trong `templates/AI-02_AI_Audit_Report.md`.
-- [ ] **Bước 3.4: Xây dựng bộ 15 Test Cases hoàn chỉnh:**
-  - Soạn thảo bảng 15 test cases chuẩn vào `requirements/req3_physical_product/test_cases.md` và file Excel `test_cases_and_summary.xlsx` gồm đầy đủ các cột:
-    - ID | Objective | Input | Steps | Expected Result | Actual Result | Verdict (Pass/Fail)
-  - Đảm bảo lồng ghép $\ge 3$ edge cases ở trên vào danh sách 15 test cases.
+- [x] **Bước 3.4: Xây dựng bộ 15 Test Cases hoàn chỉnh:**
+  - Soạn thảo bảng 15 test cases chuẩn theo ISTQB CTFL v4.0 vào `requirements/req3_physical_product/test_cases.md` gồm đầy đủ các cột: ID | Nhóm | Objective | Input | Steps | Expected | Actual | Verdict | Khiếm khuyết & Video Demo.
+  - Lồng ghép 4 Edge Cases (`TC-12`, `TC-13`, `TC-14`, `TC-15`) phát hiện 5 lỗi vật lý thực tế (`DEF-01` đến `DEF-05`).
+  - Xuất bảng tính `test_cases.csv` và sinh file Excel chuẩn `requirements/req3_physical_product/test_cases_and_summary.xlsx`.
 - [ ] **Bước 3.5: Thực nghiệm trên thiết bị & Quay $\ge 5$ video demo (Thời lượng $\le 60$s):**
   - Chọn ra $\ge 5$ test case (ưu tiên các edge case hoặc các ca phát hiện lỗi/hành vi bất thường).
   - Thực hiện trên thiết bị thật, quay video rõ nét và **nói thuyết minh trực tiếp bằng giọng của mình**.
